@@ -1,0 +1,171 @@
+{
+  "groups": [
+    {
+      "_id": "3",
+      "group_name": "Accountant"
+    },
+    {
+      "_id": "2",
+      "group_name": "User"
+    },
+    {
+      "_id": "1",
+      "group_name": "Admin"
+    },
+    {
+      "_id": "non_group",
+      "group_name": "Non Group"
+    }
+  ],
+  "departments": [
+    {
+      "_id": "sd_id",
+      "name": "Software development",
+      "manager_id": "sd_leader_id"
+    },
+    {
+      "_id": "qa_id",
+      "name": "Quality Assurance",
+      "manager_id": "qa_leader_id"
+    },
+    {
+      "_id": "fina_id",
+      "name": "Finance",
+      "manager_id": "finance_leader_id"
+    }
+  ],
+  "holidays": [
+    {
+      "_id": "5f39f2ae0d47a13b2cafe0d7",
+      "holiday_name": "Ngay Nha Giao Viet Nam",
+      "start_date": 1565888406,
+      "end_date": 1565888406,
+      "total_days": 1
+    },
+    {
+      "_id": "5f39f2ae0d47a13b2cafe0e6",
+      "holiday_name": "Quoc Te Phu Nu",
+      "start_date": 1583605662,
+      "end_date": 1583684862,
+      "total_days": 1
+    }
+  ],
+  "users": [
+    {
+      "_id": "super_admin_id",
+      "email": "super.admin@boot.ai",
+      "full_name": "Super Admin",
+      "department_id": "sd_id",
+      "mobile": "142342343253",
+      "address": "Ha Noi",
+      "position": "1",
+      "contract_type": "Hợp đồng lao động",
+      "user_evaluate": "",
+      "status": 0,
+      "date_of_birth": "1546275600",
+      "start_date": "1565888400",
+      "group_id": "1",
+      "salary": "2000",
+      "password": "pbkdf2:sha256:50000$0X5aKaqQ$61bcfb58ce325d2bbfe55784034af34f2996463e6e290797453124f9a9f037ec",
+      "MaNV": "BA001",
+      "first_login": false,
+      "thumbnail": "http://localhost:5010/avatars/avatar_default.png",
+      "file_avatar": null,
+      "name_w_or_h": null,
+      "phone_w_or_h": null,
+      "name_father": null,
+      "phone_father": null,
+      "name_mother": null,
+      "phone_mother": null,
+      "file": null,
+      "totals_days_allowed_to_leave_in_year": 12
+    },
+    {
+      "_id": "finance_leader_id",
+      "email": "accountant.user@boot.ai",
+      "full_name": "Accountant user",
+      "department_id": "fina_id",
+      "mobile": "142342343253",
+      "address": "Ha Noi",
+      "position": "2",
+      "contract_type": "Hợp đồng lao động",
+      "user_evaluate": "",
+      "status": 0,
+      "date_of_birth": "1546275600",
+      "start_date": "1565888400",
+      "group_id": "3",
+      "salary": "2000",
+      "password": "pbkdf2:sha256:50000$0X5aKaqQ$61bcfb58ce325d2bbfe55784034af34f2996463e6e290797453124f9a9f037ec",
+      "MaNV": "BA002",
+      "first_login": false,
+      "thumbnail": "http://localhost:5010/avatars/avatar_default.png",
+      "file_avatar": null,
+      "name_w_or_h": null,
+      "phone_w_or_h": null,
+      "name_father": null,
+      "phone_father": null,
+      "name_mother": null,
+      "phone_mother": null,
+      "file": null,
+      "totals_days_allowed_to_leave_in_year": 12
+    },
+    {
+      "_id": "sd_leader_id",
+      "email": "sd.leader@boot.ai",
+      "full_name": "Software development leader",
+      "department_id": "sd_id",
+      "mobile": "142342343253",
+      "address": "Ha Noi",
+      "position": "2",
+      "contract_type": "Hợp đồng lao động",
+      "user_evaluate": "",
+      "status": 0,
+      "date_of_birth": "1546275600",
+      "start_date": "1565888400",
+      "group_id": "3",
+      "salary": "2000",
+      "password": "pbkdf2:sha256:50000$0X5aKaqQ$61bcfb58ce325d2bbfe55784034af34f2996463e6e290797453124f9a9f037ec",
+      "MaNV": "BA003",
+      "first_login": false,
+      "thumbnail": "http://localhost:5010/avatars/avatar_default.png",
+      "file_avatar": null,
+      "name_w_or_h": null,
+      "phone_w_or_h": null,
+      "name_father": null,
+      "phone_father": null,
+      "name_mother": null,
+      "phone_mother": null,
+      "file": null,
+      "totals_days_allowed_to_leave_in_year": 12
+    },
+    {
+      "_id": "qa_leader_id",
+      "email": "qa.leader@boot.ai",
+      "full_name": "Quality Assurance leader",
+      "department_id": "qa_id",
+      "mobile": "142342343253",
+      "address": "Ha Noi",
+      "position": "2",
+      "contract_type": "Hợp đồng lao động",
+      "user_evaluate": "",
+      "status": 0,
+      "date_of_birth": "1546275600",
+      "start_date": "1565888400",
+      "group_id": "3",
+      "salary": "2000",
+      "password": "pbkdf2:sha256:50000$0X5aKaqQ$61bcfb58ce325d2bbfe55784034af34f2996463e6e290797453124f9a9f037ec",
+      "MaNV": "BA004",
+      "first_login": false,
+      "thumbnail": "http://localhost:5010/avatars/avatar_default.png",
+      "file_avatar": null,
+      "name_w_or_h": null,
+      "phone_w_or_h": null,
+      "name_father": null,
+      "phone_father": null,
+      "name_mother": null,
+      "phone_mother": null,
+      "file": null,
+      "totals_days_allowed_to_leave_in_year": 12
+    }
+  ]
+}
