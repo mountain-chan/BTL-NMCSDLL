@@ -1,9 +1,9 @@
 from time import time
 
 from flask import jsonify
-from flask_jwt_extended import decode_token
+from flask_jwt_extended import decode_token, get_jwt_identity, get_raw_jwt
 
-from app.enums import ALLOWED_EXTENSIONS, ALLOWED_EXTENSIONS_IMG, ALLOWED_EXTENSIONS_EXCEL
+from app.enums import ALLOWED_EXTENSIONS_IMG
 from .extensions import parser, client
 import datetime
 import werkzeug
@@ -126,22 +126,58 @@ class FieldNumber(fields.Number):
 
 
 def hash_password(str_pass):
-    return werkzeug.generate_password_hash(str_pass)
+    """
 
+    Args:
+        str_pass:
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    Returns:
+
+    """
+    return werkzeug.security.generate_password_hash(str_pass)
 
 
 def allowed_file_img(filename):
+    """
+
+    Args:
+        filename:
+
+    Returns:
+
+    """
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS_IMG
 
 
-def allowed_file_excel(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS_EXCEL
+def is_password_contain_space(password):
+    """
+
+    Args:
+        password:
+
+    Returns:
+        True if password contain space
+        False if password not contain space
+
+    """
+    return ' ' in password
 
 
-def set_auto_MaNV():
+def get_current_user():
+    """
+
+    Returns: current user
+
+    """
+    return client.db.users.find_one({"_id": get_jwt_identity}, {"password_hash": 0})
+
+
+def generate_auto_id():
+    """
+
+    Returns:
+
+    """
     lst = []
     list_user = client.db.user.find({}, {'MaNV': 1})
     if list_user is None:
@@ -192,22 +228,6 @@ def get_begin_time_of_day(timestamp):
     begin_time = datetime.datetime.strptime(begin_time, '%d/%m/%Y')
     begin_time = int(begin_time.timestamp())
     return begin_time
-
-
-def get_date_now_for_check_birthday():
-    return datetime.datetime.today().strftime('%d/%m')
-
-
-def get_date_now_for_check_breaks():
-    return datetime.datetime.now().strftime("%H:%M:%S")
-
-
-def get_current_month():
-    return datetime.datetime.today().strftime('%m')
-
-
-def get_current_year():
-    return datetime.datetime.today().strftime('%Y')
 
 
 def begin_day_of_month(any_month):
@@ -271,82 +291,66 @@ def revoke_token(jti):
     :return:
     """
     try:
-        token = TokenBlacklist.query.filter_by(jti=jti).first()
-        token.revoked = True
-        db.session.commit()
+        new_value = {
+            '$set': {
+                'revoked': True
+            }
+        }
+        client.db.tokens.update_many({"jti": jti}, new_value)
     except Exception as ex:
-        return send_error(message="Could not find the token")
+        return send_error(message="Database error: " + str(ex))
 
 
 def is_token_revoked(decoded_token):
     """
-    Checks if the given token is revoked or not. Because we are adding all the
-    tokens that we create into this database, if the token is not present
-    in the database we are going to consider it revoked, as we don't know where
-    it was created.
+    Checks if the given token is revoked or not.
     """
     jti = decoded_token['jti']
     try:
-        token = TokenBlacklist.query.filter_by(jti=jti).one()
-        return token.revoked
+        token = client.db.tokens.find_one({"jti": jti})
+        return token["revoked"]
     except Exception:
         return True
 
 
-def revoke_all_token(users_identity):
+def revoke_all_token(user_identity):
     """
     Revokes the given token. Raises a TokenNotFound error if the token does
     not exist in the database.
     Set token Revoked flag is False to revoke this token.
     Args:
-        users_identity: list or string, require
-            list users id or user_id. Used to query all token of the user on the database
+        user_identity:
     """
+
+    query = {"$and": [{"user_identity": user_identity}, {"revoked": False}]}
     try:
-        if type(users_identity) is not list:
-            # convert user_id to list user_ids
-            users_identity = [users_identity]
-
-        tokens = TokenBlacklist.query.filter(TokenBlacklist.user_identity.in_(users_identity),
-                                             TokenBlacklist.revoked == False).all()
-
-        for token in tokens:
-            token.revoked = True
-        db.session.commit()
-    except Exception:
-        return send_error(message="Could not find the user")
+        new_value = {
+            '$set': {
+                'revoked': True
+            }
+        }
+        client.db.tokens.update_many(query, new_value)
+    except Exception as ex:
+        return send_error(message="Database error: " + str(ex))
 
 
-def revoke_all_token2(users_identity):
+def revoke_all_token2(user_identity):
     """
-    Revokes all token of the given user except current token. Raises a TokenNotFound error if the token does
-    not exist in the database.
-    Set token Revoked flag is False to revoke this token.
+    Revokes all token of the given user except current token.
     Args:
-        users_identity: user id
+        user_identity: user id
     """
     jti = get_raw_jwt()['jti']
+    query = {"$and": [{"user_identity": user_identity}, {"revoked": False}, {"jti": {"$ne": jti}}]}
     try:
-        tokens = TokenBlacklist.query.filter(TokenBlacklist.user_identity == users_identity,
-                                             TokenBlacklist.revoked == False, TokenBlacklist.jti != jti).all()
-        for token in tokens:
-            token.revoked = True
-        db.session.commit()
-    except Exception:
-        return send_error(message="Could not find the user")
-
-
-def unrevoke_token(jti):
-    """
-    Unrevokes the given token. Raises a TokenNotFound error if the token does
-    not exist in the database
-    """
-    try:
-        token = TokenBlacklist.query.filter_by(jti=jti).one()
-        token.revoked = False
-        db.session.commit()
-    except Exception:
-        return send_error(message="Could not find the token")
+        new_value = {
+            '$set': {
+                'revoked': True
+            }
+        }
+        client.db.tokens.update_many(query, new_value)
+    except Exception as ex:
+        return send_error(message="Database error: " + str(ex))
 
 
 def prune_database():
@@ -357,7 +361,8 @@ def prune_database():
     set it up with flask cli, etc.
     """
     now_in_seconds = get_datetime_now()
-    expired = TokenBlacklist.query.filter(TokenBlacklist.expires < now_in_seconds).all()
-    for token in expired:
-        db.session.delete(token)
-    db.session.commit()
+    query = {"expires": {"$lt": now_in_seconds}}
+    try:
+        client.db.tokens.delete(query)
+    except Exception as ex:
+        return send_error(message="Database error: " + str(ex))

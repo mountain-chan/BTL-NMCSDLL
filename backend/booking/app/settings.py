@@ -24,7 +24,8 @@ class ProdConfig(Config):
     JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
 
     # MongoDB config
-    MONGO_DBNAME = 'qlks'
+    MONGO_URI = "mongodb://localhost:27017/booking"
+    MONGO_DBNAME = 'booking'
     MONGO_HOST = 'localhost'
     MONGO_AUTH_SOURCE = 'admin'
     MONGO_USERNAME = 'admin'
@@ -48,8 +49,9 @@ class DevConfig(Config):
     JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
 
     # MongoDB config
-    MONGO_DBNAME = 'erp_test'
+    MONGO_DBNAME = 'booking'
     MONGO_HOST = 'localhost'
+    MONGO_URI = "mongodb://localhost:27017/booking"
     # MONGO_AUTH_SOURCE = 'admin'
     # MONGO_USERNAME = 'admin'
     # MONGO_PASSWORD = '1234567aA@'

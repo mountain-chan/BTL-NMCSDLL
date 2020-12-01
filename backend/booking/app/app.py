@@ -68,17 +68,6 @@ def register_extensions(app):
         return "Internal Server Error", 500
 
 
-@jwt.user_claims_loader
-def add_claims_to_access_token(identity):
-    user = client.db.user.find_one({'_id': identity})
-    if user['group_id'] == '1':
-        return {'is_admin': True, 'is_user': False, 'is_ketoan': False}
-    elif user['group_id'] == '2':
-        return {'is_admin': False, 'is_user': True, 'is_ketoan': False}
-    else:
-        return {'is_admin': False, 'is_user': False, 'is_ketoan': True}
-
-
 def register_blueprints(app):
     """
     Init blueprint for api url
@@ -86,3 +75,4 @@ def register_blueprints(app):
     :return:
     """
     app.register_blueprint(api_v1.auth.api, url_prefix='/api/auth')
+    app.register_blueprint(api_v1.user.api, url_prefix='/api/users')

@@ -41,34 +41,26 @@ def login():
         logger.error('{} Parameters error: '.format(get_datetime_now().strftime('%Y-%b-%d %H:%M:%S')) + str(ex))
         return send_error(message='Invalid username or password.\nPlease try again')
 
-    if len(username) > 2:
-        return send_error(message="Username can be up to 2 characters")
-
-    if len(password) > 2:
-        return send_error(message="Password can be up to 2 characters")
-
-    user = client.db.user.find_one({'username': username})
+    user = client.db.users.find_one({'username': username})
     if user is None:
         return send_error(message='Invalid username or password.\nPlease try again')
 
     if not check_password_hash(user["password_hash"], password):
         return send_error(message='Invalid username or password.\nPlease try again')
 
-    access_token = create_access_token(identity=user.id, expires_delta=ACCESS_EXPIRES)
-    refresh_token = create_refresh_token(identity=user.id, expires_delta=REFRESH_EXPIRES)
+    access_token = create_access_token(identity=user["_id"], expires_delta=ACCESS_EXPIRES)
+    refresh_token = create_refresh_token(identity=user["_id"], expires_delta=REFRESH_EXPIRES)
 
     # Store the tokens in our store with a status of not currently revoked.
-    add_token_to_database(access_token, user.id)
-    add_token_to_database(refresh_token, user.id)
+    add_token_to_database(access_token, user["_id"])
+    add_token_to_database(refresh_token, user["_id"])
 
     data = {
         'access_token': access_token,
         'refresh_token': refresh_token,
-        'username': user.username,
-        'is_admin': user,
+        'username': user["username"],
+        'is_admin': user["is_admin"],
     }
-
-    # reset login failed attempt
 
     return send_result(data=data, message="Logged in successfully!")
 
