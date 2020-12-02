@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash
 
 from app.enums import SUPER_ADMIN_ID
 from app.utils import parse_req, FieldString, send_result, send_error, hash_password, get_datetime_now, \
-    is_password_contain_space, get_timestamp_now, revoke_all_token2, revoke_all_token, get_current_user
+    is_password_contain_space, revoke_all_token2, revoke_all_token, get_current_user
 from app.extensions import logger, client
 
 api = Blueprint('users', __name__)
@@ -97,8 +97,16 @@ def update_user(user_id):
     data = {}
     for key in keys:
         if key in json_data:
-            setattr(user, key, json_data.get(key).strip())
             data[key] = json_data.get(key)
+
+    new_values = {
+        "$set": data
+    }
+
+    try:
+        client.db.users.update_many({"_id": user_id}, new_values)
+    except Exception as ex:
+        return send_error(message="Database error: " + str(ex))
 
     return send_result(data=data, message="Update user successfully!")
 
@@ -117,32 +125,21 @@ def update_info():
 
     """
 
-    current_user = get_current_user()
-    if current_user is None:
-        return send_error(message="Not found user!")
-
-    params = {
-        'firstname': FieldString(),
-        'lastname': FieldString(),
-        'title': FieldString(),
-        'mobile': FieldString(),
-        'address': FieldString(),
-        'company': FieldString(),
-        'lang': FieldString()
-    }
-    try:
-        json_data = parse_req(params)
-        # Check valid params
-    except Exception as ex:
-        logger.error('{} Parameters error: '.format(get_datetime_now().strftime('%Y-%b-%d %H:%M:%S')) + str(ex))
-        return send_error(message='Parse error ' + str(ex))
+    json_data = request.get_json()
 
     keys = ['company', 'mobile', 'address', 'title', 'firstname', 'lastname', 'lang']
     data = {}
     for key in keys:
         if key in json_data:
-            setattr(current_user, key, json_data.get(key).strip())
             data[key] = json_data.get(key)
+    new_values = {
+        "$set": data
+    }
+
+    try:
+        client.db.users.update_many({"_id": get_jwt_identity()}, new_values)
+    except Exception as ex:
+        return send_error(message="Database error: " + str(ex))
 
     return send_result(data=data, message="Update user successfully!")
 
@@ -294,7 +291,7 @@ def get_user_by_id(user_id):
         Examples::
 
     """
-    # log input fields
+    
     user = client.db.users.find_one({"_id": user_id}, {"password_hash": 0})
     if not user:
         return send_error(message="User not found.")

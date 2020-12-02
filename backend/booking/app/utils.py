@@ -74,7 +74,7 @@ def get_version(version):
     Returns:
 
     """
-    return "QLKS v2.0" if version == 2 else "QLKS v1.0"
+    return "Booking v2.0" if version == 2 else "Booking v1.0"
 
 
 class FieldString(fields.String):
