@@ -363,6 +363,6 @@ def prune_database():
     now_in_seconds = get_datetime_now()
     query = {"expires": {"$lt": now_in_seconds}}
     try:
-        client.db.tokens.delete(query)
+        client.db.tokens.delete_many(query)
     except Exception as ex:
         return send_error(message="Database error: " + str(ex))

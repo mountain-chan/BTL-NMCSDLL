@@ -76,3 +76,7 @@ def register_blueprints(app):
     """
     app.register_blueprint(api_v1.auth.api, url_prefix='/api/auth')
     app.register_blueprint(api_v1.user.api, url_prefix='/api/users')
+    app.register_blueprint(api_v1.property.api, url_prefix='/api/properties')
+    app.register_blueprint(api_v1.room.api, url_prefix='/api/rooms')
+    app.register_blueprint(api_v1.city.api, url_prefix='/api/cities')
+    app.register_blueprint(api_v1.property_type.api, url_prefix='/api/properties_type')

@@ -38,7 +38,7 @@ def create_property():
 
     property_id = str(ObjectId())
     new_property = {
-        "id": property_id
+        "_id": property_id
     }
 
     for key in keys:
@@ -111,7 +111,7 @@ def delete_property(property_id):
         return send_error(message="Not found property!")
 
     # Also delete all children foreign key
-    client.db.properties.delete({"_id": property_id})
+    client.db.properties.delete_one({"_id": property_id})
 
     return send_result(data=_property, message="Delete property successfully!")
 

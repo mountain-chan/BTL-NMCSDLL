@@ -33,12 +33,11 @@ def create_room():
     if room_duplicated:
         return send_error(message="The room name has existed!")
 
-    keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
-            "city_id", "id_room_type"]
+    keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
 
     room_id = str(ObjectId())
     new_room = {
-        "id": room_id
+        "_id": room_id
     }
 
     for key in keys:
@@ -77,8 +76,7 @@ def update_room(room_id):
     except Exception as ex:
         return send_error(message=str(ex))
 
-    keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
-            "city_id", "id_room_type"]
+    keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
     data = {}
     for key in keys:
         if key in json_data:
@@ -111,7 +109,7 @@ def delete_room(room_id):
         return send_error(message="Not found room!")
 
     # Also delete all children foreign key
-    client.db.rooms.delete({"_id": room_id})
+    client.db.rooms.delete_one({"_id": room_id})
 
     return send_result(data=room, message="Delete room successfully!")
 

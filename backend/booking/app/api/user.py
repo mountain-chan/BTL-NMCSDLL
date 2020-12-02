@@ -258,7 +258,7 @@ def delete_user(user_id):
         return send_error(message="Cannot delete this user")
 
     # Also delete all children foreign key
-    client.db.users.delete({"_id": user_id})
+    client.db.users.delete_one({"_id": user_id})
 
     # revoke all token of reset user  from database
     revoke_all_token(user_id)

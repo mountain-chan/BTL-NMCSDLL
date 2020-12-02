@@ -129,8 +129,8 @@
         "is_near_beach": false,
         "rank": 5,
         "meal": 2,
-        "city_id": 1,
-        "id_property_type": 1
+        "city_id": "1",
+        "id_property_type": "1"
     }
   ],
   "rooms": [
@@ -142,7 +142,7 @@
         "facility": "1 Giường đơn",
         "description": "Phòng này có một số trang thiết bị đơn giản.",
         "bed_type": 0,
-        "property_id": 1
+        "property_id": "1"
     }
   ],
   "users": [
