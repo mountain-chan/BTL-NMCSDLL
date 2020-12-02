@@ -1,10 +1,13 @@
 from bson import ObjectId
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from jsonschema import validate
 from marshmallow import fields
 from werkzeug.security import check_password_hash
 
+from app.decorators import admin_required
 from app.enums import SUPER_ADMIN_ID
+from app.schema.schema_validator import user_validator
 from app.utils import parse_req, FieldString, send_result, send_error, hash_password, get_datetime_now, \
     is_password_contain_space, revoke_all_token2, revoke_all_token, get_current_user
 from app.extensions import logger, client
@@ -14,6 +17,7 @@ api = Blueprint('users', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
+@admin_required()
 def create_user():
     """ This is api for the user management registers user.
 
@@ -76,6 +80,7 @@ def create_user():
 
 @api.route('/<user_id>', methods=['PUT'])
 @jwt_required
+@admin_required()
 def update_user(user_id):
     """ This is api for the user management edit the user.
 
@@ -91,9 +96,14 @@ def update_user(user_id):
     if user is None:
         return send_error(message="Not found user!")
 
-    json_data = request.get_json()
+    try:
+        json_data = request.get_json()
+        # Check valid params
+        validate(instance=json_data, schema=user_validator)
+    except Exception as ex:
+        return send_error(message=str(ex))
 
-    keys = ['company', 'mobile', 'address', 'title', 'firstname', 'lastname', 'group_id']
+    keys = ["name", "gender", "phone", "email", "is_admin"]
     data = {}
     for key in keys:
         if key in json_data:
@@ -125,9 +135,15 @@ def update_info():
 
     """
 
-    json_data = request.get_json()
+    try:
+        json_data = request.get_json()
+        # Check valid params
+        validate(instance=json_data, schema=user_validator)
+    except Exception as ex:
+        return send_error(message=str(ex))
 
-    keys = ['company', 'mobile', 'address', 'title', 'firstname', 'lastname', 'lang']
+    keys = ["name", "gender", "phone", "email"]
+
     data = {}
     for key in keys:
         if key in json_data:

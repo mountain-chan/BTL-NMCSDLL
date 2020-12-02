@@ -3,6 +3,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
 
+from app.decorators import admin_required
 from app.schema.schema_validator import room_validator
 from app.utils import send_result, send_error
 from app.extensions import client
@@ -12,6 +13,7 @@ api = Blueprint('rooms', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
+@admin_required()
 def create_room():
     """ This is api for the room management create room.
 
@@ -33,8 +35,11 @@ def create_room():
     if room_duplicated:
         return send_error(message="The room name has existed!")
 
-    keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
+    _property = client.db.properties.find_one({"_id": json_data.get("property_id", None)})
+    if not _property:
+        return send_error(message="Not found the property")
 
+    keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
     room_id = str(ObjectId())
     new_room = {
         "_id": room_id
@@ -54,6 +59,7 @@ def create_room():
 
 @api.route('/<room_id>', methods=['PUT'])
 @jwt_required
+@admin_required()
 def update_room(room_id):
     """ This is api for the room management edit the room.
 
@@ -76,6 +82,10 @@ def update_room(room_id):
     except Exception as ex:
         return send_error(message=str(ex))
 
+    _property = client.db.properties.find_one({"_id": json_data.get("property_id", None)})
+    if not _property:
+        return send_error(message="Not found the property")
+
     keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
     data = {}
     for key in keys:
@@ -96,6 +106,7 @@ def update_room(room_id):
 
 @api.route('/<room_id>', methods=['DELETE'])
 @jwt_required
+@admin_required()
 def delete_room(room_id):
     """ This api for the room management deletes the rooms.
 

@@ -3,6 +3,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
 
+from app.decorators import admin_required
 from app.schema.schema_validator import property_validator
 from app.utils import send_result, send_error
 from app.extensions import client
@@ -12,6 +13,7 @@ api = Blueprint('properties', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
+@admin_required()
 def create_property():
     """ This is api for the property management registers property.
 
@@ -36,6 +38,14 @@ def create_property():
     keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
             "city_id", "id_property_type"]
 
+    property_type = client.db.properties_type.find_one({"_id": json_data.get("id_property_type", None)})
+    if not property_type:
+        return send_error(message="Not found the property type")
+
+    city = client.db.cities.find_one({"_id": json_data.get("city_id", None)})
+    if not city:
+        return send_error(message="Not found the city")
+
     property_id = str(ObjectId())
     new_property = {
         "_id": property_id
@@ -55,6 +65,7 @@ def create_property():
 
 @api.route('/<property_id>', methods=['PUT'])
 @jwt_required
+@admin_required()
 def update_property(property_id):
     """ This is api for the property management edit the property.
 
@@ -79,6 +90,15 @@ def update_property(property_id):
 
     keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
             "city_id", "id_property_type"]
+
+    property_type = client.db.properties_type.find_one({"_id": json_data.get("id_property_type", None)})
+    if not property_type:
+        return send_error(message="Not found the property type")
+
+    city = client.db.cities.find_one({"_id": json_data.get("city_id", None)})
+    if not city:
+        return send_error(message="Not found the city")
+
     data = {}
     for key in keys:
         if key in json_data:
@@ -98,6 +118,7 @@ def update_property(property_id):
 
 @api.route('/<property_id>', methods=['DELETE'])
 @jwt_required
+@admin_required()
 def delete_property(property_id):
     """ This api for the property management deletes the properties.
 

@@ -3,6 +3,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
 
+from app.decorators import admin_required
 from app.schema.schema_validator import city_validator
 from app.utils import send_result, send_error
 from app.extensions import client
@@ -12,6 +13,7 @@ api = Blueprint('cities', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
+@admin_required()
 def create_city():
     """ This is api for the city management create city.
 
@@ -54,6 +56,7 @@ def create_city():
 
 @api.route('/<city_id>', methods=['PUT'])
 @jwt_required
+@admin_required()
 def update_city(city_id):
     """ This is api for the city management edit the city.
 
@@ -96,6 +99,7 @@ def update_city(city_id):
 
 @api.route('/<city_id>', methods=['DELETE'])
 @jwt_required
+@admin_required()
 def delete_city(city_id):
     """ This api for the city management deletes the cities.
 

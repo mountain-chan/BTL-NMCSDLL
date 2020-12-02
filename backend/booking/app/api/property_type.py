@@ -3,6 +3,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
 
+from app.decorators import admin_required
 from app.schema.schema_validator import property_type_validator
 from app.utils import send_result, send_error
 from app.extensions import client
@@ -12,6 +13,7 @@ api = Blueprint('properties_type', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
+@admin_required()
 def create_property_type():
     """ This is api for the property_type management create property_type.
 
@@ -54,6 +56,7 @@ def create_property_type():
 
 @api.route('/<property_type_id>', methods=['PUT'])
 @jwt_required
+@admin_required()
 def update_property_type(property_type_id):
     """ This is api for the property_type management edit the property_type.
 
@@ -96,6 +99,7 @@ def update_property_type(property_type_id):
 
 @api.route('/<property_type_id>', methods=['DELETE'])
 @jwt_required
+@admin_required()
 def delete_property_type(property_type_id):
     """ This api for the property_type management deletes the properties_type.
 

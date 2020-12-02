@@ -1,18 +1,29 @@
 user_validator = {
     "type": "object",
     "properties": {
-        "username": {
+        "name": {
             "type": "string",
             "minLength": 1,
             "maxLength": 50
         },
-        "password": {
+        "gender": {
+            "type": "boolean"
+        },
+        "phone": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+        },
+        "email": {
             "type": "string",
             "minLength": 1,
             "maxLength": 50
+        },
+        "is_admin": {
+            "type": "boolean"
         }
     },
-    "required": ["username", "password"]
+    "required": ["name", "gender", "phone", "email"]
 }
 
 password_validator = {
