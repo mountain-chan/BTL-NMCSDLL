@@ -169,7 +169,7 @@ def get_current_user():
     Returns: current user
 
     """
-    return client.db.users.find_one({"_id": get_jwt_identity}, {"password_hash": 0})
+    return client.db.users.find_one({"_id": get_jwt_identity()}, {"password_hash": 0})
 
 
 def generate_auto_id():

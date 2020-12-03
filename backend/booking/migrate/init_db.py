@@ -34,6 +34,10 @@ class Worker:
         users = self.default_data.get('users', {})
         client.db.users.insert_many(users)
 
+    def insert_default_bookings(self):
+        bookings = self.default_data.get('bookings', {})
+        client.db.bookings.insert_many(bookings)
+
 
 if __name__ == '__main__':
     worker = Worker()
@@ -42,3 +46,4 @@ if __name__ == '__main__':
     worker.insert_default_properties()
     worker.insert_default_rooms()
     worker.insert_default_users()
+    worker.insert_default_bookings()

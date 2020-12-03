@@ -156,5 +156,19 @@
         "email": "admin@gmail.com",
         "is_admin": 1
     }
+  ],
+  "bookings": [
+    {
+        "_id": "1",
+        "user_id": "admin_id",
+        "room_id": "1",
+        "date_reservation": 1606962422,
+        "date_check_in": 1607048822,
+        "date_check_out": 1607135222,
+        "service": "2 bữa sáng",
+        "note": "Note",
+        "total": 1000,
+        "is_cancel": false
+    }
   ]
 }

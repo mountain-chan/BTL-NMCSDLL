@@ -169,17 +169,9 @@ property_type_validator = {
 booking_validator = {
     "type": "object",
     "properties": {
-        "user_id": {
-            "type": "string",
-            "maxLength": 50
-        },
         "room_id": {
             "type": "string",
             "maxLength": 50
-        },
-        "date_reservation": {
-            "type": "number",
-            "minimum": 0
         },
         "date_check_in": {
             "type": "number",
@@ -205,6 +197,5 @@ booking_validator = {
             "type": "boolean"
         }
     },
-    "required": ["user_id", "room_id", "date_reservation", "date_check_in", "date_check_out", "service", "note",
-                 "total", "is_cancel"]
+    "required": []
 }

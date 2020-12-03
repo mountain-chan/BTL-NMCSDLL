@@ -270,7 +270,7 @@ def delete_user(user_id):
     if user is None:
         return send_error(message="Not found user!")
 
-    if user["id"] == SUPER_ADMIN_ID:
+    if user["_id"] == SUPER_ADMIN_ID:
         return send_error(message="Cannot delete this user")
 
     # Also delete all children foreign key
