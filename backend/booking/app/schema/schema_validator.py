@@ -78,6 +78,7 @@ property_validator = {
         "is_near_beach": {
             "type": "number",
             "minimum": 0,
+            "maximum": 1
         },
         "rank": {
             "type": "number",
