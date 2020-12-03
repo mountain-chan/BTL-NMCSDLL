@@ -2,13 +2,12 @@ from bson import ObjectId
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from jsonschema import validate
-from marshmallow import fields
 from werkzeug.security import check_password_hash
 
 from app.decorators import admin_required
 from app.enums import SUPER_ADMIN_ID
-from app.schema.schema_validator import user_validator
-from app.utils import parse_req, FieldString, send_result, send_error, hash_password, get_datetime_now, \
+from app.schema.schema_validator import user_validator, password_validator
+from app.utils import send_result, send_error, hash_password, get_datetime_now, \
     is_password_contain_space, revoke_all_token2, revoke_all_token, get_current_user
 from app.extensions import logger, client
 
@@ -28,26 +27,13 @@ def create_user():
         Examples::
     """
 
-    params = {
-        'username': FieldString(requirement=True),
-        'password': FieldString(requirement=True),
-        'name': FieldString(requirement=True),
-        'gender': fields.Boolean(),
-        'phone': FieldString(requirement=True),
-        'email': FieldString(requirement=True),
-        'is_admin': fields.Boolean()
-    }
-
     try:
-        json_data = parse_req(params)
+        json_data = request.get_json()
+        # Check valid params
+        validate(instance=json_data, schema=user_validator)
 
         username = json_data.get('username', None).strip()
         password = json_data.get('password', None)
-        name = json_data.get('name', None)
-        gender = json_data.get('gender', True)
-        phone = json_data.get('phone', None)
-        email = json_data.get('email', None)
-        is_admin = json_data.get('is_admin', False)
     except Exception as ex:
         logger.error('{} Parameters error: '.format(get_datetime_now().strftime('%Y-%b-%d %H:%M:%S')) + str(ex))
         return send_error(message="Parameters error: " + str(ex))
@@ -59,17 +45,17 @@ def create_user():
     if is_password_contain_space(password):
         return send_error(message='Password cannot contain spaces')
 
+    keys = ["username", "name", "gender", "phone", "email", "is_admin"]
     user_id = str(ObjectId())
     new_user = {
-        '_id': user_id,
-        'username': username,
-        'password_hash': hash_password(password),
-        'name': name,
-        'gender': gender,
-        'phone': phone,
-        'email': email,
-        'is_admin': is_admin
+        "_id": user_id,
+        'password_hash': hash_password(password)
     }
+
+    for key in keys:
+        if key in json_data:
+            new_user[key] = json_data.get(key)
+
     try:
         client.db.users.insert_one(new_user)
     except Exception as ex:
@@ -176,12 +162,10 @@ def change_password():
     user_id = get_jwt_identity()
     current_user = client.db.users.find_one({"_id": user_id})
 
-    params = {
-        'current_password': FieldString(requirement=True),
-        'new_password': FieldString(requirement=True)
-    }
     try:
-        json_data = parse_req(params)
+        json_data = request.get_json()
+        # Check valid params
+        validate(instance=json_data, schema=password_validator)
 
         current_password = json_data.get('current_password', None)
         new_password = json_data.get('new_password', None)
@@ -227,11 +211,11 @@ def reset_password(user_id):
     if user is None:
         return send_error(message="Not found user!")
 
-    params = {
-        'new_password': FieldString(requirement=True)
-    }
     try:
-        json_data = parse_req(params)
+        json_data = request.get_json()
+        # Check valid params
+        validate(instance=json_data, schema=password_validator)
+
         new_password = json_data.get('new_password', None)
     except Exception as ex:
         logger.error('{} Parameters error: '.format(get_datetime_now().strftime('%Y-%b-%d %H:%M:%S')) + str(ex))

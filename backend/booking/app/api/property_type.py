@@ -8,7 +8,7 @@ from app.schema.schema_validator import property_type_validator
 from app.utils import send_result, send_error
 from app.extensions import client
 
-api = Blueprint('properties_type', __name__)
+api = Blueprint('property_types', __name__)
 
 
 @api.route('', methods=['POST'])
@@ -31,7 +31,7 @@ def create_property_type():
     except Exception as ex:
         return send_error(message=str(ex))
 
-    property_type_duplicated = client.db.properties_type.find_one({"name": json_data.get("name", None)})
+    property_type_duplicated = client.db.property_types.find_one({"name": json_data.get("name", None)})
     if property_type_duplicated:
         return send_error(message="The property_type name has existed!")
 
@@ -47,7 +47,7 @@ def create_property_type():
             new_property_type[key] = json_data.get(key)
 
     try:
-        client.db.properties_type.insert_one(new_property_type)
+        client.db.property_types.insert_one(new_property_type)
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
@@ -68,7 +68,7 @@ def update_property_type(property_type_id):
 
     """
 
-    property_type = client.db.properties_type.find_one({"_id": property_type_id})
+    property_type = client.db.property_types.find_one({"_id": property_type_id})
     if property_type is None:
         return send_error(message="Not found property_type!")
 
@@ -90,7 +90,7 @@ def update_property_type(property_type_id):
     }
 
     try:
-        client.db.properties_type.update_many({"_id": property_type_id}, new_values)
+        client.db.property_types.update_many({"_id": property_type_id}, new_values)
     except Exception as ex:
         return send_error(message="Database error: " + str(ex))
 
@@ -101,19 +101,19 @@ def update_property_type(property_type_id):
 @jwt_required
 @admin_required()
 def delete_property_type(property_type_id):
-    """ This api for the property_type management deletes the properties_type.
+    """ This api for the property_type management deletes the property_types.
 
         Returns:
 
         Examples::
 
     """
-    property_type = client.db.properties_type.find_one({"_id": property_type_id})
+    property_type = client.db.property_types.find_one({"_id": property_type_id})
     if property_type is None:
         return send_error(message="Not found property_type!")
 
     # Also delete all children foreign key
-    client.db.properties_type.delete_one({"_id": property_type_id})
+    client.db.property_types.delete_one({"_id": property_type_id})
 
     return send_result(data=property_type, message="Delete property_type successfully!")
 
@@ -121,7 +121,7 @@ def delete_property_type(property_type_id):
 @api.route('', methods=['GET'])
 @jwt_required
 def get_all_properties_type():
-    """ This api gets all properties_type.
+    """ This api gets all property_types.
 
         Returns:
 
@@ -129,7 +129,7 @@ def get_all_properties_type():
 
     """
 
-    results = client.db.properties_type.find({})
+    results = client.db.property_types.find({})
     return send_result(data=list(results))
 
 
@@ -144,7 +144,7 @@ def get_property_type_by_id(property_type_id):
 
     """
 
-    property_type = client.db.properties_type.find_one({"_id": property_type_id})
+    property_type = client.db.property_types.find_one({"_id": property_type_id})
     if not property_type:
         return send_error(message="property_type not found.")
     return send_result(data=property_type)

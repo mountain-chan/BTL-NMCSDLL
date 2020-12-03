@@ -1,13 +1,20 @@
 user_validator = {
     "type": "object",
     "properties": {
+        "password": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 50
+        },
         "name": {
             "type": "string",
             "minLength": 1,
             "maxLength": 50
         },
         "gender": {
-            "type": "boolean"
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
         },
         "phone": {
             "type": "string",
@@ -20,7 +27,9 @@ user_validator = {
             "maxLength": 50
         },
         "is_admin": {
-            "type": "boolean"
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
         }
     },
     "required": ["name", "gender", "phone", "email"]
@@ -67,7 +76,8 @@ property_validator = {
             "maxLength": 1000
         },
         "is_near_beach": {
-            "type": "boolean"
+            "type": "number",
+            "minimum": 0,
         },
         "rank": {
             "type": "number",
@@ -194,7 +204,9 @@ booking_validator = {
             "minimum": 0
         },
         "is_cancel": {
-            "type": "boolean"
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
         }
     },
     "required": []

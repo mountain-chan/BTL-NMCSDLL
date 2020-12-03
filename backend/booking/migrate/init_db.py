@@ -19,8 +19,8 @@ class Worker:
         client.db.cities.insert_many(cities)
 
     def insert_default_properties_type(self):
-        properties_type = self.default_data.get('properties_type', {})
-        client.db.properties_type.insert_many(properties_type)
+        property_types = self.default_data.get('property_types', {})
+        client.db.property_types.insert_many(property_types)
 
     def insert_default_properties(self):
         properties = self.default_data.get('properties', {})
