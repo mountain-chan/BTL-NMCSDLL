@@ -15,8 +15,6 @@ api = Blueprint('users', __name__)
 
 
 @api.route('', methods=['POST'])
-@jwt_required
-@admin_required()
 def create_user():
     """ This is api for the user management registers user.
 
@@ -197,6 +195,7 @@ def change_password():
 
 @api.route('/<user_id>/reset_password', methods=['PUT'])
 @jwt_required
+@admin_required()
 def reset_password(user_id):
     """ This api for the user management resets the users password.
 
@@ -242,6 +241,7 @@ def reset_password(user_id):
 
 @api.route('/<user_id>', methods=['DELETE'])
 @jwt_required
+@admin_required()
 def delete_user(user_id):
     """ This api for the user management deletes the users.
 

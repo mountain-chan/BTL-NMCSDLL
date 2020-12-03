@@ -13,7 +13,6 @@ api = Blueprint('bookings', __name__)
 
 @api.route('', methods=['POST'])
 @jwt_required
-@admin_required()
 def create_booking():
     """ This is api for the booking management create booking.
 
@@ -78,7 +77,6 @@ def create_booking():
 
 @api.route('/<booking_id>', methods=['PUT'])
 @jwt_required
-@admin_required()
 def update_booking(booking_id):
     """ This is api for the booking management edit the booking.
 
