@@ -75,7 +75,7 @@ def create_user():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create user successfully!")
+    return send_result(data=new_user, message="Create user successfully!")
 
 
 @api.route('/<user_id>', methods=['PUT'])

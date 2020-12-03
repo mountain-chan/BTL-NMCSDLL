@@ -73,7 +73,7 @@ def create_booking():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create booking successfully!")
+    return send_result(data=new_booking, message="Create booking successfully!")
 
 
 @api.route('/<booking_id>', methods=['PUT'])

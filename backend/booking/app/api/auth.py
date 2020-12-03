@@ -60,6 +60,8 @@ def login():
         'refresh_token': refresh_token,
         'username': user["username"],
         'is_admin': user["is_admin"],
+        'user_id': user["_id"],
+        'name': user["name"],
     }
 
     return send_result(data=data, message="Logged in successfully!")
