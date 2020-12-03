@@ -126,7 +126,7 @@
         "phone": "0366918587",
         "distance_from_center": 1045,
         "description": "Nằm ở quận Hoàn Kiếm, thuộc thành phố Hà Nội, The Light Hotel chỉ cách 300 m từ Nhà Thờ Lớn. Với các phòng nghỉ thanh lịch và hiện đại, khách sạn có hồ bơi ngoài trời cùng tầm nhìn ra vườn.",
-        "is_near_beach": false,
+        "is_near_beach": 0,
         "rank": 5,
         "meal": 2,
         "city_id": "1",
@@ -168,7 +168,7 @@
         "service": "2 bữa sáng",
         "note": "Note",
         "total": 1000,
-        "is_cancel": false
+        "is_cancel": 0
     }
   ]
 }
