@@ -38,7 +38,7 @@ def create_property():
     keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
             "city_id", "id_property_type"]
 
-    property_type = client.db.properties_type.find_one({"_id": json_data.get("id_property_type", None)})
+    property_type = client.db.property_types.find_one({"_id": json_data.get("id_property_type", None)})
     if not property_type:
         return send_error(message="Not found the property type")
 
@@ -91,7 +91,7 @@ def update_property(property_id):
     keys = ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
             "city_id", "id_property_type"]
 
-    property_type = client.db.properties_type.find_one({"_id": json_data.get("id_property_type", None)})
+    property_type = client.db.property_types.find_one({"_id": json_data.get("id_property_type", None)})
     if not property_type:
         return send_error(message="Not found the property type")
 
