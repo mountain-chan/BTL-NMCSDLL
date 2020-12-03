@@ -1,174 +1,1084 @@
 {
-  "cities": [
-    {
-      "_id": "1",
-      "name": "Hà Nội",
-      "description": "Thành Phố Hà Nội",
-      "image": "files/city/HaNoi.jpg"
-    },
-    {
-      "_id": "2",
-      "name": "TP. Hồ Chí Minh",
-      "description": "Thành Phố Hồ Chí Minh",
-      "image": "files/city/HoChiMinh.jpg"
-    },
-    {
-      "_id": "3",
-      "name": "Đà Nẵng",
-      "description": "Thành Phố Đà Nẵng",
-      "image": "files/city/DaNang.jpg"
-    },
-    {
-      "_id": "4",
-      "name": "Đà Lạt",
-      "description": "Thành Phố Đà Lạt",
-      "image": "files/city/DaLat.jpg"
-    },
-    {
-      "_id": "5",
-      "name": "Hội An",
-      "description": "Thành Phố Hội An",
-      "image": "files/city/HoiAn.jpg"
-    },
-    {
-      "_id": "6",
-      "name": "Phú Quốc",
-      "description": "Thành Phố Phú Quốc",
-      "image": "files/city/PhuQuoc.jpg"
-    },
-    {
-      "_id": "7",
-      "name": "Sapa",
-      "description": "Thành Phố Sapa",
-      "image": "files/city/Sapa.jpg"
-    },
-    {
-      "_id": "8",
-      "name": "Huế",
-      "description": "Thành Phố Huế",
-      "image": "files/city/Hue.jpg"
-    },
-    {
-      "_id": "9",
-      "name": "Nha Trang",
-      "description": "Thành Phố Nha Trang",
-      "image": "files/city/NhaTrang.jpg"
-    },
-    {
-      "_id": "10",
-      "name": "Buôn Ma Thuột",
-      "description": "Thành Phố Buôn Ma Thuột",
-      "image": "files/city/BuonMaThuot.jpg"
-    }
-  ],
-  "property_types": [
-    {
-      "_id": "1",
-      "name": "Khách sạn",
-      "description": "Khách sạn",
-      "image": "files/property_type/KhachSan.jpg"
-    },
-    {
-      "_id": "2",
-      "name": "Biệt thự",
-      "description": "Biệt thự",
-      "image": "files/property_type/BietThu.jpg"
-    },
-    {
-      "_id": "3",
-      "name": "Resort",
-      "description": "Resort",
-      "image": "files/property_type/Resort.jpg"
-    },
-    {
-      "_id": "4",
-      "name": "Nhà khách",
-      "description": "Nhà khách",
-      "image": "files/property_type/NhaKhach.jpg"
-    }
-    ,
-    {
-      "_id": "5",
-      "name": "Nhà trọ",
-      "description": "Nhà trọ",
-      "image": "files/property_type/NhaTro.jpg"
-    },
-    {
-      "_id": "6",
-      "name": "Thôn dã",
-      "description": "Thôn dã",
-      "image": "files/property_type/ThonDa.jpg"
-    },
-    {
-      "_id": "7",
-      "name": "Nhà gỗ",
-      "description": "Nhà gỗ",
-      "image": "files/property_type/NhaGo.jpg"
-    },
-    {
-      "_id": "8",
-      "name": "Căn hộ",
-      "description": "Căn hộ",
-      "image": "files/property_type/CanHo.jpg"
-    },
-    {
-      "_id": "9",
-      "name": "Glamping",
-      "description": "Glamping",
-      "image": "files/property_type/Glamping.jpg"
-    }
-  ],
-  "properties": [
-    {
-        "_id": "1",
-        "name": "The Light Hotel",
-        "address": "79 Tran Cung, Quận Từ Liêm, Hà Nội",
-        "phone": "0366918587",
-        "distance_from_center": 1045,
-        "description": "Nằm ở quận Hoàn Kiếm, thuộc thành phố Hà Nội, The Light Hotel chỉ cách 300 m từ Nhà Thờ Lớn. Với các phòng nghỉ thanh lịch và hiện đại, khách sạn có hồ bơi ngoài trời cùng tầm nhìn ra vườn.",
-        "is_near_beach": 0,
-        "rank": 5,
-        "meal": 2,
-        "city_id": "1",
-        "id_property_type": "1"
-    }
-  ],
-  "rooms": [
-    {
-        "_id": "1",
-        "name": "Phòng Tiêu chuẩn",
-        "acreage": 15,
-        "price": 350,
-        "facility": "1 Giường đơn",
-        "description": "Phòng này có một số trang thiết bị đơn giản.",
-        "bed_type": 0,
-        "property_id": "1"
-    }
-  ],
-  "users": [
-    {
-        "_id": "admin_id",
-        "username": "admin",
-        "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
-        "name": "Admin",
-        "gender": 1,
-        "phone": "0123456789",
-        "email": "admin@gmail.com",
-        "is_admin": 1
-    }
-  ],
-  "bookings": [
-    {
-        "_id": "1",
-        "user_id": "admin_id",
-        "room_id": "1",
-        "date_reservation": 1606962422,
-        "date_check_in": 1607048822,
-        "date_check_out": 1607135222,
-        "service": "2 bữa sáng",
-        "note": "Note",
-        "total": 1000,
-        "is_cancel": 0
-    }
-  ]
+    "cities": [
+        {
+            "_id": "1",
+            "name": "Hà Nội",
+            "description": "Thành Phố Hà Nội",
+            "image": "Content/Images/ThanhPho/HaNoi.jpg"
+        },
+        {
+            "_id": "2",
+            "name": "TP. Hồ Chí Minh",
+            "description": "Thành Phố Hồ Chí Minh",
+            "image": "Content/Images/ThanhPho/HoChiMinh.jpg"
+        },
+        {
+            "_id": "3",
+            "name": "Đà Nẵng",
+            "description": "Thành Phố Đà Nẵng",
+            "image": "Content/Images/ThanhPho/DaNang.jpg"
+        },
+        {
+            "_id": "4",
+            "name": "Đà Lạt",
+            "description": "Thành Phố Đà Lạt",
+            "image": "Content/Images/ThanhPho/DaLat.jpg"
+        },
+        {
+            "_id": "5",
+            "name": "Hội An",
+            "description": "Thành Phố Hội An",
+            "image": "Content/Images/ThanhPho/HoiAn.jpg"
+        },
+        {
+            "_id": "6",
+            "name": "Phú Quốc",
+            "description": "Thành Phố Phú Quốc",
+            "image": "Content/Images/ThanhPho/PhuQuoc.jpg"
+        },
+        {
+            "_id": "7",
+            "name": "Sapa",
+            "description": "Thành Phố Sapa",
+            "image": "Content/Images/ThanhPho/Sapa.jpg"
+        },
+        {
+            "_id": "8",
+            "name": "Huế",
+            "description": "Thành Phố Huế",
+            "image": "Content/Images/ThanhPho/Hue.jpg"
+        },
+        {
+            "_id": "9",
+            "name": "Nha Trang",
+            "description": "Thành Phố Nha Trang",
+            "image": "Content/Images/ThanhPho/NhaTrang.jpg"
+        },
+        {
+            "_id": "10",
+            "name": "Buôn Ma Thuột",
+            "description": "Thành Phố Buôn Ma Thuột",
+            "image": "Content/Images/ThanhPho/BuonMaThuot.jpg"
+        }
+    ],
+    "property_types": [
+        {
+            "_id": "1",
+            "name": "Khách sạn",
+            "description": "Khách sạn",
+            "image": "Content/Images/LoaiKhachSan/KhachSan.jpg"
+        },
+        {
+            "_id": "2",
+            "name": "Biệt thự",
+            "description": "Biệt thự",
+            "image": "Content/Images/LoaiKhachSan/BietThu.jpg"
+        },
+        {
+            "_id": "3",
+            "name": "Resort",
+            "description": "Resort",
+            "image": "Content/Images/LoaiKhachSan/Resort.jpg"
+        },
+        {
+            "_id": "4",
+            "name": "Nhà khách",
+            "description": "Nhà khách",
+            "image": "Content/Images/LoaiKhachSan/NhaKhach.jpg"
+        },
+        {
+            "_id": "5",
+            "name": "Nhà trọ",
+            "description": "Nhà trọ",
+            "image": "Content/Images/LoaiKhachSan/NhaTro.jpg"
+        },
+        {
+            "_id": "6",
+            "name": "Thôn dã",
+            "description": "Thôn dã",
+            "image": "Content/Images/LoaiKhachSan/ThonDa.jpg"
+        },
+        {
+            "_id": "7",
+            "name": "Nhà gỗ",
+            "description": "Nhà gỗ",
+            "image": "Content/Images/LoaiKhachSan/NhaGo.jpg"
+        },
+        {
+            "_id": "8",
+            "name": "Căn hộ",
+            "description": "Căn hộ",
+            "image": "Content/Images/LoaiKhachSan/CanHo.jpg"
+        },
+        {
+            "_id": "9",
+            "name": "Glamping",
+            "description": "Glamping",
+            "image": "Content/Images/LoaiKhachSan/Glamping.jpg"
+        }
+    ],
+    "properties": [
+        {
+            "_id": "1",
+            "name": "The Light Hotel",
+            "address": "79 Tran Cung, Quận Từ Liêm, Hà Nội",
+            "phone": "0366918587",
+            "distance_from_center": 1045,
+            "description": "Nằm ở quận Hoàn Kiếm, thuộc thành phố Hà Nội, The Light Hotel chỉ cách 300 m từ Nhà Thờ Lớn. Với các phòng nghỉ thanh lịch và hiện đại, khách sạn có hồ bơi ngoài trời cùng tầm nhìn ra vườn.",
+            "is_near_beach": 0,
+            "rank": 5,
+            "meal": 2,
+            "city_id": "1",
+            "id_property_type": "1"
+        },
+        {
+            "_id": "2",
+            "name": "Rising Dragon Palace Hotel",
+            "address": "24 Hang Ga Street, Quận Ba Đình, Hà Nội",
+            "phone": "0328758787",
+            "distance_from_center": 2455,
+            "description": "Rising Dragon Palace Hotel cách Hồ Hoàn Kiếm và Nhà hát múa rối nước chỉ vài dãy nhà. Khách sạn cung cấp chỗ đỗ xe cũng như Wi-Fi miễn phí và bữa sáng tự chọn miễn phí.",
+            "is_near_beach": 0,
+            "rank": 4,
+            "meal": 4,
+            "city_id": "1",
+            "id_property_type": "2"
+        },
+        {
+            "_id": "3",
+            "name": "Classic Street Hotel",
+            "address": "41 Hang Be Street, Quận Hoàn Kiếm, Hà Nội",
+            "phone": "0365618587",
+            "distance_from_center": 1410,
+            "description": "Classic Street Hotel tọa lạc trên Phố cổ Hàng Bè ở thành phố Hà Nội, nằm trong bán kính 5 phút đi bộ từ Hồ Hoàn Kiếm, Đền Ngọc Sơn và Nhà hát Múa rối Nước Thăng Long. Khách sạn có lối trang trí kiểu Việt Nam truyền thống, Wi-Fi miễn phí và nhà hàng trong khuôn viên phục vụ các món ăn Việt Nam.",
+            "is_near_beach": 0,
+            "rank": 5,
+            "meal": 1,
+            "city_id": "1",
+            "id_property_type": "3"
+        },
+        {
+            "_id": "4",
+            "name": "O Gallery Majestic Hotel",
+            "address": "38 Tran Phu, Quận Bắc Từ Liêm, Hà Nội",
+            "phone": "0366916587",
+            "distance_from_center": 8812,
+            "description": "Tọa lạc tại Khu phố Pháp yên bình, O Gallery Majestic Hotel có hồ bơi ngoài trời, phòng tập thể dục và vườn. Khách sạn nằm trong bán kính 700 m từ Nhà thờ Lớn Hà Nội, Bảo tàng Lịch sử Quân sự Việt Nam, Cột cờ Hà Nội và Hoàng thành Thăng Long. Du khách có thể truy cập Wi-Fi miễn phí.",
+            "is_near_beach": 0,
+            "rank": 5,
+            "meal": 4,
+            "city_id": "1",
+            "id_property_type": "4"
+        },
+        {
+            "_id": "5",
+            "name": "Hanoi Allure Hotel",
+            "address": "52 Dao Duy Tu, Quận Hai Bà Trưng, Hà Nội",
+            "phone": "0366918891",
+            "distance_from_center": 1341,
+            "description": "Hanoi Allure Hotel tọa lạc tại vị trí lý tưởng ở quận Hoàn Kiếm của thành phố Hà Nội, cách Ô Quan Chưởng 200 m, Chợ Đồng Xuân 700 m và Nhà hát múa rối nước Thăng Long 800 m. Trong số các tiện nghi của chỗ nghỉ này có nhà hàng, lễ tân 24 giờ, dịch vụ phòng và WiFi miễn phí trong toàn bộ khuôn viên. Chỗ nghỉ cũng cung cấp sảnh khách chung, trung tâm dịch vụ doanh nhân và dịch vụ thu đổi ngoại tệ cho khách.",
+            "is_near_beach": 0,
+            "rank": 3,
+            "meal": 3,
+            "city_id": "1",
+            "id_property_type": "2"
+        },
+        {
+            "_id": "6",
+            "name": "HCM Cristina Hotel & Travel",
+            "address": "40 Phat Loc, Quận Tân Bình, TP. Hồ Chí Minh",
+            "phone": "0366915457",
+            "distance_from_center": 1778,
+            "description": "Có vị trí thuận tiện ở quận Tân Bình thuộc thành phố Hồ Chí Minh, HCM Cristina Hotel & Travel nằm cách Ô Quan Chưởng 500 m, Nhà hát múa rối nước Thăng Long 600 m và Chợ Đồng Xuân chưa đến 1 km. Trong số các tiện nghi của khách sạn này có nhà hàng, lễ tân 24 giờ, dịch vụ phòng và Wi-Fi miễn phí, Khách sạn cung cấp các phòng gia đình.",
+            "is_near_beach": 1,
+            "rank": 5,
+            "meal": 4,
+            "city_id": "2",
+            "id_property_type": "5"
+        },
+        {
+            "_id": "7",
+            "name": "Dola Hostel",
+            "address": "205/26 Bui Vien, Quận 1, TP. Hồ Chí Minh",
+            "phone": "0366956527",
+            "distance_from_center": 504,
+            "description": "Tọa lạc tại Thành phố Hồ Chí Minh, cách Bảo tàng Mỹ thuật trong vòng 1,3 km và trung tâm thương mại Takashimaya Việt Nam 1,6 km, Dola Hostel cung cấp chỗ nghỉ với sảnh khách chung đồng thời miễn phí WiFi cũng như chỗ đỗ xe riêng cho khách lái xe. Chỗ nghỉ này còn có dịch vụ phòng và sân hiên. Tại đây cũng có lễ tân 24 giờ, bếp chung và dịch vụ thu đổi ngoại tệ cho khách.",
+            "is_near_beach": 1,
+            "rank": 2,
+            "meal": 3,
+            "city_id": "2",
+            "id_property_type": "6"
+        },
+        {
+            "_id": "8",
+            "name": "9 Hostel and Bar",
+            "address": "9 Bui Thi Xuan street, Quận 10, TP. Hồ Chí Minh",
+            "phone": "0365456287",
+            "distance_from_center": 150,
+            "description": "Chỉ cách Phố đi bộ Bùi Viện nổi tiếng một quãng đi bộ ngắn, 9 Hostel and Rooftop cung cấp các phòng ngủ tập thể và phòng riêng bắt mắt với truy cập Wi-Fi miễn phí. Tọa lạc tại trung tâm Quận 1 sôi động ở Thành phố Hồ Chí Minh, nhà trọ này có lối đi dễ dàng đến hầu hết các địa danh chính của thành phố như Chợ Bến Thành, Nhà hát Thành phố, Bảo tàng Mỹ thuật và Nhà thờ Đức Bà.",
+            "is_near_beach": 0,
+            "rank": 3,
+            "meal": 4,
+            "city_id": "2",
+            "id_property_type": "7"
+        },
+        {
+            "_id": "9",
+            "name": "Town House 23 Saigon",
+            "address": "23 Dang Thi Nhu, Quận 2, TP. Hồ Chí Minh",
+            "phone": "0366454787",
+            "distance_from_center": 188,
+            "description": "Chỉ cách Chợ Bến Thành nổi tiếng 300 m, Town House 23 Saigon cung cấp các phòng được bài trí trang nhã với phòng tắm riêng. Khách cũng được truy cập Wi-Fi miễn phí.",
+            "is_near_beach": 1,
+            "rank": 4,
+            "meal": 3,
+            "city_id": "4",
+            "id_property_type": "8"
+        },
+        {
+            "_id": "10",
+            "name": "Victory Airport Hotel",
+            "address": "96 Yên Thế, Quận Tân Bình, TP. Hồ Chí Minh",
+            "phone": "0366475187",
+            "distance_from_center": 3416,
+            "description": "Nằm ở thành phố Hồ Chí Minh, cách chợ Tân Định 6 km, Victory Airport Hotel có chỗ nghỉ với quầy bar, chỗ đỗ xe riêng miễn phí, sảnh khách chung và sân hiên. Khách sạn cung cấp WiFi miễn phí, đồng thời nằm trong bán kính khoảng 6 km từ Chùa Giác Lâm và 7 km từ Bảo tàng Chứng tích Chiến tranh. Tại đây cũng cung cấp dịch vụ lễ tân 24 giờ, dịch vụ phòng và dịch vụ thu đổi ngoại tệ cho khách.",
+            "is_near_beach": 1,
+            "rank": 5,
+            "meal": 1,
+            "city_id": "2",
+            "id_property_type": "9"
+        },
+        {
+            "_id": "11",
+            "name": "Da Nang Sunlit Sea Hotel & Apartment",
+            "address": "41-42 Do Bi Street, Đà Nẵng",
+            "phone": "0374775187",
+            "distance_from_center": 3005,
+            "description": "Tọa lạc tại Đà Nẵng, cách 2,7 km từ Cầu tàu Tình yêu, Da Nang Sunlit Sea Hotel & Apartment cung cấp chỗ nghỉ với nhà hàng, chỗ đỗ xe riêng miễn phí, hồ bơi ngoài trời và quán bar. Khách sạn 4 sao này có sảnh khách chung và phòng nghỉ gắn máy điều hòa đi kèm WiFi miễn phí cùng phòng tắm riêng. Chỗ nghỉ còn có lễ tân 24 giờ, bếp chung và dịch vụ thu đổi ngoại tệ cho khách.",
+            "is_near_beach": 1,
+            "rank": 4,
+            "meal": 3,
+            "city_id": "3",
+            "id_property_type": "5"
+        },
+        {
+            "_id": "12",
+            "name": "OYO 403 Bao Quyen",
+            "address": "35 Tran Hung Dao, Đà Nẵng, Việt Nam",
+            "phone": "0366475187",
+            "distance_from_center": 1210,
+            "description": "Khách sạn chỉ cách thành phố Đà Nẵng và Bãi biển Mỹ Khê nổi tiếng 2 km. Sân bay Quốc tế Đà Nẵng và Ga Đà Nẵng nằm ở vị trí thuận tiện cách nơi đây 3 km trong khi khách đi 30 km là tới Phố Cổ Hội An.",
+            "is_near_beach": 1,
+            "rank": 2,
+            "meal": 3,
+            "city_id": "3",
+            "id_property_type": "1"
+        },
+        {
+            "_id": "13",
+            "name": "Sunflower Hotel",
+            "address": "Corner Vo Van Kiet - Ho Nghinh, Đà Nẵng",
+            "phone": "0366000187",
+            "distance_from_center": 4332,
+            "description": "Phòng nghỉ của khách sạn được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, ấm đun nước, chậu rửa vệ sinh (bidet), máy sấy tóc và bàn làm việc. Phòng tắm riêng đi kèm vòi sen và đồ vệ sinh cá nhân miễn phí. Các phòng cũng có tầm nhìn ra hồ và tủ quần áo.",
+            "is_near_beach": 1,
+            "rank": 3,
+            "meal": 1,
+            "city_id": "4",
+            "id_property_type": "2"
+        },
+        {
+            "_id": "14",
+            "name": "Koceano Resort Villas",
+            "address": "Võ Nguyên Giáp Villas S21 - Furama Villas, Đà Nẵng, Việt Nam",
+            "phone": "0366046182",
+            "distance_from_center": 250,
+            "description": "Offering lake or pool views, each unit comes with a kitchen, a satellite flat-screen TV and Blu-ray player, desk, a washing machine and a private bathroom with hot tub and a hairdryer. All units are air conditioned and include a seating and/or dining area.",
+            "is_near_beach": 1,
+            "rank": 5,
+            "meal": 4,
+            "city_id": "3",
+            "id_property_type": "3"
+        },
+        {
+            "_id": "15",
+            "name": "DNBV - BeachVillas",
+            "address": "55 Cẩm Phô, Đà Nẵng",
+            "phone": "0344475162",
+            "distance_from_center": 2155,
+            "description": "Nằm cách Ngũ Hành Sơn 5 km, DNBV - BeachVillas có chỗ nghỉ, nhà hàng, hồ bơi ngoài trời, trung tâm thể dục và quán bar. Biệt thự này cung cấp cả WiFi lẫn chỗ đỗ xe riêng miễn phí.",
+            "is_near_beach": 0,
+            "rank": 4,
+            "meal": 2,
+            "city_id": "3",
+            "id_property_type": "4"
+        },
+        {
+            "_id": "16",
+            "name": "Lan Phuong Hotel",
+            "address": "60 Phạm Ngũ Lão, Tp. Đà lạt, Tỉnh Lâm Đồng",
+            "phone": "0366445210",
+            "distance_from_center": 345,
+            "description": "Lan Phuong Hotel nằm cách Vườn Hoa Đà Lạt 3 km và Thiền viện Trúc Lâm 5 km. Sân bay gần nhất là sân bay Liên Khương, cách khách sạn 29 km. Khách sạn cung cấp dịch vụ đưa đón sân bay với một khoản phụ phí.",
+            "is_near_beach": 0,
+            "rank": 4,
+            "meal": 2,
+            "city_id": "4",
+            "id_property_type": "5"
+        },
+        {
+            "_id": "17",
+            "name": "Thiên Phúc",
+            "address": "7 Phan Bội Châu, Phường 1, Tp Đà Lạt, Lâm Đồng",
+            "phone": "0366475187",
+            "distance_from_center": 550,
+            "description": "Thiên Phúc nằm cách Công viên Yersin 1,8 km và Vườn Hoa Đà Lạt 3 km. Sân bay gần nhất là sân bay Liên Khương, cách đó 30 km, và chỗ nghỉ cung cấp dịch vụ đưa đón sân bay với một khoản phụ phí.",
+            "is_near_beach": 0,
+            "rank": 1,
+            "meal": 0,
+            "city_id": "4",
+            "id_property_type": "6"
+        },
+        {
+            "_id": "18",
+            "name": "Hotel Colline",
+            "address": "10 Phan Boi Chau Street, Hà Nội",
+            "phone": "0344444447",
+            "distance_from_center": 145,
+            "description": "Các phòng tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, ấm đun nước, chậu rửa vệ sinh, đồ vệ sinh cá nhân miễn phí, bàn làm việc, phòng tắm riêng và tầm nhìn ra quang cảnh thành phố. Ngoài ra còn có tủ quần áo.",
+            "is_near_beach": 0,
+            "rank": 4,
+            "meal": 3,
+            "city_id": "1",
+            "id_property_type": "7"
+        },
+        {
+            "_id": "19",
+            "name": "Rosemary Studio Dalat",
+            "address": "29 Đường Mạc Đĩnh Chi, Đà Lạt",
+            "phone": "0366542888",
+            "distance_from_center": 1015,
+            "description": "Rosemary Studio Dalat nằm ở thành phố Đà Lạt, cách Quảng trường Lâm Viên 2 km và Hồ Xuân Hương 2,2 km. Căn hộ này có chỗ nghỉ với sảnh khách chung, WiFi miễn phí, lễ tân 24 giờ, bếp chung và khu vườn.",
+            "is_near_beach": 0,
+            "rank": 5,
+            "meal": 4,
+            "city_id": "4",
+            "id_property_type": "8"
+        },
+        {
+            "_id": "20",
+            "name": "The Luxe Da Lat ",
+            "address": "17 bis duong 3/4, Đà Lạt",
+            "phone": "0366475400",
+            "distance_from_center": 2550,
+            "description": "Nằm ở thành phố Đà Lạt, cách Hồ Xuân Hương 1,3 km, The Luxe Da Lat cung cấp chỗ nghỉ với nhà hàng, chỗ đỗ xe riêng miễn phí, sảnh khách chung và khu vườn. Trong số các tiện nghi của khách sạn này còn có lễ tân 24 giờ, dịch vụ phòng cũng như Wi-Fi miễn phí trong toàn bộ khuôn viên. Khách sạn có các phòng gia đình.",
+            "is_near_beach": 1,
+            "rank": 3,
+            "meal": 2,
+            "city_id": "4",
+            "id_property_type": "9"
+        },
+        {
+            "_id": "21",
+            "name": "Acacia Heritage Hotel",
+            "address": "54 Nguyen Tri Phuong , Cẩm Nam, Hội An",
+            "phone": "0444405427",
+            "distance_from_center": 2200,
+            "description": "Acacia Heritage Hotel cách Hội quán Triều Châu cũng như Bảo tàng Lịch sử và Văn hoá Hội An 9 phút đi bộ. Sân bay gần nhất là sân bay quốc tế Đà Nẵng, cách đó 50 phút lái xe.",
+            "is_near_beach": 1,
+            "rank": 4,
+            "meal": 2,
+            "city_id": "5",
+            "id_property_type": "1"
+        },
+        {
+            "_id": "22",
+            "name": "Tribee Ede Hostel & Bar",
+            "address": "30 Ba Trieu, Cẩm Phô, Hà Nội",
+            "phone": "0361278654",
+            "distance_from_center": 1158,
+            "description": "Chỉ cách khu Phố Cổ và chợ địa phương 5 phút đi bộ, Tribee Ede tận hưởng vị trí yên tĩnh được bao quanh bởi thiên nhiên. Nơi đây có WiFi miễn phí trong toàn bộ khuôn viên.",
+            "is_near_beach": 0,
+            "rank": 0,
+            "meal": 0,
+            "city_id": "1",
+            "id_property_type": "2"
+        },
+        {
+            "_id": "23",
+            "name": "The AN retreat Hoi An",
+            "address": "Tống Văn Sương, Cẩm Thanh, Hội An",
+            "phone": "0322848672",
+            "distance_from_center": 3004,
+            "description": "Cách Hội quán Triều Châu 3 km, The AN retreat Hoi An cung cấp chỗ nghỉ, nhà hàng, hồ bơi ngoài trời, quán bar và sảnh khách chung. Du khách có thể truy cập Wi-Fi miễn phí trong toàn bộ khuôn viên.",
+            "is_near_beach": 1,
+            "rank": 4,
+            "meal": 4,
+            "city_id": "5",
+            "id_property_type": "3"
+        },
+        {
+            "_id": "24",
+            "name": "Serenity Villa Hoi An",
+            "address": "91 Ngô Quyền, Minh An, Hội An",
+            "phone": "0366475256",
+            "distance_from_center": 5236,
+            "description": "Providing city views, Serenity Villa Hoi An in Hoi An provides accommodation, an outdoor swimming pool, a bar, a shared lounge, a garden and a terrace. Complimentary WiFi is featured.",
+            "is_near_beach": 0,
+            "rank": 2,
+            "meal": 2,
+            "city_id": "5",
+            "id_property_type": "4"
+        },
+        {
+            "_id": "25",
+            "name": "Hi Guy Homestay",
+            "address": "15/6 Thoai Ngoc Hau, Minh An, Hội An",
+            "phone": "0123456187",
+            "distance_from_center": 6411,
+            "description": " Một trong những chỗ nghỉ bán chạy nhất ở Hội An của chúng tôi! Nằm ở thành phố Hội An, cách Hội quán Quảng Đông 600 m và Chùa Cầu Nhật Bản 800 m, Hi Guy Homestay cung cấp chỗ nghỉ với WiFi cùng xe máy miễn phí, máy điều hòa và sảnh khách chung.",
+            "is_near_beach": 1,
+            "rank": 4,
+            "meal": 3,
+            "city_id": "5",
+            "id_property_type": "5"
+        },
+        {
+            "_id": "26",
+            "name": "LA Beach Hotel",
+            "address": "22 Lê Bình, Đà Nẵng, Việt Nam",
+            "phone": "0346475256",
+            "distance_from_center": 2346,
+            "description": "Providing city views, Serenity Villa Hoi An in Hoi An provides accommodation, an outdoor swimming pool, a bar, a shared lounge, a garden and a terrace. Complimentary WiFi is featured.",
+            "is_near_beach": 0,
+            "rank": 2,
+            "meal": 2,
+            "city_id": "3",
+            "id_property_type": "4"
+        },
+        {
+            "_id": "27",
+            "name": "ND Building",
+            "address": "9 Le Van Huan, Tân Bình, TP. Hồ Chí Minh",
+            "phone": "0326475256",
+            "distance_from_center": 6436,
+            "description": "LA Beach Hotel nằm trong bán kính 2,2 km từ Cầu Sông Hàn và 2,9 km từ Trung tâm thương mại Indochina Riverside. Sân bay gần nhất là sân bay quốc tế Đà Nẵng, cách chỗ nghỉ 7 km.",
+            "is_near_beach": 0,
+            "rank": 2,
+            "meal": 1,
+            "city_id": "2",
+            "id_property_type": "3"
+        },
+        {
+            "_id": "28",
+            "name": "Lisbon Hanoi",
+            "address": "91 Ngô Quyền, Minh An, Hà Nội",
+            "phone": "0344475256",
+            "distance_from_center": 1346,
+            "description": "Set in Lisbon historical downtown, The Visionaire Apartments features apartments, studios and suites right across from the iconic Figueira Square. Rossio is 130 metres away, while Commerce Square and the Tagus riverside are at a 10-minute walk.",
+            "is_near_beach": 0,
+            "rank": 1,
+            "meal": 2,
+            "city_id": "1",
+            "id_property_type": "2"
+        }
+    ],
+    "rooms": [
+        {
+            "_id": "5fc8f64547565cb58cded960",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 15,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded961",
+            "name": "Phòng Trăng Mật",
+            "acreage": 15,
+            "price": 400,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded962",
+            "name": "Phòng Cao Cấp",
+            "acreage": 20,
+            "price": 400,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded963",
+            "name": "Phòng Gia Đình",
+            "acreage": 25,
+            "price": 500,
+            "facility": "2 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded964",
+            "name": "Phòng Trung Cấp",
+            "acreage": 10,
+            "price": 200,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded965",
+            "name": "Phòng Superior",
+            "acreage": 30,
+            "price": 600,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded966",
+            "name": "Phòng Không",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded967",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded968",
+            "name": "Phòng 4 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded969",
+            "name": "Phòng 3 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96a",
+            "name": "Phòng Ban",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96b",
+            "name": "Phòng Đào Tạo",
+            "acreage": 25,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96c",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 20,
+            "price": 500,
+            "facility": "1 Giường đôi lớn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96d",
+            "name": "Phòng Tuyến",
+            "acreage": 18,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96e",
+            "name": "Phòng 2 Người",
+            "acreage": 25,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded96f",
+            "name": "Phòng 1 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded970",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 20,
+            "price": 500,
+            "facility": "1 Giường đôi lớn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded971",
+            "name": "Phòng Trăng Mật",
+            "acreage": 15,
+            "price": 100,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded972",
+            "name": "Phòng Cao Cấp",
+            "acreage": 20,
+            "price": 400,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded973",
+            "name": "Phòng Gia Đình",
+            "acreage": 25,
+            "price": 500,
+            "facility": "2 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded974",
+            "name": "Phòng Trung Cấp",
+            "acreage": 10,
+            "price": 200,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded975",
+            "name": "Phòng Superior",
+            "acreage": 30,
+            "price": 200,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded976",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 15,
+            "price": 220,
+            "facility": "2 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded977",
+            "name": "Phòng Không",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded978",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded979",
+            "name": "Phòng 4 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97a",
+            "name": "Phòng 3 Người",
+            "acreage": 15,
+            "price": 220,
+            "facility": "2 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97b",
+            "name": "Phòng Ban",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97c",
+            "name": "Phòng Đào Tạo",
+            "acreage": 25,
+            "price": 410,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97d",
+            "name": "Phòng Tuyến",
+            "acreage": 18,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97e",
+            "name": "Phòng 2 Người",
+            "acreage": 25,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded97f",
+            "name": "Phòng 1 Người",
+            "acreage": 15,
+            "price": 260,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded980",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 20,
+            "price": 500,
+            "facility": "1 Giường đôi lớn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded981",
+            "name": "Phòng Trăng Mật",
+            "acreage": 15,
+            "price": 400,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded982",
+            "name": "Phòng Cao Cấp",
+            "acreage": 20,
+            "price": 150,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded983",
+            "name": "Phòng Gia Đình",
+            "acreage": 25,
+            "price": 600,
+            "facility": "2 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded984",
+            "name": "Phòng Trung Cấp",
+            "acreage": 10,
+            "price": 200,
+            "facility": "1 Giường đơn",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded985",
+            "name": "Phòng Superior",
+            "acreage": 30,
+            "price": 150,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded986",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 15,
+            "price": 420,
+            "facility": "2 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded987",
+            "name": "Phòng Không",
+            "acreage": 15,
+            "price": 400,
+            "facility": "2 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded988",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded989",
+            "name": "Phòng 4 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98a",
+            "name": "Phòng 3 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98b",
+            "name": "Phòng Ban",
+            "acreage": 15,
+            "price": 350,
+            "facility": "2 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98c",
+            "name": "Phòng Đào Tạo",
+            "acreage": 25,
+            "price": 450,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98d",
+            "name": "Phòng Tuyến",
+            "acreage": 18,
+            "price": 250,
+            "facility": "2 Giường đơn",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98e",
+            "name": "Phòng 2 Người",
+            "acreage": 25,
+            "price": 330,
+            "facility": "2 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded98f",
+            "name": "Phòng 1 Người",
+            "acreage": 15,
+            "price": 350,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded990",
+            "name": "Phòng Streamer",
+            "acreage": 25,
+            "price": 450,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded991",
+            "name": "Phòng Vinahouse",
+            "acreage": 22,
+            "price": 999,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded992",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 4,
+            "price": 199,
+            "facility": "1 Giường đơn",
+            "description": "Vào làm vài bi nào mấy em, phê cùng anh.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc8f64547565cb58cded993",
+            "name": "Phòng Trần Dần",
+            "acreage": 1,
+            "price": 399,
+            "facility": "1 Giường đơn",
+            "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+            "bed_type": 0,
+            "property_id": "5"
+        }
+    ],
+    "users": [
+          {
+            "_id": "admin_id",
+            "username": "admin",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Admin",
+            "gender": 1,
+            "phone": "0123456789",
+            "email": "admin@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95b",
+            "username": "BuiThuy",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Bùi Đình Thủy",
+            "gender": 1,
+            "phone": "0556878945",
+            "email": "buithuy@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95c",
+            "username": "LyChan",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Lý Văn Chản",
+            "gender": 1,
+            "phone": "0123455678",
+            "email": "lychan@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95d",
+            "username": "NgoThuong",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Ngô Văn Thường",
+            "gender": 1,
+            "phone": "0358763412",
+            "email": "ngothuong@gmail.com",
+            "is_admin": 0
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95e",
+            "username": "NguyenKhanh",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Nguyễn Khánh",
+            "gender": 1,
+            "phone": "0366918587",
+            "email": "nguyenkhanh@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95f",
+            "username": "User",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Người Dùng",
+            "gender": 0,
+            "phone": "0358763412",
+            "email": "user@gmail.com",
+            "is_admin": 0
+        }
+    ],
+    "bookings": [
+        {
+            "_id": "1",
+            "user_id": "admin_id",
+            "room_id": "1",
+            "date_reservation": 1606962422,
+            "date_check_in": 1607048822,
+            "date_check_out": 1607135222,
+            "service": "2 bữa sáng",
+            "note": "Note",
+            "total": 1000,
+            "is_cancel": 0
+        }
+    ]
 }
