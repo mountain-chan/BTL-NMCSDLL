@@ -119,7 +119,6 @@ def delete_property_type(property_type_id):
 
 
 @api.route('', methods=['GET'])
-@jwt_required
 def get_all_properties_type():
     """ This api gets all property_types.
 
@@ -134,7 +133,6 @@ def get_all_properties_type():
 
 
 @api.route('/<property_type_id>', methods=['GET'])
-@jwt_required
 def get_property_type_by_id(property_type_id):
     """ This api get information of a property_type.
 

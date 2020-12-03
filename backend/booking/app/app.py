@@ -81,3 +81,4 @@ def register_blueprints(app):
     app.register_blueprint(api_v1.city.api, url_prefix='/api/cities')
     app.register_blueprint(api_v1.property_type.api, url_prefix='/api/property_types')
     app.register_blueprint(api_v1.booking.api, url_prefix='/api/bookings')
+    app.register_blueprint(api_v1.statistics.api, url_prefix='/api/statistics')

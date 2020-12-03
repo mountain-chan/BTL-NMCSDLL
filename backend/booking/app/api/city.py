@@ -119,7 +119,6 @@ def delete_city(city_id):
 
 
 @api.route('', methods=['GET'])
-@jwt_required
 def get_all_cities():
     """ This api gets all cities.
 
@@ -134,7 +133,6 @@ def get_all_cities():
 
 
 @api.route('/<city_id>', methods=['GET'])
-@jwt_required
 def get_city_by_id(city_id):
     """ This api get information of a city.
 
