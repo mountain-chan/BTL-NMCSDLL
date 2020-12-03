@@ -51,7 +51,7 @@ def create_property_type():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create property_type successfully!")
+    return send_result(data=new_property_type, message="Create property_type successfully!")
 
 
 @api.route('/<property_type_id>', methods=['PUT'])

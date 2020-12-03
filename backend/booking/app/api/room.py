@@ -54,7 +54,7 @@ def create_room():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create room successfully!")
+    return send_result(data=new_room, message="Create room successfully!")
 
 
 @api.route('/<room_id>', methods=['PUT'])

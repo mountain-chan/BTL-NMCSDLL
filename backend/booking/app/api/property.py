@@ -60,7 +60,7 @@ def create_property():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create property successfully!")
+    return send_result(data=new_property, message="Create property successfully!")
 
 
 @api.route('/<property_id>', methods=['PUT'])

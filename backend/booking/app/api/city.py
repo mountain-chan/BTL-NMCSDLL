@@ -51,7 +51,7 @@ def create_city():
     except Exception as ex:
         return send_error(message="Insert to database error: " + str(ex))
 
-    return send_result(message="Create city successfully!")
+    return send_result(data=new_city, message="Create city successfully!")
 
 
 @api.route('/<city_id>', methods=['PUT'])
