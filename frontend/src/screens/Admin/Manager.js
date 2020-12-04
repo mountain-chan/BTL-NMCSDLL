@@ -121,7 +121,7 @@ const Manager = (props) => {
                             onClick={() => set_screen("REGRESSION")}
                             style={screen === "REGRESSION" ? active : non_active}>
                             <i style={{ width: 30 }} className="fa fa-line-chart"></i>
-                            Dự báo
+                            Dự đoán
                         </div>
                         <div
                             onClick={() => set_screen("IRREGULAR")}

@@ -75,7 +75,7 @@ const General = (props) => {
     return (
         <div>
             <HeadText>Danh mục - Tổng quan</HeadText>
-            <div>
+            <div style={{ width: "92%", margin: "0 auto" }}>
                 <div style={{ textAlign: "center" }}>
                     <Doughnut
                         height={80}
@@ -90,9 +90,7 @@ const General = (props) => {
                             ],
                         }}
                     />
-                    <div style={{ margin: "20px 0 50px 0" }}>
-                        Thống kê số chỗ nghỉ theo các thành phố
-                    </div>
+                    <div style={{ margin: "30px 0 50px 0" }}>Thống kê số chỗ nghỉ theo các thành phố</div>
                 </div>
                 <div style={{ textAlign: "center" }}>
                     <Bar
@@ -110,9 +108,7 @@ const General = (props) => {
                             legend: { display: false },
                         }}
                     />
-                    <div style={{ margin: "10px 0 50px 0" }}>
-                        Thống kê số phòng theo các khách sạn
-                    </div>
+                    <div style={{ margin: "10px 0 50px 0" }}>Thống kê số phòng theo các khách sạn</div>
                 </div>
             </div>
         </div>
