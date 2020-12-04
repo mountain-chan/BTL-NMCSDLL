@@ -29,36 +29,6 @@
             "name": "Hội An",
             "description": "Thành Phố Hội An",
             "image": "Content/Images/ThanhPho/HoiAn.jpg"
-        },
-        {
-            "_id": "6",
-            "name": "Phú Quốc",
-            "description": "Thành Phố Phú Quốc",
-            "image": "Content/Images/ThanhPho/PhuQuoc.jpg"
-        },
-        {
-            "_id": "7",
-            "name": "Sapa",
-            "description": "Thành Phố Sapa",
-            "image": "Content/Images/ThanhPho/Sapa.jpg"
-        },
-        {
-            "_id": "8",
-            "name": "Huế",
-            "description": "Thành Phố Huế",
-            "image": "Content/Images/ThanhPho/Hue.jpg"
-        },
-        {
-            "_id": "9",
-            "name": "Nha Trang",
-            "description": "Thành Phố Nha Trang",
-            "image": "Content/Images/ThanhPho/NhaTrang.jpg"
-        },
-        {
-            "_id": "10",
-            "name": "Buôn Ma Thuột",
-            "description": "Thành Phố Buôn Ma Thuột",
-            "image": "Content/Images/ThanhPho/BuonMaThuot.jpg"
         }
     ],
     "property_types": [
@@ -129,7 +99,7 @@
             "rank": 5,
             "meal": 2,
             "city_id": "1",
-            "id_property_type": "1"
+            "property_type_id": "1"
         },
         {
             "_id": "2",
@@ -142,7 +112,7 @@
             "rank": 4,
             "meal": 4,
             "city_id": "1",
-            "id_property_type": "2"
+            "property_type_id": "2"
         },
         {
             "_id": "3",
@@ -155,7 +125,7 @@
             "rank": 5,
             "meal": 1,
             "city_id": "1",
-            "id_property_type": "3"
+            "property_type_id": "3"
         },
         {
             "_id": "4",
@@ -168,7 +138,7 @@
             "rank": 5,
             "meal": 4,
             "city_id": "1",
-            "id_property_type": "4"
+            "property_type_id": "4"
         },
         {
             "_id": "5",
@@ -181,7 +151,7 @@
             "rank": 3,
             "meal": 3,
             "city_id": "1",
-            "id_property_type": "2"
+            "property_type_id": "2"
         },
         {
             "_id": "6",
@@ -194,7 +164,7 @@
             "rank": 5,
             "meal": 4,
             "city_id": "2",
-            "id_property_type": "5"
+            "property_type_id": "5"
         },
         {
             "_id": "7",
@@ -207,7 +177,7 @@
             "rank": 2,
             "meal": 3,
             "city_id": "2",
-            "id_property_type": "6"
+            "property_type_id": "6"
         },
         {
             "_id": "8",
@@ -220,7 +190,7 @@
             "rank": 3,
             "meal": 4,
             "city_id": "2",
-            "id_property_type": "7"
+            "property_type_id": "7"
         },
         {
             "_id": "9",
@@ -233,7 +203,7 @@
             "rank": 4,
             "meal": 3,
             "city_id": "4",
-            "id_property_type": "8"
+            "property_type_id": "8"
         },
         {
             "_id": "10",
@@ -246,7 +216,7 @@
             "rank": 5,
             "meal": 1,
             "city_id": "2",
-            "id_property_type": "9"
+            "property_type_id": "9"
         },
         {
             "_id": "11",
@@ -259,7 +229,7 @@
             "rank": 4,
             "meal": 3,
             "city_id": "3",
-            "id_property_type": "5"
+            "property_type_id": "5"
         },
         {
             "_id": "12",
@@ -272,7 +242,7 @@
             "rank": 2,
             "meal": 3,
             "city_id": "3",
-            "id_property_type": "1"
+            "property_type_id": "1"
         },
         {
             "_id": "13",
@@ -285,7 +255,7 @@
             "rank": 3,
             "meal": 1,
             "city_id": "4",
-            "id_property_type": "2"
+            "property_type_id": "2"
         },
         {
             "_id": "14",
@@ -298,7 +268,7 @@
             "rank": 5,
             "meal": 4,
             "city_id": "3",
-            "id_property_type": "3"
+            "property_type_id": "3"
         },
         {
             "_id": "15",
@@ -311,7 +281,7 @@
             "rank": 4,
             "meal": 2,
             "city_id": "3",
-            "id_property_type": "4"
+            "property_type_id": "4"
         },
         {
             "_id": "16",
@@ -324,7 +294,7 @@
             "rank": 4,
             "meal": 2,
             "city_id": "4",
-            "id_property_type": "5"
+            "property_type_id": "5"
         },
         {
             "_id": "17",
@@ -337,7 +307,7 @@
             "rank": 1,
             "meal": 0,
             "city_id": "4",
-            "id_property_type": "6"
+            "property_type_id": "6"
         },
         {
             "_id": "18",
@@ -350,7 +320,7 @@
             "rank": 4,
             "meal": 3,
             "city_id": "1",
-            "id_property_type": "7"
+            "property_type_id": "7"
         },
         {
             "_id": "19",
@@ -363,7 +333,7 @@
             "rank": 5,
             "meal": 4,
             "city_id": "4",
-            "id_property_type": "8"
+            "property_type_id": "8"
         },
         {
             "_id": "20",
@@ -376,7 +346,7 @@
             "rank": 3,
             "meal": 2,
             "city_id": "4",
-            "id_property_type": "9"
+            "property_type_id": "9"
         },
         {
             "_id": "21",
@@ -389,7 +359,7 @@
             "rank": 4,
             "meal": 2,
             "city_id": "5",
-            "id_property_type": "1"
+            "property_type_id": "1"
         },
         {
             "_id": "22",
@@ -402,7 +372,7 @@
             "rank": 0,
             "meal": 0,
             "city_id": "1",
-            "id_property_type": "2"
+            "property_type_id": "2"
         },
         {
             "_id": "23",
@@ -415,7 +385,7 @@
             "rank": 4,
             "meal": 4,
             "city_id": "5",
-            "id_property_type": "3"
+            "property_type_id": "3"
         },
         {
             "_id": "24",
@@ -428,7 +398,7 @@
             "rank": 2,
             "meal": 2,
             "city_id": "5",
-            "id_property_type": "4"
+            "property_type_id": "4"
         },
         {
             "_id": "25",
@@ -441,7 +411,7 @@
             "rank": 4,
             "meal": 3,
             "city_id": "5",
-            "id_property_type": "5"
+            "property_type_id": "5"
         },
         {
             "_id": "26",
@@ -454,7 +424,7 @@
             "rank": 2,
             "meal": 2,
             "city_id": "3",
-            "id_property_type": "4"
+            "property_type_id": "4"
         },
         {
             "_id": "27",
@@ -467,7 +437,7 @@
             "rank": 2,
             "meal": 1,
             "city_id": "2",
-            "id_property_type": "3"
+            "property_type_id": "3"
         },
         {
             "_id": "28",
@@ -480,529 +450,4009 @@
             "rank": 1,
             "meal": 2,
             "city_id": "1",
-            "id_property_type": "2"
+            "property_type_id": "2"
         }
     ],
     "rooms": [
         {
-            "_id": "5fc8f64547565cb58cded960",
-            "name": "Phòng Tiêu chuẩn",
-            "acreage": 15,
-            "price": 350,
-            "facility": "1 Giường đơn",
-            "description": "Phòng này có một số trang thiết bị đơn giản.",
-            "bed_type": 0,
-            "property_id": "1"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded961",
-            "name": "Phòng Trăng Mật",
-            "acreage": 15,
-            "price": 400,
+            "_id": "5fc9aeb2692171ba2d560d02",
+            "name": "Phòng Vinahouse",
+            "acreage": 29,
+            "price": 0,
             "facility": "1 Giường đôi",
-            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
-            "bed_type": 1,
-            "property_id": "2"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded962",
-            "name": "Phòng Cao Cấp",
-            "acreage": 20,
-            "price": 400,
-            "facility": "1 Giường đôi",
-            "description": "Phòng cách âm này có máy lạnh.",
-            "bed_type": 1,
-            "property_id": "3"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded963",
-            "name": "Phòng Gia Đình",
-            "acreage": 25,
-            "price": 500,
-            "facility": "2 Giường đôi",
             "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d03",
+            "name": "Phòng 3 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d04",
+            "name": "Phòng Thủ",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d05",
+            "name": "Phòng Trăng Mật",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d06",
+            "name": "Phòng Cao Cấp",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d07",
+            "name": "Phòng Streamer",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This twin room has a electric kettle and air conditioning.",
             "bed_type": 1,
             "property_id": "4"
         },
         {
-            "_id": "5fc8f64547565cb58cded964",
-            "name": "Phòng Trung Cấp",
-            "acreage": 10,
-            "price": 200,
-            "facility": "1 Giường đơn",
-            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
-            "bed_type": 0,
-            "property_id": "5"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded965",
-            "name": "Phòng Superior",
-            "acreage": 30,
-            "price": 600,
+            "_id": "5fc9aeb2692171ba2d560d08",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 21,
+            "price": 0,
             "facility": "1 Giường đôi",
             "description": "Phòng cách âm này có nhiều thứ vl.",
             "bed_type": 1,
-            "property_id": "6"
+            "property_id": "23"
         },
         {
-            "_id": "5fc8f64547565cb58cded966",
-            "name": "Phòng Không",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng không không quân.",
-            "bed_type": 1,
-            "property_id": "8"
+            "_id": "5fc9aeb2692171ba2d560d09",
+            "name": "Phòng Gia Đình",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "28"
         },
         {
-            "_id": "5fc8f64547565cb58cded967",
+            "_id": "5fc9aeb2692171ba2d560d0a",
             "name": "Phòng Thủ",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "9"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded968",
-            "name": "Phòng 4 Người",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đôi",
-            "description": "Phòng có tivi siêu to khổng lồ.",
-            "bed_type": 1,
-            "property_id": "10"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded969",
-            "name": "Phòng 3 Người",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
             "description": "Phòng có truyền hình cáp và máy lạnh.",
             "bed_type": 1,
             "property_id": "11"
         },
         {
-            "_id": "5fc8f64547565cb58cded96a",
+            "_id": "5fc9aeb2692171ba2d560d0b",
+            "name": "Phòng Thủ",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d0c",
+            "name": "Phòng 4 Người",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d0d",
             "name": "Phòng Ban",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
-            "bed_type": 1,
-            "property_id": "12"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded96b",
-            "name": "Phòng Đào Tạo",
-            "acreage": 25,
-            "price": 350,
+            "acreage": 23,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
-            "bed_type": 1,
-            "property_id": "13"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded96c",
-            "name": "Phòng Deluxe Giường Đôi",
-            "acreage": 20,
-            "price": 500,
-            "facility": "1 Giường đôi lớn",
-            "description": "This double room has air conditioning and electric kettle.",
-            "bed_type": 1,
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
             "property_id": "1"
         },
         {
-            "_id": "5fc8f64547565cb58cded96d",
-            "name": "Phòng Tuyến",
-            "acreage": 18,
-            "price": 350,
+            "_id": "5fc9aeb2692171ba2d560d0e",
+            "name": "Phòng 4 Người",
+            "acreage": 27,
+            "price": 0,
             "facility": "1 Giường đơn",
             "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "14"
+            "bed_type": 0,
+            "property_id": "21"
         },
         {
-            "_id": "5fc8f64547565cb58cded96e",
-            "name": "Phòng 2 Người",
-            "acreage": 25,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
-            "bed_type": 1,
-            "property_id": "15"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded96f",
-            "name": "Phòng 1 Người",
-            "acreage": 15,
-            "price": 350,
+            "_id": "5fc9aeb2692171ba2d560d0f",
+            "name": "Phòng Ban",
+            "acreage": 13,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Phòng dành cho một người.",
-            "bed_type": 1,
-            "property_id": "16"
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "23"
         },
         {
-            "_id": "5fc8f64547565cb58cded970",
-            "name": "Phòng Deluxe Giường Đôi",
-            "acreage": 20,
-            "price": 500,
-            "facility": "1 Giường đôi lớn",
-            "description": "This double room has air conditioning and electric kettle.",
-            "bed_type": 1,
-            "property_id": "2"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded971",
-            "name": "Phòng Trăng Mật",
-            "acreage": 15,
-            "price": 100,
+            "_id": "5fc9aeb2692171ba2d560d10",
+            "name": "Phòng 3 Người",
+            "acreage": 18,
+            "price": 0,
             "facility": "1 Giường đôi",
-            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d11",
+            "name": "Phòng 3 Người",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d12",
+            "name": "Phòng Đào Tạo",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d13",
+            "name": "Phòng Tuyến",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d14",
+            "name": "Phòng Superior",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d15",
+            "name": "Phòng Không",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d16",
+            "name": "Phòng 1 Người",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d17",
+            "name": "Phòng Vinahouse",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d18",
+            "name": "Phòng Superior",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d19",
+            "name": "Phòng 1 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d1a",
+            "name": "Phòng 1 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d1b",
+            "name": "Phòng Superior",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
             "bed_type": 1,
             "property_id": "3"
         },
         {
-            "_id": "5fc8f64547565cb58cded972",
+            "_id": "5fc9aeb2692171ba2d560d1c",
             "name": "Phòng Cao Cấp",
-            "acreage": 20,
-            "price": 400,
+            "acreage": 30,
+            "price": 0,
             "facility": "1 Giường đôi",
-            "description": "Phòng cách âm này có máy lạnh.",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d1d",
+            "name": "Phòng 4 Người",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d1e",
+            "name": "Phòng Thủ",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d1f",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d20",
+            "name": "Phòng Không",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d21",
+            "name": "Phòng Tuyến",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d22",
+            "name": "Phòng 1 Người",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
             "bed_type": 1,
             "property_id": "4"
         },
         {
-            "_id": "5fc8f64547565cb58cded973",
-            "name": "Phòng Gia Đình",
-            "acreage": 25,
-            "price": 500,
-            "facility": "2 Giường đôi",
-            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "5"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded974",
-            "name": "Phòng Trung Cấp",
-            "acreage": 10,
-            "price": 200,
-            "facility": "1 Giường đơn",
-            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
-            "bed_type": 0,
-            "property_id": "6"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded975",
-            "name": "Phòng Superior",
-            "acreage": 30,
-            "price": 200,
+            "_id": "5fc9aeb2692171ba2d560d23",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 26,
+            "price": 0,
             "facility": "1 Giường đôi",
-            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
             "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d24",
+            "name": "Phòng Đào Tạo",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d25",
+            "name": "Phòng Gia Đình",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d26",
+            "name": "Phòng Trung Cấp",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d27",
+            "name": "Phòng Đào Tạo",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
             "property_id": "7"
         },
         {
-            "_id": "5fc8f64547565cb58cded976",
-            "name": "Phòng Tiêu chuẩn",
-            "acreage": 15,
-            "price": 220,
-            "facility": "2 Giường đơn",
-            "description": "Phòng này ít thứ vl.",
-            "bed_type": 1,
-            "property_id": "8"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded977",
-            "name": "Phòng Không",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng không không quân.",
-            "bed_type": 1,
-            "property_id": "9"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded978",
-            "name": "Phòng Thủ",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "10"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded979",
-            "name": "Phòng 4 Người",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đôi",
-            "description": "Phòng có tivi siêu to khổng lồ.",
-            "bed_type": 1,
-            "property_id": "11"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded97a",
-            "name": "Phòng 3 Người",
-            "acreage": 15,
-            "price": 220,
-            "facility": "2 Giường đơn",
+            "_id": "5fc9aeb2692171ba2d560d28",
+            "name": "Phòng Tuyến",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
             "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d29",
+            "name": "Phòng 1 Người",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
             "bed_type": 1,
             "property_id": "12"
         },
         {
-            "_id": "5fc8f64547565cb58cded97b",
-            "name": "Phòng Ban",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
-            "bed_type": 1,
-            "property_id": "13"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded97c",
-            "name": "Phòng Đào Tạo",
-            "acreage": 25,
-            "price": 410,
+            "_id": "5fc9aeb2692171ba2d560d2a",
+            "name": "Phòng Gia Đình",
+            "acreage": 29,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
-            "bed_type": 1,
-            "property_id": "14"
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "28"
         },
         {
-            "_id": "5fc8f64547565cb58cded97d",
-            "name": "Phòng Tuyến",
-            "acreage": 18,
-            "price": 350,
-            "facility": "1 Giường đơn",
-            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "15"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded97e",
-            "name": "Phòng 2 Người",
-            "acreage": 25,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
-            "bed_type": 1,
-            "property_id": "16"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded97f",
-            "name": "Phòng 1 Người",
-            "acreage": 15,
-            "price": 260,
-            "facility": "1 Giường đơn",
-            "description": "Phòng dành cho một người.",
+            "_id": "5fc9aeb2692171ba2d560d2b",
+            "name": "Phòng Cao Cấp",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
             "bed_type": 1,
             "property_id": "1"
         },
         {
-            "_id": "5fc8f64547565cb58cded980",
-            "name": "Phòng Deluxe Giường Đôi",
-            "acreage": 20,
-            "price": 500,
-            "facility": "1 Giường đôi lớn",
-            "description": "This double room has air conditioning and electric kettle.",
+            "_id": "5fc9aeb2692171ba2d560d2c",
+            "name": "Phòng Trăng Mật",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
             "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d2d",
+            "name": "Phòng Đào Tạo",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d2e",
+            "name": "Phòng 2 Người",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d2f",
+            "name": "Phòng Vinahouse",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d30",
+            "name": "Phòng Gia Đình",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d31",
+            "name": "Phòng Đào Tạo",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d32",
+            "name": "Phòng Tuyến",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d33",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d34",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d35",
+            "name": "Phòng Đào Tạo",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 0,
             "property_id": "3"
         },
         {
-            "_id": "5fc8f64547565cb58cded981",
-            "name": "Phòng Trăng Mật",
+            "_id": "5fc9aeb2692171ba2d560d36",
+            "name": "Phòng Vip 101",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d37",
+            "name": "Phòng Không",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d38",
+            "name": "Phòng Tuyến",
             "acreage": 15,
-            "price": 400,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d39",
+            "name": "Phòng 2 Người",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3a",
+            "name": "Phòng 2 Người",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3b",
+            "name": "Phòng Tuyến",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3c",
+            "name": "Phòng Đào Tạo",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3d",
+            "name": "Phòng 4 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3e",
+            "name": "Phòng Superior",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d3f",
+            "name": "Phòng Gia Đình",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d40",
+            "name": "Phòng 2 Người",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d41",
+            "name": "Phòng Superior",
+            "acreage": 22,
+            "price": 0,
             "facility": "1 Giường đôi",
             "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
             "bed_type": 1,
             "property_id": "4"
         },
         {
-            "_id": "5fc8f64547565cb58cded982",
-            "name": "Phòng Cao Cấp",
-            "acreage": 20,
-            "price": 150,
-            "facility": "1 Giường đôi",
-            "description": "Phòng cách âm này có máy lạnh.",
-            "bed_type": 1,
-            "property_id": "5"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded983",
-            "name": "Phòng Gia Đình",
-            "acreage": 25,
-            "price": 600,
-            "facility": "2 Giường đôi",
-            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
-            "bed_type": 1,
-            "property_id": "6"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded984",
-            "name": "Phòng Trung Cấp",
-            "acreage": 10,
-            "price": 200,
-            "facility": "1 Giường đơn",
-            "description": "This apartment features a electric kettle and air conditioning.",
-            "bed_type": 0,
-            "property_id": "7"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded985",
-            "name": "Phòng Superior",
-            "acreage": 30,
-            "price": 150,
-            "facility": "1 Giường đôi",
-            "description": "Phòng cách âm này có nhiều thứ vl.",
-            "bed_type": 1,
-            "property_id": "8"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded986",
+            "_id": "5fc9aeb2692171ba2d560d42",
             "name": "Phòng Tiêu chuẩn",
             "acreage": 15,
-            "price": 420,
-            "facility": "2 Giường đơn",
-            "description": "Phòng này ít thứ vl.",
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
             "bed_type": 1,
-            "property_id": "9"
+            "property_id": "28"
         },
         {
-            "_id": "5fc8f64547565cb58cded987",
-            "name": "Phòng Không",
-            "acreage": 15,
-            "price": 400,
-            "facility": "2 Giường đơn",
-            "description": "Phòng không không quân.",
-            "bed_type": 1,
-            "property_id": "10"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded988",
-            "name": "Phòng Thủ",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
-            "description": "This twin room has a electric kettle and air conditioning.",
-            "bed_type": 1,
-            "property_id": "11"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded989",
-            "name": "Phòng 4 Người",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đôi",
-            "description": "Phòng có tivi siêu to khổng lồ.",
-            "bed_type": 1,
-            "property_id": "12"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded98a",
-            "name": "Phòng 3 Người",
-            "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
+            "_id": "5fc9aeb2692171ba2d560d43",
+            "name": "Phòng 1 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
             "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d44",
+            "name": "Phòng 2 Người",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
             "bed_type": 1,
             "property_id": "13"
         },
         {
-            "_id": "5fc8f64547565cb58cded98b",
+            "_id": "5fc9aeb2692171ba2d560d45",
+            "name": "Phòng 2 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d46",
+            "name": "Phòng 3 Người",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d47",
+            "name": "Phòng Gia Đình",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d48",
+            "name": "Phòng Trăng Mật",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d49",
+            "name": "Phòng Superior",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4a",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4b",
+            "name": "Phòng Cao Cấp",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4c",
+            "name": "Phòng Superior",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "25"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4d",
+            "name": "Phòng Đào Tạo",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4e",
+            "name": "Phòng Tuyến",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d4f",
+            "name": "Phòng Thủ",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d50",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d51",
+            "name": "Phòng 1 Người",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d52",
+            "name": "Phòng 4 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d53",
+            "name": "Phòng Gia Đình",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d54",
+            "name": "Phòng Vip 101",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d55",
+            "name": "Phòng Không",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d56",
+            "name": "Phòng Không",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d57",
+            "name": "Phòng Đào Tạo",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d58",
+            "name": "Phòng 3 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d59",
+            "name": "Phòng 1 Người",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5a",
+            "name": "Phòng Thủ",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5b",
             "name": "Phòng Ban",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5c",
+            "name": "Phòng Trung Cấp",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5d",
+            "name": "Phòng 2 Người",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5e",
+            "name": "Phòng Trung Cấp",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d5f",
+            "name": "Phòng Đào Tạo",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d60",
+            "name": "Phòng Gia Đình",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d61",
+            "name": "Phòng Trung Cấp",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d62",
+            "name": "Phòng Thủ",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d63",
+            "name": "Phòng 4 Người",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d64",
+            "name": "Phòng Ban",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d65",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d66",
+            "name": "Phòng Trung Cấp",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d67",
+            "name": "Phòng 3 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d68",
+            "name": "Phòng Gia Đình",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 0,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d69",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6a",
+            "name": "Phòng 2 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6b",
+            "name": "Phòng Superior",
             "acreage": 15,
-            "price": 350,
-            "facility": "2 Giường đơn",
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6c",
+            "name": "Phòng Trăng Mật",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6d",
+            "name": "Phòng Tuyến",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6e",
+            "name": "Phòng Streamer",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d6f",
+            "name": "Phòng Ban",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d70",
+            "name": "Phòng Ban",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d71",
+            "name": "Phòng Streamer",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d72",
+            "name": "Phòng Trung Cấp",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d73",
+            "name": "Phòng Ban",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "26"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d74",
+            "name": "Phòng 3 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d75",
+            "name": "Phòng 1 Người",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d76",
+            "name": "Phòng Cao Cấp",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d77",
+            "name": "Phòng Thủ",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d78",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d79",
+            "name": "Phòng Gia Đình",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7a",
+            "name": "Phòng 1 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7b",
+            "name": "Phòng Đào Tạo",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7c",
+            "name": "Phòng 2 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7d",
+            "name": "Phòng Cao Cấp",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7e",
+            "name": "Phòng 1 Người",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d7f",
+            "name": "Phòng Tuyến",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d80",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d81",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "26"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d82",
+            "name": "Phòng Thủ",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d83",
+            "name": "Phòng 4 Người",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
             "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
             "bed_type": 1,
             "property_id": "14"
         },
         {
-            "_id": "5fc8f64547565cb58cded98c",
-            "name": "Phòng Đào Tạo",
-            "acreage": 25,
-            "price": 450,
+            "_id": "5fc9aeb2692171ba2d560d84",
+            "name": "Phòng Không",
+            "acreage": 21,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d85",
+            "name": "Phòng Vip 101",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d86",
+            "name": "Phòng Cao Cấp",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d87",
+            "name": "Phòng Trăng Mật",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d88",
+            "name": "Phòng 3 Người",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
             "bed_type": 1,
             "property_id": "15"
         },
         {
-            "_id": "5fc8f64547565cb58cded98d",
-            "name": "Phòng Tuyến",
-            "acreage": 18,
-            "price": 250,
-            "facility": "2 Giường đơn",
+            "_id": "5fc9aeb2692171ba2d560d89",
+            "name": "Phòng Trăng Mật",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8a",
+            "name": "Phòng Trung Cấp",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8b",
+            "name": "Phòng Đào Tạo",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8c",
+            "name": "Phòng 3 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8d",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
             "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8e",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d8f",
+            "name": "Phòng Đào Tạo",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d90",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d91",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d92",
+            "name": "Phòng Không",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d93",
+            "name": "Phòng Tuyến",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d94",
+            "name": "Phòng Không",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d95",
+            "name": "Phòng Gia Đình",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d96",
+            "name": "Phòng Trăng Mật",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d97",
+            "name": "Phòng Tuyến",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d98",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d99",
+            "name": "Phòng 1 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9a",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9b",
+            "name": "Phòng 3 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9c",
+            "name": "Phòng Superior",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "25"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9d",
+            "name": "Phòng 2 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9e",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560d9f",
+            "name": "Phòng Đào Tạo",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da0",
+            "name": "Phòng Trung Cấp",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da1",
+            "name": "Phòng Vip 101",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da2",
+            "name": "Phòng Trăng Mật",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da3",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da4",
+            "name": "Phòng Không",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da5",
+            "name": "Phòng Không",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da6",
+            "name": "Phòng Gia Đình",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da7",
+            "name": "Phòng Ban",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da8",
+            "name": "Phòng Trung Cấp",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560da9",
+            "name": "Phòng Cao Cấp",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560daa",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dab",
+            "name": "Phòng 3 Người",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dac",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
             "bed_type": 1,
             "property_id": "16"
         },
         {
-            "_id": "5fc8f64547565cb58cded98e",
+            "_id": "5fc9aeb2692171ba2d560dad",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dae",
+            "name": "Phòng Trung Cấp",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560daf",
+            "name": "Phòng Cao Cấp",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db0",
+            "name": "Phòng Ban",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db1",
+            "name": "Phòng Trăng Mật",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db2",
+            "name": "Phòng Tuyến",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db3",
+            "name": "Phòng Vinahouse",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db4",
+            "name": "Phòng 1 Người",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db5",
+            "name": "Phòng Vip 101",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db6",
+            "name": "Phòng Ban",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db7",
+            "name": "Phòng Trung Cấp",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db8",
+            "name": "Phòng 1 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560db9",
+            "name": "Phòng Ban",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dba",
+            "name": "Phòng Trung Cấp",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dbb",
+            "name": "Phòng Tuyến",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dbc",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dbd",
+            "name": "Phòng Ban",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dbe",
             "name": "Phòng 2 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dbf",
+            "name": "Phòng Ban",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc0",
+            "name": "Phòng Cao Cấp",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc1",
+            "name": "Phòng Tuyến",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc2",
+            "name": "Phòng Đào Tạo",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc3",
+            "name": "Phòng 1 Người",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc4",
+            "name": "Phòng 4 Người",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc5",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc6",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc7",
+            "name": "Phòng Trung Cấp",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc8",
+            "name": "Phòng Ban",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dc9",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dca",
+            "name": "Phòng Streamer",
             "acreage": 25,
-            "price": 330,
-            "facility": "2 Giường đơn",
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dcb",
+            "name": "Phòng Thủ",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dcc",
+            "name": "Phòng Không",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dcd",
+            "name": "Phòng Superior",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dce",
+            "name": "Phòng Tuyến",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dcf",
+            "name": "Phòng Trăng Mật",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "25"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd0",
+            "name": "Phòng Trăng Mật",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd1",
+            "name": "Phòng 3 Người",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "26"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd2",
+            "name": "Phòng Ban",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd3",
+            "name": "Phòng Trăng Mật",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd4",
+            "name": "Phòng Đào Tạo",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd5",
+            "name": "Phòng Ban",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd6",
+            "name": "Phòng Superior",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd7",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd8",
+            "name": "Phòng Trung Cấp",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dd9",
+            "name": "Phòng Vinahouse",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dda",
+            "name": "Phòng Gia Đình",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 0,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560ddb",
+            "name": "Phòng Trung Cấp",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560ddc",
+            "name": "Phòng Trung Cấp",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560ddd",
+            "name": "Phòng Gia Đình",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dde",
+            "name": "Phòng Thủ",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560ddf",
+            "name": "Phòng Trăng Mật",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de0",
+            "name": "Phòng Gia Đình",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de1",
+            "name": "Phòng Trung Cấp",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de2",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de3",
+            "name": "Phòng Tuyến",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de4",
+            "name": "Phòng Gia Đình",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de5",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de6",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de7",
+            "name": "Phòng Superior",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de8",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560de9",
+            "name": "Phòng Không",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dea",
+            "name": "Phòng Trăng Mật",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560deb",
+            "name": "Phòng 3 Người",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
             "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
             "bed_type": 1,
             "property_id": "1"
         },
         {
-            "_id": "5fc8f64547565cb58cded98f",
+            "_id": "5fc9aeb2692171ba2d560dec",
+            "name": "Phòng 4 Người",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560ded",
+            "name": "Phòng Trăng Mật",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dee",
             "name": "Phòng 1 Người",
-            "acreage": 15,
-            "price": 350,
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560def",
+            "name": "Phòng 4 Người",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df0",
+            "name": "Phòng Trăng Mật",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df1",
+            "name": "Phòng Streamer",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df2",
+            "name": "Phòng Gia Đình",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df3",
+            "name": "Phòng Trung Cấp",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df4",
+            "name": "Phòng Trung Cấp",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df5",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df6",
+            "name": "Phòng Trung Cấp",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df7",
+            "name": "Phòng 3 Người",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df8",
+            "name": "Phòng 3 Người",
+            "acreage": 13,
+            "price": 0,
             "facility": "1 Giường đơn",
             "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560df9",
+            "name": "Phòng 3 Người",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
             "bed_type": 1,
-            "property_id": "2"
+            "property_id": "12"
         },
         {
-            "_id": "5fc8f64547565cb58cded990",
-            "name": "Phòng Streamer",
-            "acreage": 25,
-            "price": 450,
+            "_id": "5fc9aeb2692171ba2d560dfa",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 28,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "description": "Phòng không không quân.",
             "bed_type": 0,
             "property_id": "2"
         },
         {
-            "_id": "5fc8f64547565cb58cded991",
-            "name": "Phòng Vinahouse",
-            "acreage": 22,
-            "price": 999,
+            "_id": "5fc9aeb2692171ba2d560dfb",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 28,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Phòng chuyên dành Khá Bảnh.",
-            "bed_type": 0,
-            "property_id": "3"
-        },
-        {
-            "_id": "5fc8f64547565cb58cded992",
-            "name": "Phòng Thuốc Lào",
-            "acreage": 4,
-            "price": 199,
-            "facility": "1 Giường đơn",
-            "description": "Vào làm vài bi nào mấy em, phê cùng anh.",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
             "bed_type": 0,
             "property_id": "4"
         },
         {
-            "_id": "5fc8f64547565cb58cded993",
-            "name": "Phòng Trần Dần",
-            "acreage": 1,
-            "price": 399,
+            "_id": "5fc9aeb2692171ba2d560dfc",
+            "name": "Phòng Trăng Mật",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dfd",
+            "name": "Phòng Streamer",
+            "acreage": 24,
+            "price": 0,
             "facility": "1 Giường đơn",
-            "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dfe",
+            "name": "Phòng Superior",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 0,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560dff",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e00",
+            "name": "Phòng 2 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e01",
+            "name": "Phòng Gia Đình",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e02",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e03",
+            "name": "Phòng Đào Tạo",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e04",
+            "name": "Phòng 3 Người",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e05",
+            "name": "Phòng Tuyến",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e06",
+            "name": "Phòng Trăng Mật",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e07",
+            "name": "Phòng Đào Tạo",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e08",
+            "name": "Phòng Vip 101",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e09",
+            "name": "Phòng Streamer",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0a",
+            "name": "Phòng Ban",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0b",
+            "name": "Phòng 3 Người",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0c",
+            "name": "Phòng Ban",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0d",
+            "name": "Phòng 2 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0e",
+            "name": "Phòng 4 Người",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng không không quân.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e0f",
+            "name": "Phòng 4 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e10",
+            "name": "Phòng 2 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e11",
+            "name": "Phòng Không",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e12",
+            "name": "Phòng Không",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e13",
+            "name": "Phòng Không",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e14",
+            "name": "Phòng Tuyến",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e15",
+            "name": "Phòng Đào Tạo",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "26"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e16",
+            "name": "Phòng Superior",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
             "bed_type": 0,
             "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e17",
+            "name": "Phòng 3 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e18",
+            "name": "Phòng Gia Đình",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e19",
+            "name": "Phòng 4 Người",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1a",
+            "name": "Phòng Tuyến",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1b",
+            "name": "Phòng Cao Cấp",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1c",
+            "name": "Phòng Đào Tạo",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1d",
+            "name": "Phòng Cao Cấp",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1e",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e1f",
+            "name": "Phòng Cao Cấp",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e20",
+            "name": "Phòng Cao Cấp",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e21",
+            "name": "Phòng 4 Người",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e22",
+            "name": "Phòng Superior",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e23",
+            "name": "Phòng 2 Người",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e24",
+            "name": "Phòng Ban",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e25",
+            "name": "Phòng Đào Tạo",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e26",
+            "name": "Phòng Ban",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e27",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e28",
+            "name": "Phòng Đào Tạo",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e29",
+            "name": "Phòng Cao Cấp",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2a",
+            "name": "Phòng Trăng Mật",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2b",
+            "name": "Phòng Thuốc Lào",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2c",
+            "name": "Phòng 1 Người",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2d",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "25"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2e",
+            "name": "Phòng Đào Tạo",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e2f",
+            "name": "Phòng Gia Đình",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e30",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This apartment features a electric kettle and air conditioning.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e31",
+            "name": "Phòng Tuyến",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e32",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e33",
+            "name": "Phòng 4 Người",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e34",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e35",
+            "name": "Phòng Tuyến",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e36",
+            "name": "Phòng Trung Cấp",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 1,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e37",
+            "name": "Phòng 4 Người",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e38",
+            "name": "Phòng 1 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e39",
+            "name": "Phòng 1 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3a",
+            "name": "Phòng 3 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "23"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3b",
+            "name": "Phòng Cao Cấp",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3c",
+            "name": "Phòng Superior",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3d",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3e",
+            "name": "Phòng Tuyến",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e3f",
+            "name": "Phòng 3 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 1,
+            "property_id": "22"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e40",
+            "name": "Phòng Tuyến",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e41",
+            "name": "Phòng 3 Người",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e42",
+            "name": "Phòng 2 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e43",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e44",
+            "name": "Phòng Thủ",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e45",
+            "name": "Phòng 3 Người",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e46",
+            "name": "Phòng Thủ",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e47",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng 2 giường đơn này được trang bị ban công, áo choàng tắm cùng máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e48",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e49",
+            "name": "Phòng 4 Người",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 1,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4a",
+            "name": "Phòng Trung Cấp",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Vào làm vài bi nào mấy em, phê cùng anh.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4b",
+            "name": "Phòng 4 Người",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 1,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4c",
+            "name": "Phòng Không",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4d",
+            "name": "Phòng Cao Cấp",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4e",
+            "name": "Phòng 2 Người",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e4f",
+            "name": "Phòng Superior",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e50",
+            "name": "Phòng Superior",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "8"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e51",
+            "name": "Phòng 2 Người",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e52",
+            "name": "Phòng 1 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành cho sờ chim mơ.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e53",
+            "name": "Phòng Superior",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có một số trang thiết bị đơn giản.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e54",
+            "name": "Phòng 2 Người",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e55",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 1,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e56",
+            "name": "Phòng 3 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e57",
+            "name": "Phòng Thủ",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e58",
+            "name": "Phòng 3 Người",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e59",
+            "name": "Phòng Không",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5a",
+            "name": "Phòng Cao Cấp",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 1,
+            "property_id": "7"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5b",
+            "name": "Phòng 1 Người",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5c",
+            "name": "Phòng Trung Cấp",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng chuyên dành Khá Bảnh.",
+            "bed_type": 0,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5d",
+            "name": "Phòng 3 Người",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5e",
+            "name": "Phòng Gia Đình",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e5f",
+            "name": "Phòng 1 Người",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "26"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e60",
+            "name": "Phòng Thủ",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e61",
+            "name": "Phòng Không",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 0,
+            "property_id": "24"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e62",
+            "name": "Phòng Thủ",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e63",
+            "name": "Phòng Vinahouse",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e64",
+            "name": "Phòng Ban",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "27"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e65",
+            "name": "Phòng Trung Cấp",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e66",
+            "name": "Phòng 2 Người",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e67",
+            "name": "Phòng Ban",
+            "acreage": 15,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e68",
+            "name": "Phòng Trăng Mật",
+            "acreage": 16,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e69",
+            "name": "Phòng Streamer",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trang trọng, sang chảnh.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6a",
+            "name": "Phòng 1 Người",
+            "acreage": 27,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6b",
+            "name": "Phòng Tiêu chuẩn",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6c",
+            "name": "Phòng Tuyến",
+            "acreage": 18,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "2"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6d",
+            "name": "Phòng Gia Đình",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6e",
+            "name": "Phòng Đào Tạo",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e6f",
+            "name": "Phòng 4 Người",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 0,
+            "property_id": "15"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e70",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Có trách nhiệm trong công tác tuyển sinh, quản lý chương trình đào tạo.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e71",
+            "name": "Phòng Superior",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "10"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e72",
+            "name": "Phòng 3 Người",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng được trang bị 2 máy tính, thích hợp để solo game.",
+            "bed_type": 0,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e73",
+            "name": "Phòng Không",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "18"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e74",
+            "name": "Phòng 4 Người",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có nhiều thứ vl.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e75",
+            "name": "Phòng Trăng Mật",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "4"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e76",
+            "name": "Phòng 3 Người",
+            "acreage": 21,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "3"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e77",
+            "name": "Phòng Deluxe Giường Đôi",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng không không quân.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e78",
+            "name": "Phòng Không",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e79",
+            "name": "Phòng Tuyến",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7a",
+            "name": "Phòng Superior",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng cách âm này có máy lạnh.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7b",
+            "name": "Phòng Trăng Mật",
+            "acreage": 28,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7c",
+            "name": "Phòng 4 Người",
+            "acreage": 30,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7d",
+            "name": "Phòng 2 Người",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "14"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7e",
+            "name": "Phòng 2 Người",
+            "acreage": 14,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 1,
+            "property_id": "20"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e7f",
+            "name": "Phòng Vinahouse",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "This double room has air conditioning and electric kettle.",
+            "bed_type": 0,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e80",
+            "name": "Phòng 4 Người",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng dành cho một người.",
+            "bed_type": 0,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e81",
+            "name": "Phòng Streamer",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e82",
+            "name": "Phòng 1 Người",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng trung cấp nên chẳng có gì hết, thích hợp với bọn kiết xác.",
+            "bed_type": 0,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e83",
+            "name": "Phòng Trăng Mật",
+            "acreage": 26,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "5"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e84",
+            "name": "Phòng Không",
+            "acreage": 13,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này ít thứ vl.",
+            "bed_type": 0,
+            "property_id": "28"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e85",
+            "name": "Phòng Ban",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "1"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e86",
+            "name": "Phòng Không",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có tivi siêu to khổng lồ.",
+            "bed_type": 1,
+            "property_id": "19"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e87",
+            "name": "Phòng Gia Đình",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "16"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e88",
+            "name": "Phòng Gia Đình",
+            "acreage": 20,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "17"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e89",
+            "name": "Phòng Cao Cấp",
+            "acreage": 29,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng giường đôi này có ban công, TV truyền hình vệ tinh và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8a",
+            "name": "Phòng Streamer",
+            "acreage": 24,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "13"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8b",
+            "name": "Phòng Gia Đình",
+            "acreage": 22,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 0,
+            "property_id": "12"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8c",
+            "name": "Phòng Trăng Mật",
+            "acreage": 23,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 0,
+            "property_id": "9"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8d",
+            "name": "Phòng 1 Người",
+            "acreage": 19,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng này có máy lạnh, minibar và được cách âm. Phòng này được trang trí bằng hoa và bánh ngọt.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8e",
+            "name": "Phòng Không",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "This twin room has a electric kettle and air conditioning.",
+            "bed_type": 1,
+            "property_id": "11"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e8f",
+            "name": "Phòng Ban",
+            "acreage": 25,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Là cơ quan quyền lực cao nhất Công ty, quyết định cơ cấu tổ chức.",
+            "bed_type": 1,
+            "property_id": "21"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e90",
+            "name": "Phòng Đào Tạo",
+            "acreage": 17,
+            "price": 0,
+            "facility": "1 Giường đơn",
+            "description": "Phòng gia đình này có quầy bar mini, truyền hình cáp và máy lạnh.",
+            "bed_type": 0,
+            "property_id": "6"
+        },
+        {
+            "_id": "5fc9aeb2692171ba2d560e91",
+            "name": "Phòng 1 Người",
+            "acreage": 12,
+            "price": 0,
+            "facility": "1 Giường đôi",
+            "description": "Phòng có truyền hình cáp và máy lạnh.",
+            "bed_type": 1,
+            "property_id": "18"
         }
     ],
     "users": [
@@ -1070,8 +4520,8 @@
     "bookings": [
         {
             "_id": "1",
-            "user_id": "admin_id",
-            "room_id": "1",
+            "user_id": "5fc8f64547565cb58cded95f",
+            "room_id": "5fc9aeb2692171ba2d560e91",
             "date_reservation": 1606962422,
             "date_check_in": 1607048822,
             "date_check_out": 1607135222,
