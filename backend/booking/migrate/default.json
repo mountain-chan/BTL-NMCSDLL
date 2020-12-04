@@ -6455,6 +6455,68 @@
             "property_id": "5"
         }
     ],
+    "users": [
+          {
+            "_id": "admin_id",
+            "username": "admin",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Admin",
+            "gender": 1,
+            "phone": "0123456789",
+            "email": "admin@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95b",
+            "username": "BuiThuy",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Bùi Đình Thủy",
+            "gender": 1,
+            "phone": "0556878945",
+            "email": "buithuy@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95c",
+            "username": "LyChan",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Lý Văn Chản",
+            "gender": 1,
+            "phone": "0123455678",
+            "email": "lychan@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95d",
+            "username": "NgoThuong",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Ngô Văn Thường",
+            "gender": 1,
+            "phone": "0358763412",
+            "email": "ngothuong@gmail.com",
+            "is_admin": 0
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95e",
+            "username": "NguyenKhanh",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Nguyễn Khánh",
+            "gender": 1,
+            "phone": "0366918587",
+            "email": "nguyenkhanh@gmail.com",
+            "is_admin": 1
+        },
+        {
+            "_id": "5fc8f64547565cb58cded95f",
+            "username": "User",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Người Dùng",
+            "gender": 0,
+            "phone": "0358763412",
+            "email": "user@gmail.com",
+            "is_admin": 0
+        }
+    ],
     "bookings": [
         {
             "_id": "1",
