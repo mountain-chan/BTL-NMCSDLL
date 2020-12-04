@@ -72,7 +72,11 @@ const Properties = (props) => {
 
     const page_max = Math.ceil(data.length / item_per_page) - 1;
     const pages = [];
-    for (let i = 0; i <= page_max; i++) pages.push(i + 1);
+    let page_left = page_current - 3,
+        page_right = page_current + 3;
+    if (page_left < 0) page_left = 0;
+    if (page_right > page_max) page_right = page_max;
+    for (let i = page_left; i <= page_right; i++) pages.push(i + 1);
 
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
@@ -123,62 +127,60 @@ const Properties = (props) => {
                     ))}
                     <tbody>
                         <tr>
-                            <td colSpan={columns.length + 1} style={{ position: "relative", height: 28 }}>
-                                <div style={{ textAlign: "center" }}>
-                                    <div
-                                        style={{
-                                            display: "inline-block",
-                                            width: 25,
-                                            height: 22,
-                                            color: "#888",
-                                            cursor: "pointer",
-                                        }}
-                                        onClick={() => goto(page_current - 1)}>
-                                        &laquo;
-                                    </div>
-                                    {pages.map((item) => (
+                            <td colSpan={columns.length + 1} style={{ height: 28 }}>
+                                <div style={{ display: "flex", flex: 1, flexDirection: "row" }}>
+                                    <div style={{ textAlign: "center", flex: 4 }}>
                                         <div
                                             style={{
                                                 display: "inline-block",
                                                 width: 25,
                                                 height: 22,
-                                                backgroundColor: item === page_current + 1 ? "#007ad9" : "#fff",
-                                                color: item === page_current + 1 ? "#fff" : "#888",
-
+                                                color: "#888",
                                                 cursor: "pointer",
                                             }}
-                                            onClick={() => goto(item - 1)}>
-                                            {item}
+                                            onClick={() => goto(0)}>
+                                            &laquo;
                                         </div>
-                                    ))}
-                                    <div
-                                        style={{
-                                            display: "inline-block",
-                                            width: 25,
-                                            height: 22,
-                                            color: "#888",
-                                            cursor: "pointer",
-                                        }}
-                                        onClick={() => goto(page_current + 1)}>
-                                        &raquo;
-                                    </div>
-                                </div>
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        right: 30,
-                                        top: 5,
-                                    }}>
-                                    <button onClick={() => set_ins_open(true)}>
-                                        <i className="fa fa-plus-circle"></i>
-                                        <span
+                                        {pages.map((item) => (
+                                            <div
+                                                style={{
+                                                    display: "inline-block",
+                                                    width: 25,
+                                                    height: 22,
+                                                    backgroundColor: item === page_current + 1 ? "#007ad9" : "#fff",
+                                                    color: item === page_current + 1 ? "#fff" : "#888",
+
+                                                    cursor: "pointer",
+                                                }}
+                                                onClick={() => goto(item - 1)}>
+                                                {item}
+                                            </div>
+                                        ))}
+                                        <div
                                             style={{
-                                                marginLeft: 8,
-                                                marginRight: 6,
-                                            }}>
-                                            Thêm mới
-                                        </span>
-                                    </button>
+                                                display: "inline-block",
+                                                width: 25,
+                                                height: 22,
+                                                color: "#888",
+                                                cursor: "pointer",
+                                            }}
+                                            onClick={() => goto(page_max)}>
+                                            &raquo;
+                                        </div>
+                                    </div>
+                                    <div style={{ flex: 1, textAlign: "right" }}>
+                                        Tổng: {data.length}
+                                        <button style={{ marginLeft: 15 }} onClick={() => set_ins_open(true)}>
+                                            <i className="fa fa-plus-circle"></i>
+                                            <span
+                                                style={{
+                                                    marginLeft: 8,
+                                                    marginRight: 6,
+                                                }}>
+                                                Thêm mới
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
