@@ -3,7 +3,7 @@ export const fet = async (api, set, token) => {
         const response = await fetch(api, {
             method: "GET",
             headers: {
-                Authorization: token,
+                Authorization: "Bearer " + token,
             },
         });
         if (!response.ok) {
@@ -22,7 +22,7 @@ export const ins = async (api, set, data, token) => {
         const response = await fetch(api, {
             method: "POST",
             headers: {
-                Authorization: token,
+                Authorization: "Bearer " + token,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
@@ -43,7 +43,7 @@ export const upd = async (api, set, data, token) => {
         const response = await fetch(`${api}/${data._id}`, {
             method: "PUT",
             headers: {
-                Authorization: token,
+                Authorization: "Bearer " + token,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
@@ -69,7 +69,7 @@ export const del = async (api, set, data, token) => {
         const response = await fetch(`${api}/${data._id}`, {
             method: "DELETE",
             headers: {
-                Authorization: token,
+                Authorization: "Bearer " + token,
             },
         });
         if (!response.ok) {

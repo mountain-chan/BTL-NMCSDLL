@@ -10,36 +10,12 @@ import HeadText from "./HeadText";
 Modal.setAppElement("#root");
 
 const columns = [
-    {
-        name: "username",
-        title: "Tài khoản",
-        width: 15,
-    },
-    {
-        name: "name",
-        title: "Họ tên",
-        width: 20,
-    },
-    {
-        name: "gender",
-        title: "Giới tính",
-        width: 10,
-    },
-    {
-        name: "phone",
-        title: "Điện thoại",
-        width: 14,
-    },
-    {
-        name: "email",
-        title: "Email",
-        width: 20,
-    },
-    {
-        name: "is_admin",
-        title: "Là Admin",
-        width: 10,
-    },
+    { name: "username", title: "Tài khoản", width: 15 },
+    { name: "name", title: "Họ tên", width: 20 },
+    { name: "gender", title: "Giới tính", width: 10 },
+    { name: "phone", title: "Điện thoại", width: 14 },
+    { name: "email", title: "Email", width: 20 },
+    { name: "is_admin", title: "Là Admin", width: 10 },
 ];
 
 const item_per_page = 8;
@@ -78,11 +54,7 @@ const Users = (props) => {
     useEffect(() => {
         const load = async () => {
             try {
-                const result = await actions.fet(
-                    api,
-                    set_data,
-                    auth.access_token
-                );
+                await actions.fet(api, set_data, auth.access_token);
             } catch (err) {}
         };
         load();
@@ -95,10 +67,7 @@ const Users = (props) => {
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
     const item_min = page_current * item_per_page;
-    const item_max =
-        page_max === page_current
-            ? data.length
-            : (page_current + 1) * item_per_page;
+    const item_max = page_max === page_current ? data.length : (page_current + 1) * item_per_page;
 
     const goto = (page) => {
         if (page < 0) page = 0;
@@ -110,28 +79,13 @@ const Users = (props) => {
         try {
             switch (type) {
                 case 0:
-                    await actions.ins(
-                        api,
-                        set_data,
-                        ins_data,
-                        auth.access_token
-                    );
+                    await actions.ins(api, set_data, ins_data, auth.access_token);
                     break;
                 case 1:
-                    await actions.upd(
-                        api,
-                        set_data,
-                        upd_data,
-                        auth.access_token
-                    );
+                    await actions.upd(api, set_data, upd_data, auth.access_token);
                     break;
                 case 2:
-                    await actions.del(
-                        api,
-                        set_data,
-                        del_data,
-                        auth.access_token
-                    );
+                    await actions.del(api, set_data, del_data, auth.access_token);
                     break;
             }
             addToast("Thành công", {
@@ -159,9 +113,7 @@ const Users = (props) => {
                     ))}
                     <tbody>
                         <tr>
-                            <td
-                                colSpan={columns.length + 1}
-                                style={{ position: "relative", height: 28 }}>
+                            <td colSpan={columns.length + 1} style={{ position: "relative", height: 28 }}>
                                 <div style={{ textAlign: "center" }}>
                                     <div
                                         style={{
@@ -180,14 +132,8 @@ const Users = (props) => {
                                                 display: "inline-block",
                                                 width: 25,
                                                 height: 22,
-                                                backgroundColor:
-                                                    item === page_current + 1
-                                                        ? "#007ad9"
-                                                        : "#fff",
-                                                color:
-                                                    item === page_current + 1
-                                                        ? "#fff"
-                                                        : "#888",
+                                                backgroundColor: item === page_current + 1 ? "#007ad9" : "#fff",
+                                                color: item === page_current + 1 ? "#fff" : "#888",
 
                                                 cursor: "pointer",
                                             }}

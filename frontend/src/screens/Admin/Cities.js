@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
+import { useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import * as actions from "../../actions";
 
@@ -9,26 +10,16 @@ import HeadText from "./HeadText";
 Modal.setAppElement("#root");
 
 const columns = [
-    {
-        name: "name",
-        title: "Tên thành phố",
-        width: 20,
-    },
-    {
-        name: "description",
-        title: "Mô tả",
-        width: 30,
-    },
-    {
-        name: "image",
-        title: "Hình ảnh",
-        width: 35,
-    },
+    { name: "name", title: "Tên thành phố", width: 20 },
+    { name: "description", title: "Mô tả", width: 30 },
+    { name: "image", title: "Hình ảnh", width: 35 },
 ];
 
 const item_per_page = 8;
 
 const Cities = (props) => {
+    const auth = useSelector((state) => state.auth);
+
     const { addToast } = useToasts();
 
     const [data, set_data] = useState([]);
@@ -52,7 +43,7 @@ const Cities = (props) => {
     useEffect(() => {
         const load = async () => {
             try {
-                const result = await actions.fet(api, set_data);
+                await actions.fet(api, set_data, auth.access_token);
             } catch (err) {}
         };
         load();
@@ -65,10 +56,7 @@ const Cities = (props) => {
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
     const item_min = page_current * item_per_page;
-    const item_max =
-        page_max === page_current
-            ? data.length
-            : (page_current + 1) * item_per_page;
+    const item_max = page_max === page_current ? data.length : (page_current + 1) * item_per_page;
 
     const goto = (page) => {
         if (page < 0) page = 0;
@@ -80,13 +68,13 @@ const Cities = (props) => {
         try {
             switch (type) {
                 case 0:
-                    await actions.ins(api, set_data, ins_data);
+                    await actions.ins(api, set_data, ins_data, auth.access_token);
                     break;
                 case 1:
-                    await actions.upd(api, set_data, upd_data);
+                    await actions.upd(api, set_data, upd_data, auth.access_token);
                     break;
                 case 2:
-                    await actions.del(api, set_data, del_data);
+                    await actions.del(api, set_data, del_data, auth.access_token);
                     break;
             }
             addToast("Thành công", {
@@ -114,9 +102,7 @@ const Cities = (props) => {
                     ))}
                     <tbody>
                         <tr>
-                            <td
-                                colSpan={columns.length + 1}
-                                style={{ position: "relative", height: 28 }}>
+                            <td colSpan={columns.length + 1} style={{ position: "relative", height: 28 }}>
                                 <div style={{ textAlign: "center" }}>
                                     <div
                                         style={{
@@ -135,14 +121,8 @@ const Cities = (props) => {
                                                 display: "inline-block",
                                                 width: 25,
                                                 height: 22,
-                                                backgroundColor:
-                                                    item === page_current + 1
-                                                        ? "#007ad9"
-                                                        : "#fff",
-                                                color:
-                                                    item === page_current + 1
-                                                        ? "#fff"
-                                                        : "#888",
+                                                backgroundColor: item === page_current + 1 ? "#007ad9" : "#fff",
+                                                color: item === page_current + 1 ? "#fff" : "#888",
 
                                                 cursor: "pointer",
                                             }}

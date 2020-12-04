@@ -17,21 +17,21 @@ import * as auth_action from "../../store/actions/Auth";
 
 const Manager = (props) => {
     const auth = useSelector((state) => state.auth);
-    console.log(auth)
     const dispatch = useDispatch();
+
+    const [screen, set_screen] = useState("NONE");
 
     useEffect(() => {
         const load = async () => {
             try {
                 await dispatch(auth_action.login("admin", "admin123"));
+                set_screen("USERS");
             } catch (err) {
             }
         };
         load();
-    }, [dispatch]);
-
-    const [screen, set_screen] = useState("USERS");
-
+    }, []);
+    
     const active = {
         margin: 8,
         borderRadius: 4,
@@ -75,6 +75,9 @@ const Manager = (props) => {
             break;
         case "ROOMS":
             Render = Rooms;
+            break;
+        default:
+            Render = () => <div></div>;
             break;
     }
 

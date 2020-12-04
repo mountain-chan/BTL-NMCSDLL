@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
+import { useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import * as actions from "../../actions";
 
@@ -9,61 +10,23 @@ import HeadText from "./HeadText";
 Modal.setAppElement("#root");
 
 const columns = [
-    {
-        name: "name",
-        title: "Chỗ nghỉ",
-        width: 10,
-    },
-    {
-        name: "address",
-        title: "Địa chỉ",
-        width: 10,
-    },
-    {
-        name: "phone",
-        title: "Điện thoại",
-        width: 10,
-    },
-    {
-        name: "distance_from_center",
-        title: "Cách trung tâm",
-        width: 6,
-    },
-    {
-        name: "description",
-        title: "Mô tả",
-        width: 24,
-    },
-    {
-        name: "is_near_beach",
-        title: "Gần biển",
-        width: 6,
-    },
-    {
-        name: "rank",
-        title: "Xếp hạng",
-        width: 6,
-    },
-    {
-        name: "meal",
-        title: "Bữa ăn",
-        width: 6,
-    },
-    {
-        name: "city_id",
-        title: "Id thành phố",
-        width: 6,
-    },
-    {
-        name: "id_property_type",
-        title: "Id loại chỗ nghỉ",
-        width: 6,
-    },
+    { name: "name", title: "Chỗ nghỉ", width: 10 },
+    { name: "address", title: "Địa chỉ", width: 10 },
+    { name: "phone", title: "Điện thoại", width: 10 },
+    { name: "distance_from_center", title: "Cách trung tâm", width: 6 },
+    { name: "description", title: "Mô tả", width: 24 },
+    { name: "is_near_beach", title: "Gần biển", width: 6 },
+    { name: "rank", title: "Xếp hạng", width: 6 },
+    { name: "meal", title: "Bữa ăn", width: 6 },
+    { name: "city_id", title: "Id thành phố", width: 6 },
+    { name: "id_property_type", title: "Id loại chỗ nghỉ", width: 6 },
 ];
 
 const item_per_page = 4;
 
 const Properties = (props) => {
+    const auth = useSelector((state) => state.auth);
+
     const { addToast } = useToasts();
 
     const [data, set_data] = useState([]);
@@ -71,23 +34,29 @@ const Properties = (props) => {
     const [upd_open, set_upd_open] = useState(false);
     const [del_open, set_del_open] = useState(false);
     const [ins_data, set_ins_data] = useState({
-        username: "username",
-        password: "123456",
-        name: "Người Dùng",
-        gender: 0,
+        name: "Khách sạn 1",
+        address: "Trần Cung",
         phone: "0366918587",
-        email: "@gmail.com",
-        is_admin: 0,
+        distance_from_center: 100,
+        description: "Mô tả",
+        is_near_beach: 1,
+        rank: 5,
+        meal: 4,
+        city_id: "1",
+        id_property_type: "1",
     });
     const [upd_data, set_upd_data] = useState({
         _id: "",
-        username: "",
-        password: "",
-        name: "Người Dùng",
-        gender: 0,
+        name: "",
+        address: "",
         phone: "",
-        email: "@gmail.com",
-        is_admin: 0,
+        distance_from_center: 0,
+        description: "",
+        is_near_beach: 0,
+        rank: 0,
+        meal: 0,
+        city_id: "",
+        id_property_type: "",
     });
     const [del_data, set_del_data] = useState("");
     const [page_current, set_page_current] = useState(0);
@@ -95,7 +64,7 @@ const Properties = (props) => {
     useEffect(() => {
         const load = async () => {
             try {
-                const result = await actions.fet(api, set_data);
+                await actions.fet(api, set_data, auth.access_token);
             } catch (err) {}
         };
         load();
@@ -108,10 +77,7 @@ const Properties = (props) => {
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
     const item_min = page_current * item_per_page;
-    const item_max =
-        page_max === page_current
-            ? data.length
-            : (page_current + 1) * item_per_page;
+    const item_max = page_max === page_current ? data.length : (page_current + 1) * item_per_page;
 
     const goto = (page) => {
         if (page < 0) page = 0;
@@ -123,13 +89,13 @@ const Properties = (props) => {
         try {
             switch (type) {
                 case 0:
-                    await actions.ins(api, set_data, ins_data);
+                    await actions.ins(api, set_data, ins_data, auth.access_token);
                     break;
                 case 1:
-                    await actions.upd(api, set_data, upd_data);
+                    await actions.upd(api, set_data, upd_data, auth.access_token);
                     break;
                 case 2:
-                    await actions.del(api, set_data, del_data);
+                    await actions.del(api, set_data, del_data, auth.access_token);
                     break;
             }
             addToast("Thành công", {
@@ -157,9 +123,7 @@ const Properties = (props) => {
                     ))}
                     <tbody>
                         <tr>
-                            <td
-                                colSpan={columns.length + 1}
-                                style={{ position: "relative", height: 28 }}>
+                            <td colSpan={columns.length + 1} style={{ position: "relative", height: 28 }}>
                                 <div style={{ textAlign: "center" }}>
                                     <div
                                         style={{
@@ -178,14 +142,8 @@ const Properties = (props) => {
                                                 display: "inline-block",
                                                 width: 25,
                                                 height: 22,
-                                                backgroundColor:
-                                                    item === page_current + 1
-                                                        ? "#007ad9"
-                                                        : "#fff",
-                                                color:
-                                                    item === page_current + 1
-                                                        ? "#fff"
-                                                        : "#888",
+                                                backgroundColor: item === page_current + 1 ? "#007ad9" : "#fff",
+                                                color: item === page_current + 1 ? "#fff" : "#888",
 
                                                 cursor: "pointer",
                                             }}
@@ -274,44 +232,6 @@ const Properties = (props) => {
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        value={ins_data.username}
-                                        onChange={(event) =>
-                                            set_ins_data({
-                                                ...ins_data,
-                                                username: event.target.value,
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mật khẩu</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={ins_data.password}
-                                        onChange={(event) =>
-                                            set_ins_data({
-                                                ...ins_data,
-                                                password: event.target.value,
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Họ tên</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
                                         value={ins_data.name}
                                         onChange={(event) =>
                                             set_ins_data({
@@ -323,20 +243,19 @@ const Properties = (props) => {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Giới tính</td>
+                                <td>Địa chỉ</td>
                                 <td>
                                     <input
-                                        type="checkbox"
                                         style={{
-                                            width: 60,
+                                            width: 200,
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        checked={ins_data.gender}
-                                        onChange={() =>
+                                        value={ins_data.address}
+                                        onChange={(event) =>
                                             set_ins_data({
                                                 ...ins_data,
-                                                gender: 1 - ins_data.gender,
+                                                address: event.target.value,
                                             })
                                         }
                                     />
@@ -362,7 +281,7 @@ const Properties = (props) => {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Email</td>
+                                <td>Cách trung tâm</td>
                                 <td>
                                     <input
                                         style={{
@@ -370,18 +289,37 @@ const Properties = (props) => {
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        value={ins_data.email}
+                                        value={ins_data.distance_from_center}
                                         onChange={(event) =>
                                             set_ins_data({
                                                 ...ins_data,
-                                                email: event.target.value,
+                                                distance_from_center: parseInt(event.target.value),
                                             })
                                         }
                                     />
                                 </td>
                             </tr>
                             <tr>
-                                <td>Là Admin</td>
+                                <td>Mô tả</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={ins_data.description}
+                                        onChange={(event) =>
+                                            set_ins_data({
+                                                ...ins_data,
+                                                description: event.target.value,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gần biển</td>
                                 <td>
                                     <input
                                         type="checkbox"
@@ -390,11 +328,98 @@ const Properties = (props) => {
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        checked={ins_data.is_admin}
+                                        checked={ins_data.is_near_beach}
                                         onChange={(event) =>
                                             set_ins_data({
                                                 ...ins_data,
-                                                is_admin: 1 - ins_data.is_admin,
+                                                is_near_beach: 1 - ins_data.is_near_beach,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xếp hạng</td>
+                                <td>
+                                    <select
+                                        style={{
+                                            width: 216,
+                                            height: 30,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={ins_data.rank}
+                                        onChange={(event) =>
+                                            set_ins_data({
+                                                ...ins_data,
+                                                rank: parseInt(event.target.value),
+                                            })
+                                        }>
+                                        <option value={0}>0 &#9733;</option>
+                                        <option value={1}>1 &#9733;</option>
+                                        <option value={2}>2 &#9733;</option>
+                                        <option value={3}>3 &#9733;</option>
+                                        <option value={4}>4 &#9733;</option>
+                                        <option value={5}>5 &#9733;</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bữa ăn</td>
+                                <td>
+                                    <select
+                                        style={{
+                                            width: 216,
+                                            height: 30,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={ins_data.meal}
+                                        onChange={(event) =>
+                                            set_ins_data({
+                                                ...ins_data,
+                                                meal: parseInt(event.target.value),
+                                            })
+                                        }>
+                                        <option value={0}>Không có</option>
+                                        <option value={1}>Bữa sáng</option>
+                                        <option value={2}>Bữa sáng và trưa</option>
+                                        <option value={3}>Bữa sáng và tối</option>
+                                        <option value={4}>Cả ba bữa</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Id thành phố</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={ins_data.city_id}
+                                        onChange={(event) =>
+                                            set_ins_data({
+                                                ...ins_data,
+                                                city_id: event.target.value,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Id loại chỗ nghỉ</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={ins_data.id_property_type}
+                                        onChange={(event) =>
+                                            set_ins_data({
+                                                ...ins_data,
+                                                id_property_type: event.target.value,
                                             })
                                         }
                                     />
@@ -429,26 +454,6 @@ const Properties = (props) => {
                                 <td>Chỗ nghỉ</td>
                                 <td>
                                     <input
-                                        disabled
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.username}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                username: event.target.value,
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Họ tên</td>
-                                <td>
-                                    <input
                                         style={{
                                             width: 200,
                                             height: 24,
@@ -465,20 +470,19 @@ const Properties = (props) => {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Giới tính</td>
+                                <td>Địa chỉ</td>
                                 <td>
                                     <input
-                                        type="checkbox"
                                         style={{
-                                            width: 60,
+                                            width: 200,
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        checked={upd_data.gender}
-                                        onChange={() =>
+                                        value={upd_data.address}
+                                        onChange={(event) =>
                                             set_upd_data({
                                                 ...upd_data,
-                                                gender: 1 - upd_data.gender,
+                                                address: event.target.value,
                                             })
                                         }
                                     />
@@ -504,7 +508,7 @@ const Properties = (props) => {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Email</td>
+                                <td>Cách trung tâm</td>
                                 <td>
                                     <input
                                         style={{
@@ -512,18 +516,37 @@ const Properties = (props) => {
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        value={upd_data.email}
+                                        value={upd_data.distance_from_center}
                                         onChange={(event) =>
                                             set_upd_data({
                                                 ...upd_data,
-                                                email: event.target.value,
+                                                distance_from_center: parseInt(event.target.value),
                                             })
                                         }
                                     />
                                 </td>
                             </tr>
                             <tr>
-                                <td>Là Admin</td>
+                                <td>Mô tả</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={upd_data.description}
+                                        onChange={(event) =>
+                                            set_upd_data({
+                                                ...upd_data,
+                                                description: event.target.value,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gần biển</td>
                                 <td>
                                     <input
                                         type="checkbox"
@@ -532,11 +555,98 @@ const Properties = (props) => {
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        checked={upd_data.is_admin}
+                                        checked={upd_data.is_near_beach}
                                         onChange={(event) =>
                                             set_upd_data({
                                                 ...upd_data,
-                                                is_admin: 1 - upd_data.is_admin,
+                                                is_near_beach: 1 - upd_data.is_near_beach,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xếp hạng</td>
+                                <td>
+                                    <select
+                                        style={{
+                                            width: 216,
+                                            height: 30,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={upd_data.rank}
+                                        onChange={(event) =>
+                                            set_upd_data({
+                                                ...upd_data,
+                                                rank: parseInt(event.target.value),
+                                            })
+                                        }>
+                                        <option value={0}>0 &#9733;</option>
+                                        <option value={1}>1 &#9733;</option>
+                                        <option value={2}>2 &#9733;</option>
+                                        <option value={3}>3 &#9733;</option>
+                                        <option value={4}>4 &#9733;</option>
+                                        <option value={5}>5 &#9733;</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bữa ăn</td>
+                                <td>
+                                    <select
+                                        style={{
+                                            width: 216,
+                                            height: 30,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={upd_data.meal}
+                                        onChange={(event) =>
+                                            set_upd_data({
+                                                ...upd_data,
+                                                meal: parseInt(event.target.value),
+                                            })
+                                        }>
+                                        <option value={0}>Không có</option>
+                                        <option value={1}>Bữa sáng</option>
+                                        <option value={2}>Bữa sáng và trưa</option>
+                                        <option value={3}>Bữa sáng và tối</option>
+                                        <option value={4}>Cả ba bữa</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Id thành phố</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={upd_data.city_id}
+                                        onChange={(event) =>
+                                            set_upd_data({
+                                                ...upd_data,
+                                                city_id: event.target.value,
+                                            })
+                                        }
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Id loại chỗ nghỉ</td>
+                                <td>
+                                    <input
+                                        style={{
+                                            width: 200,
+                                            height: 24,
+                                            paddingLeft: 10,
+                                        }}
+                                        value={upd_data.id_property_type}
+                                        onChange={(event) =>
+                                            set_upd_data({
+                                                ...upd_data,
+                                                id_property_type: event.target.value,
                                             })
                                         }
                                     />
