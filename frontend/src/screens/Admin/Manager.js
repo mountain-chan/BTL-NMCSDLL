@@ -26,12 +26,11 @@ const Manager = (props) => {
             try {
                 await dispatch(auth_action.login("admin", "admin123"));
                 set_screen("USERS");
-            } catch (err) {
-            }
+            } catch (err) {}
         };
         load();
     }, []);
-    
+
     const active = {
         margin: 8,
         borderRadius: 4,
@@ -95,6 +94,7 @@ const Manager = (props) => {
                         padding: "40px 15px 40px 20px",
                         backgroundColor: "#0e0c28",
                         width: 180,
+                        minWidth: 180,
                         fontSize: 16,
                         color: "#aab0e4",
                     }}>
@@ -107,40 +107,26 @@ const Manager = (props) => {
                             }}>
                             DANH MỤC
                         </div>
-                        <div
-                            onClick={() => set_screen("GENERAL")}
-                            style={screen === "GENERAL" ? active : non_active}>
+                        <div onClick={() => set_screen("GENERAL")} style={screen === "GENERAL" ? active : non_active}>
                             <i style={{ width: 30 }} className="fa fa-home"></i>
                             Tổng quan
                         </div>
                         <div
                             onClick={() => set_screen("STATISTIC")}
-                            style={
-                                screen === "STATISTIC" ? active : non_active
-                            }>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-bar-chart"></i>
+                            style={screen === "STATISTIC" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-bar-chart"></i>
                             Thống kê
                         </div>
                         <div
                             onClick={() => set_screen("REGRESSION")}
-                            style={
-                                screen === "REGRESSION" ? active : non_active
-                            }>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-line-chart"></i>
+                            style={screen === "REGRESSION" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-line-chart"></i>
                             Dự báo
                         </div>
                         <div
                             onClick={() => set_screen("IRREGULAR")}
-                            style={
-                                screen === "IRREGULAR" ? active : non_active
-                            }>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-remove"></i>
+                            style={screen === "IRREGULAR" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-remove"></i>
                             Bất thường
                         </div>
                     </div>
@@ -153,45 +139,27 @@ const Manager = (props) => {
                             }}>
                             QUẢN LÝ
                         </div>
-                        <div
-                            onClick={() => set_screen("USERS")}
-                            style={screen === "USERS" ? active : non_active}>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-user-circle"></i>
+                        <div onClick={() => set_screen("USERS")} style={screen === "USERS" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-user-circle"></i>
                             Tài khoản
                         </div>
-                        <div
-                            onClick={() => set_screen("CITIES")}
-                            style={screen === "CITIES" ? active : non_active}>
+                        <div onClick={() => set_screen("CITIES")} style={screen === "CITIES" ? active : non_active}>
                             <i style={{ width: 30 }} className="fa fa-bank"></i>
                             Thành phố
                         </div>
                         <div
                             onClick={() => set_screen("PROPERTY_TYPES")}
-                            style={
-                                screen === "PROPERTY_TYPES"
-                                    ? active
-                                    : non_active
-                            }>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-th-list"></i>
+                            style={screen === "PROPERTY_TYPES" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-th-list"></i>
                             Loại chỗ nghỉ
                         </div>
                         <div
                             onClick={() => set_screen("PROPERTIES")}
-                            style={
-                                screen === "PROPERTIES" ? active : non_active
-                            }>
-                            <i
-                                style={{ width: 30 }}
-                                className="fa fa-building"></i>
+                            style={screen === "PROPERTIES" ? active : non_active}>
+                            <i style={{ width: 30 }} className="fa fa-building"></i>
                             Chỗ nghỉ
                         </div>
-                        <div
-                            onClick={() => set_screen("ROOMS")}
-                            style={screen === "ROOMS" ? active : non_active}>
+                        <div onClick={() => set_screen("ROOMS")} style={screen === "ROOMS" ? active : non_active}>
                             <i style={{ width: 30 }} className="fa fa-bed"></i>
                             Phòng
                         </div>
