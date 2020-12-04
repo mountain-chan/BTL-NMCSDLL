@@ -6467,13 +6467,13 @@
             "is_admin": 1
         },
         {
-            "_id": "5fc8f64547565cb58cded95b",
-            "username": "BuiThuy",
+            "_id": "5fc8f64547565cb58cded95e",
+            "username": "NguyenKhanh",
             "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
-            "name": "Bùi Đình Thủy",
+            "name": "Nguyễn Khánh",
             "gender": 1,
-            "phone": "0556878945",
-            "email": "buithuy@gmail.com",
+            "phone": "0366918587",
+            "email": "nguyenkhanh@gmail.com",
             "is_admin": 1
         },
         {
@@ -6487,6 +6487,16 @@
             "is_admin": 1
         },
         {
+            "_id": "5fc8f64547565cb58cded95b",
+            "username": "BuiThuy",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Bùi Đình Thủy",
+            "gender": 1,
+            "phone": "0556878945",
+            "email": "buithuy@gmail.com",
+            "is_admin": 0
+        },
+        {
             "_id": "5fc8f64547565cb58cded95d",
             "username": "NgoThuong",
             "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
@@ -6497,16 +6507,6 @@
             "is_admin": 0
         },
         {
-            "_id": "5fc8f64547565cb58cded95e",
-            "username": "NguyenKhanh",
-            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
-            "name": "Nguyễn Khánh",
-            "gender": 1,
-            "phone": "0366918587",
-            "email": "nguyenkhanh@gmail.com",
-            "is_admin": 1
-        },
-        {
             "_id": "5fc8f64547565cb58cded95f",
             "username": "User",
             "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
@@ -6515,13 +6515,23 @@
             "phone": "0358763412",
             "email": "user@gmail.com",
             "is_admin": 0
+        },
+        {
+            "_id": "5fc8f64547565c38es495f",
+            "username": "user2",
+            "password_hash": "pbkdf2:sha256:150000$zADraBV4$61495339cb3b72751c71375614c1397d295ec661e954ca022f83830bb0db45d8",
+            "name": "Người Dùng 2",
+            "gender": 0,
+            "phone": "0358763412",
+            "email": "user2@gmail.com",
+            "is_admin": 0
         }
     ],
     "bookings": [
         {
             "_id": "1",
             "user_id": "5fc8f64547565cb58cded95f",
-            "room_id": "5fc9aeb2692171ba2d560e91",
+            "room_id": "5fca3dd67fb91731953e5d8d",
             "date_reservation": 1606962422,
             "date_check_in": 1607048822,
             "date_check_out": 1607135222,

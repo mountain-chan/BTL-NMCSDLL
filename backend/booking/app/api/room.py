@@ -5,7 +5,7 @@ from jsonschema import validate
 
 from app.decorators import admin_required
 from app.schema.schema_validator import room_validator
-from app.utils import send_result, send_error
+from app.utils import send_result, send_error, get_timestamp_now
 from app.extensions import client
 
 api = Blueprint('rooms', __name__)
@@ -153,3 +153,26 @@ def get_room_by_id(room_id):
     if not room:
         return send_error(message="room not found.")
     return send_result(data=room)
+
+
+@api.route('/available', methods=['GET'])
+@jwt_required
+def available_rooms_by_date():
+    """ This api get information of a booking.
+
+        Returns:
+
+        Examples::
+
+    """
+
+    datetime = request.args.get('datetime', get_timestamp_now(), type=int)
+    all_rooms = client.db.rooms.find({})
+    query = {"$and": [
+        {"date_check_out": {"$gte": datetime}},
+        {"date_check_in": {"$lte": datetime}}
+    ]}
+    bookings = client.db.bookings.find(query)
+    booking_rooms_id = [b["room_id"] for b in bookings]
+    available_rooms = [room for room in all_rooms if room["_id"] not in booking_rooms_id]
+    return send_result(data=available_rooms)
