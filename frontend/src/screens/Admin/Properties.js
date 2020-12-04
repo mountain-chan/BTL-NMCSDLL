@@ -19,7 +19,7 @@ const columns = [
     { name: "rank", title: "Xếp hạng", width: 6 },
     { name: "meal", title: "Bữa ăn", width: 6 },
     { name: "city_id", title: "Id thành phố", width: 6 },
-    { name: "id_property_type", title: "Id loại chỗ nghỉ", width: 6 },
+    { name: "property_type_id", title: "Id loại chỗ nghỉ", width: 6 },
 ];
 
 const item_per_page = 4;

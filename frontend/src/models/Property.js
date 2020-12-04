@@ -10,7 +10,7 @@ class Property {
         rank,
         meal,
         city_id,
-        id_property_type
+        property_type_id
     ) {
         this._id = _id;
         this.name = name;
@@ -22,7 +22,7 @@ class Property {
         this.rank = rank;
         this.meal = meal;
         this.city_id = city_id;
-        this.id_property_type = id_property_type;
+        this.property_type_id = property_type_id;
     }
 }
 
