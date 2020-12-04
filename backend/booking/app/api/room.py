@@ -126,7 +126,6 @@ def delete_room(room_id):
 
 
 @api.route('', methods=['GET'])
-@jwt_required
 def get_all_rooms():
     """ This api gets all rooms.
 
@@ -141,7 +140,6 @@ def get_all_rooms():
 
 
 @api.route('/<room_id>', methods=['GET'])
-@jwt_required
 def get_room_by_id(room_id):
     """ This api get information of a room.
 

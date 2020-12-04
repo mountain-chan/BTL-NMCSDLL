@@ -94,13 +94,13 @@ property_validator = {
             "type": "string",
             "maxLength": 50
         },
-        "id_property_type": {
+        "property_type_id": {
             "type": "string",
             "maxLength": 50
         }
     },
     "required": ["name", "address", "phone", "distance_from_center", "description", "is_near_beach", "rank", "meal",
-                 "city_id", "id_property_type"]
+                 "city_id", "property_type_id"]
 }
 
 room_validator = {
