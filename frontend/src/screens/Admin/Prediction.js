@@ -7,8 +7,9 @@ import { API_ROOMS_DETAIL } from "../../constants";
 import RoomsDetail from "./RoomsDetail";
 import Histogram from "./Histogram";
 import Relation from "./Relation";
+import PricePrediction from "./PricePrediction";
 
-const Regression = (props) => {
+const Prediction = (props) => {
     const auth = useSelector((state) => state.auth);
     const [data, set_data] = useState(null);
     const [tab, set_tab] = useState("ROOMS_DETAIL");
@@ -46,7 +47,8 @@ const Regression = (props) => {
             case "RELATION":
                 Render = <Relation data={data} />;
                 break;
-            default:
+            case "PRICE_PREDICTION":
+                Render = <PricePrediction />;
                 break;
         }
     }
@@ -71,8 +73,8 @@ const Regression = (props) => {
                     Sự tương quan
                 </button>
                 <button
-                    style={tab === "REGRESSION" ? { backgroundColor: "#ccc" } : {}}
-                    onClick={() => set_tab("REGRESSION")}>
+                    style={tab === "PRICE_PREDICTION" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("PRICE_PREDICTION")}>
                     Dự đoán
                 </button>
             </div>
@@ -81,4 +83,4 @@ const Regression = (props) => {
     );
 };
 
-export default Regression;
+export default Prediction;

@@ -7,8 +7,8 @@ const columns = [
     { name: "is_near_beach", title: "Gần biển", width: 11 },
     { name: "rank", title: "Xếp hạng", width: 11 },
     { name: "meal", title: "Bữa ăn", width: 11 },
-    { name: "city_id", title: "Id thành phố", width: 11 },
-    { name: "property_type_id", title: "Id loại chỗ nghỉ", width: 11 },
+    { name: "city_id", title: "Thành phố", width: 11 },
+    { name: "property_type_id", title: "Loại chỗ nghỉ", width: 11 },
     { name: "price", title: "Giá thuê", width: 11 },
 ];
 

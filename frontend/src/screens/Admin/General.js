@@ -106,6 +106,15 @@ const General = (props) => {
                         }}
                         options={{
                             legend: { display: false },
+                            scales: {
+                                yAxes: [
+                                    {
+                                        ticks: {
+                                            beginAtZero: true,
+                                        },
+                                    },
+                                ],
+                            },
                         }}
                     />
                     <div style={{ margin: "10px 0 50px 0" }}>Thống kê số phòng theo các khách sạn</div>

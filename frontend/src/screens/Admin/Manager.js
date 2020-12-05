@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Header from "./Header";
 import General from "./General";
 import Statistic from "./Statistic";
-import Regression from "./Regression";
+import Prediction from "./Prediction";
 import Irregular from "./Irregular";
 
 import Users from "./Users";
@@ -54,8 +54,8 @@ const Manager = (props) => {
         case "STATISTIC":
             Render = Statistic;
             break;
-        case "REGRESSION":
-            Render = Regression;
+        case "PREDICTION":
+            Render = Prediction;
             break;
         case "IRREGULAR":
             Render = Irregular;
@@ -118,8 +118,8 @@ const Manager = (props) => {
                             Thống kê
                         </div>
                         <div
-                            onClick={() => set_screen("REGRESSION")}
-                            style={screen === "REGRESSION" ? active : non_active}>
+                            onClick={() => set_screen("PREDICTION")}
+                            style={screen === "PREDICTION" ? active : non_active}>
                             <i style={{ width: 30 }} className="fa fa-line-chart"></i>
                             Dự đoán
                         </div>
