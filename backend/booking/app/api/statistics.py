@@ -84,7 +84,7 @@ def booking_by_city():
         properties_id = [p["_id"] for p in properties]
         rooms = client.db.rooms.find({"property_id": {"$in": properties_id}})
         rooms_id = [r["_id"] for r in rooms]
-        bookings = client.db.bookings.find({"rooms_id": {"$in": rooms_id}}).count()
+        bookings = client.db.bookings.find({"room_id": {"$in": rooms_id}}).count()
         results[city["name"]] = bookings
 
     return send_result(data=results)
