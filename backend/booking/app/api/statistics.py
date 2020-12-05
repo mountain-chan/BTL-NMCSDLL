@@ -123,10 +123,10 @@ def available_rooms_by_city():
     return send_result(data=results)
 
 
-@api.route('/by_year_and_month', methods=['GET'])
+@api.route('/bookings_by_year', methods=['GET'])
 @jwt_required
 @admin_required()
-def by_year_and_month():
+def bookings_by_year():
     """
         Returns:
 
