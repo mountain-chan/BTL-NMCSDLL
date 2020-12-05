@@ -1,9 +1,0 @@
-venv
-.idea/
-logs
-__pycache__
-files
-/build/
-/dist/
-/manage.spec
-/scada.spec
