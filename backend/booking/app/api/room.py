@@ -139,6 +139,28 @@ def get_all_rooms():
     return send_result(data=list(results))
 
 
+@api.route('/detail', methods=['GET'])
+def detail():
+    """ This api gets all rooms.
+
+        Returns:
+
+        Examples::
+
+    """
+
+    results = list(client.db.rooms.find({}, {"facility": 0, "description": 0, "name": 0}))
+    for item in results:
+        _property = client.db.properties.find_one({"_id": item["property_id"]})
+        item["is_near_beach"] = _property["is_near_beach"]
+        item["rank"] = _property["rank"]
+        item["meal"] = _property["meal"]
+        item["distance_from_center"] = _property["distance_from_center"]
+        item["city_id"] = _property["city_id"]
+        item["property_type_id"] = _property["property_type_id"]
+    return send_result(data=list(results))
+
+
 @api.route('/<room_id>', methods=['GET'])
 def get_room_by_id(room_id):
     """ This api get information of a room.
