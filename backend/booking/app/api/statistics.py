@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_jwt_extended import jwt_required
 
 from app.decorators import admin_required
 from app.utils import send_result, get_timestamp_now, begin_day_of_month, last_day_of_month
@@ -138,9 +138,10 @@ def by_year_and_month():
     for i in range(1, 13):
         begin_month = begin_day_of_month(i, year)
         end_month = last_day_of_month(i, year)
-        query = {"$nor": [
-            {"date_check_out": {"$lt": begin_month}},
-            {"date_check_in": {"$gt": end_month}}
+        query = {"$and": [
+            {"is_cancel": 0},
+            {"date_check_in": {"$gte": begin_month}},
+            {"date_check_in": {"$lte": end_month}}
         ]}
         bookings = list(client.db.bookings.find(query))
         n = len(bookings)
