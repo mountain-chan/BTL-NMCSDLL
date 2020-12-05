@@ -212,3 +212,45 @@ booking_validator = {
     },
     "required": []
 }
+
+feature_validator = {
+    "type": "object",
+    "properties": {
+        "acreage": {
+            "type": "number",
+            "minimum": 0
+        },
+        "bed_type": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "is_near_beach": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+        },
+        "rank": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "meal": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 4
+        },
+        "distance_from_center": {
+            "type": "number",
+            "minimum": 0
+        },
+        "city_id": {
+            "type": "string"
+        },
+        "property_type_id": {
+            "type": "string"
+        }
+    },
+    "required": ["acreage", "bed_type", "distance_from_center", "is_near_beach", "rank", "meal", "city_id",
+                 "property_type_id"]
+}

@@ -2,6 +2,8 @@ from flask import Blueprint, request
 from jsonschema import validate
 import pandas as pd
 import numpy as np
+
+from app.schema.schema_validator import feature_validator
 from app.utils import send_result, send_error
 from app.extensions import client, scaler_x, scaler_y, linear, neural
 
@@ -21,7 +23,7 @@ def predictions():
     try:
         json_data = request.get_json()
         # Check valid params
-        # validate(instance=json_data, schema=room_validator)
+        validate(instance=json_data, schema=feature_validator)
     except Exception as ex:
         return send_error(message=str(ex))
 
