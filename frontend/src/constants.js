@@ -8,10 +8,13 @@ export const API_CITIES = API + "cities";
 export const API_PROPERTY_TYPES = API + "property_types";
 export const API_PROPERTIES = API + "properties";
 export const API_ROOMS = API + "rooms";
+export const API_ROOMS_DETAIL = API_ROOMS + "/detail";
 
 export const API_STATISTICS_PROPERTIES_BY_CITY = API_STATISTICS + "properties_by_city";
 export const API_STATISTICS_ROOMS_BY_CITY = API_STATISTICS + "rooms_by_city";
 export const API_STATISTICS_ROOMS_BY_PROPERTY = API_STATISTICS + "rooms_by_property";
+export const API_STATISTICS_BOOKINGS_BY_CITY = API_STATISTICS + "bookings_by_city";
+export const API_STATISTICS_BOOKINGS_BY_YEAR = API_STATISTICS + "by_year_and_month";
 
 export const custom_styles = {
     content: {

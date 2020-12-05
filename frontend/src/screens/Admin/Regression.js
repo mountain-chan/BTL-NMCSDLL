@@ -1,25 +1,22 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { Line, Scatter } from "react-chartjs-2";
 
 import HeadText from "./HeadText";
-import { colors } from "../../constants";
 
-import { API_ROOMS } from "../../constants";
+import { API_ROOMS_DETAIL } from "../../constants";
+import RoomsDetail from "./RoomsDetail";
+import Histogram from "./Histogram";
+import Relation from "./Relation";
 
 const Regression = (props) => {
     const auth = useSelector((state) => state.auth);
     const [data, set_data] = useState(null);
-
-    const point = 10;
+    const [tab, set_tab] = useState("ROOMS_DETAIL");
 
     useEffect(() => {
         const load = async () => {
             try {
-                let dt = {
-                    prices: null,
-                };
-                let response = await fetch(API_ROOMS, {
+                let response = await fetch(API_ROOMS_DETAIL, {
                     method: "GET",
                     headers: {
                         Authorization: "Bearer " + auth.access_token,
@@ -28,23 +25,7 @@ const Regression = (props) => {
                 if (!response.ok) throw new Error("Error");
                 let result = await response.json();
                 if (!result.status) throw new Error("Error");
-                let rooms = result.data;
-                let prices = rooms.map((value) => value.price);
-                let min = Math.min(...prices);
-                let max = Math.max(...prices);
-                let interval = (max - min) / point;
-                let price_range = [];
-                let amount = [];
-                for (let i = 0; i <= point; i++) {
-                    price_range.push(Math.floor(min + interval * i));
-                    amount.push(0);
-                }
-                prices.map((value) => (amount[Math.floor((value - min) / interval)] += 1));
-                dt.prices = {
-                    price_range: price_range,
-                    amount: amount,
-                };
-                set_data(dt);
+                set_data(result.data);
             } catch (err) {
                 throw err;
             }
@@ -52,74 +33,50 @@ const Regression = (props) => {
         load();
     }, []);
 
-    if (!data) return <div />;
+    let Render = <div />;
 
-    let bar_colors = [];
-    for (let key in data.rooms_by_property) {
-        let rd = Math.floor(Math.random() * colors.length);
-        bar_colors.push(colors[rd]);
+    if (data) {
+        switch (tab) {
+            case "ROOMS_DETAIL":
+                Render = <RoomsDetail data={data} />;
+                break;
+            case "HISTOGRAM":
+                Render = <Histogram data={data} />;
+                break;
+            case "RELATION":
+                Render = <Relation data={data} />;
+                break;
+            default:
+                break;
+        }
     }
 
     return (
         <div>
             <HeadText>Danh mục - Dự đoán</HeadText>
-            <div>
-                <div style={{ textAlign: "center", width: "60%", margin: "0 auto" }}>
-                    <Line
-                        data={{
-                            labels: data.prices.price_range,
-                            datasets: [
-                                {
-                                    data: data.prices.amount,
-                                    label: "Số phòng",
-                                    borderColor: "#3e95cd",
-                                    fill: false,
-                                },
-                            ],
-                        }}
-                        options={{
-                            legend: {
-                                display: false,
-                                position: "bottom",
-                            },
-                        }}
-                    />
-                    <div style={{ margin: "20px 0 50px 0" }}>Phân bố giá phòng</div>
-                </div>
-                <div style={{ textAlign: "center", width: "60%", margin: "0 auto" }}>
-                    <Scatter
-                        data={{
-                            labels: data.prices.price_range,
-                            datasets: [
-                                {
-                                    label: "Scatter Dataset",
-                                    data: [
-                                        {
-                                            x: -10,
-                                            y: 0,
-                                        },
-                                        {
-                                            x: 0,
-                                            y: 10,
-                                        },
-                                        {
-                                            x: 10,
-                                            y: 5,
-                                        },
-                                    ],
-                                },
-                            ],
-                        }}
-                        options={{
-                            legend: {
-                                display: false,
-                                position: "bottom",
-                            },
-                        }}
-                    />
-                    <div style={{ margin: "20px 0 50px 0" }}>Sự phụ thuộc của x đến y</div>
-                </div>
+            <div class="tab">
+                <button
+                    style={tab === "ROOMS_DETAIL" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("ROOMS_DETAIL")}>
+                    Chi tiết phòng
+                </button>
+                <button
+                    style={tab === "HISTOGRAM" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("HISTOGRAM")}>
+                    Phân bố giá phòng
+                </button>
+                <button
+                    style={tab === "RELATION" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("RELATION")}>
+                    Sự tương quan
+                </button>
+                <button
+                    style={tab === "REGRESSION" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("REGRESSION")}>
+                    Dự đoán
+                </button>
             </div>
+            <div>{Render}</div>
         </div>
     );
 };
