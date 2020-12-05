@@ -258,7 +258,7 @@ def last_day_of_month(any_month, any_year):
     if month > 12:
         month = 1
         year = year + 1
-    next_month = datetime.datetime.now().replace(year=year, month=month, day=1, hour=0, minute=0, second=0)
+    next_month = datetime.datetime(year=year, month=month, day=1, hour=0, minute=0, second=0)
     return int(next_month.timestamp())
 
 

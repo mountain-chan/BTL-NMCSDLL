@@ -14,6 +14,9 @@ class Worker:
         with open('default.json', encoding='utf-8') as file:
             self.default_data = json.load(file)
 
+        with open('booking_data.json', encoding='utf-8') as file:
+            self.booking_data = json.load(file)
+
     def insert_default_cities(self):
         cities = self.default_data.get('cities', {})
         client.db.cities.insert_many(cities)
@@ -35,7 +38,7 @@ class Worker:
         client.db.users.insert_many(users)
 
     def insert_default_bookings(self):
-        bookings = self.default_data.get('bookings', {})
+        bookings = self.booking_data
         client.db.bookings.insert_many(bookings)
 
 
