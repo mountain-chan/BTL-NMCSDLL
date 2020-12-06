@@ -273,11 +273,12 @@ def export2():
         "rank": [i["rank"] for i in items],
         "meal": [i["meal"] for i in items],
         "city_id": [i["city_id"] for i in items],
-        "property_type_id": [i["property_type_id"] for i in items]
+        "property_type_id": [i["property_type_id"] for i in items],
+        "price": [i["price"] for i in items]
     }
 
     df = pd.DataFrame(data, columns=["acreage", "bed_type", "distance_from_center", "is_near_beach", "rank", "meal",
-                                     "city_id", "property_type_id"])
+                                     "city_id", "property_type_id", "price"])
 
     df.to_csv('feature.csv', index=False, header=True)
 
