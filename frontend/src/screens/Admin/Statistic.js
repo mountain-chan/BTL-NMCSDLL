@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { Doughnut, Line } from "react-chartjs-2";
+import { Line, Polar } from "react-chartjs-2";
 
 import HeadText from "./HeadText";
 import { colors } from "../../constants";
@@ -55,8 +55,8 @@ const Statistic = (props) => {
             <HeadText>Danh mục - Thống kê</HeadText>
             <div style={{ width: "90%", margin: "0 auto" }}>
                 <div style={{ textAlign: "center" }}>
-                    <Doughnut
-                        height={80}
+                    <Polar
+                        height={120}
                         data={{
                             labels: Object.keys(data.bookings_by_city),
                             datasets: [
@@ -66,6 +66,17 @@ const Statistic = (props) => {
                                     data: Object.values(data.bookings_by_city),
                                 },
                             ],
+                        }}
+                        options={{
+                            legend: {
+                                display: true,
+                                position: "top",
+                            },
+                            scale: {
+                                ticks: {
+                                    display: false,
+                                },
+                            },
                         }}
                     />
                     <div style={{ margin: "30px 0 50px 0" }}>Thống kê số lượng đặt phòng theo các thành phố</div>
@@ -102,11 +113,17 @@ const Statistic = (props) => {
                                         id: "A",
                                         type: "linear",
                                         position: "left",
+                                        ticks: {
+                                            beginAtZero: true,
+                                        },
                                     },
                                     {
                                         id: "B",
                                         type: "linear",
                                         position: "right",
+                                        ticks: {
+                                            beginAtZero: true,
+                                        },
                                     },
                                 ],
                             },

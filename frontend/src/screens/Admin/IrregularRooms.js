@@ -2,23 +2,22 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
-import * as actions from "../../actions";
 
 import { custom_styles, API_ROOMS as api } from "../../constants";
 
 Modal.setAppElement("#root");
 
 const columns = [
-    { name: "acreage", title: "Diện tích", width: 6 },
-    { name: "bed_type", title: "Loại giường", width: 6 },
-    { name: "distance_from_center", title: "Cách trung tâm", width: 6 },
-    { name: "is_near_beach", title: "Gần biển", width: 6 },
+    { name: "acreage", title: "Diện tích", width: 9 },
+    { name: "bed_type", title: "Loại giường", width: 9 },
+    { name: "distance_from_center", title: "Cách trung tâm", width: 9 },
+    { name: "is_near_beach", title: "Gần biển", width: 8 },
     { name: "meal", title: "Bữa ăn", width: 9 },
-    { name: "rank", title: "Xếp hạng", width: 9 },
+    { name: "rank", title: "Xếp hạng", width: 8 },
     { name: "city_id", title: "Thành phố", width: 9 },
     { name: "property_type_id", title: "Loại chỗ nghỉ", width: 9 },
-    { name: "predicted_price", title: "Giá thuê dự đoán", width: 9 },
-    { name: "price", title: "Giá thuê", width: 9 },
+    { name: "predicted_price", title: "Giá thuê dự đoán", width: 10 },
+    { name: "price", title: "Giá thuê thực tế", width: 10 },
 ];
 
 const item_per_page = 6;
@@ -68,14 +67,61 @@ const IrregularRooms = (props) => {
         if (page !== page_current) set_page_current(page);
     };
 
+    const upd = async () => {
+        try {
+            const response = await fetch(`${api}/${upd_data._id}`, {
+                method: "PUT",
+                headers: {
+                    Authorization: "Bearer " + auth.access_token,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    price: upd_data.price,
+                }),
+            });
+            if (!response.ok) {
+                throw new Error("Error");
+            }
+            const result = await response.json();
+            if (!result.status) throw new Error(result.message);
+            set_data((state) => {
+                const idx = state.findIndex((a) => a._id === upd_data._id);
+                let new_state = state;
+                new_state[idx] = upd_data;
+                return new_state;
+            });
+        } catch (err) {
+            throw err;
+        }
+    };
+
+    const del = async () => {
+        try {
+            const response = await fetch(`${api}/${del_data._id}`, {
+                method: "DELETE",
+                headers: {
+                    Authorization: "Bearer " + auth.access_token,
+                },
+            });
+            if (!response.ok) {
+                throw new Error("Error");
+            }
+            const result = await response.json();
+            if (!result.status) throw new Error(result.message);
+            set_data((state) => state.filter((a) => a._id !== del_data._id));
+        } catch (err) {
+            throw err;
+        }
+    };
+
     const action = async (type) => {
         try {
             switch (type) {
                 case 1:
-                    await actions.upd(api, set_data, upd_data, auth.access_token);
+                    await upd();
                     break;
                 case 2:
-                    await actions.del(api, set_data, del_data, auth.access_token);
+                    await del();
                     break;
             }
             addToast("Thành công", {
@@ -190,45 +236,21 @@ const IrregularRooms = (props) => {
                     <table>
                         <tbody>
                             <tr>
-                                <td>Tên phòng</td>
+                                <td>Giá thuê dự đoán</td>
                                 <td>
                                     <input
+                                        disabled
                                         style={{
                                             width: 200,
                                             height: 24,
                                             paddingLeft: 10,
                                         }}
-                                        value={upd_data.name}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                name: event.target.value,
-                                            })
-                                        }
+                                        value={upd_data.predicted_price}
                                     />
                                 </td>
                             </tr>
                             <tr>
-                                <td>Diện tích</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.acreage}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                acreage: parseInt(event.target.value),
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Giá thuê</td>
+                                <td>Giá thuê thực tế</td>
                                 <td>
                                     <input
                                         style={{
@@ -237,86 +259,10 @@ const IrregularRooms = (props) => {
                                             paddingLeft: 10,
                                         }}
                                         value={upd_data.price}
-                                        onChange={(event) =>
+                                        onChange={(e) =>
                                             set_upd_data({
                                                 ...upd_data,
-                                                price: parseInt(event.target.value),
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tiện nghi</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.facility}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                facility: event.target.value,
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mô tả</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.description}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                description: event.target.value,
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Loại giường</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.bed_type}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                bed_type: parseInt(event.target.value),
-                                            })
-                                        }
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Id chỗ nghỉ</td>
-                                <td>
-                                    <input
-                                        style={{
-                                            width: 200,
-                                            height: 24,
-                                            paddingLeft: 10,
-                                        }}
-                                        value={upd_data.property_id}
-                                        onChange={(event) =>
-                                            set_upd_data({
-                                                ...upd_data,
-                                                property_id: event.target.value,
+                                                price: parseFloat(e.target.value),
                                             })
                                         }
                                     />

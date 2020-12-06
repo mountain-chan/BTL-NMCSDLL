@@ -7,7 +7,7 @@ const PricePrediction = (props) => {
     const auth = useSelector((state) => state.auth);
     const [type, set_type] = useState("linear");
     const [acreage, set_acreage] = useState(14);
-    const [bed_type, set_bed_type] = useState(0);
+    const [bed_type, set_bed_type] = useState(1);
     const [distance_from_center, set_distance_from_center] = useState(150);
     const [is_near_beach, set_is_near_beach] = useState(0);
     const [rank, set_rank] = useState(3.9);
@@ -22,6 +22,7 @@ const PricePrediction = (props) => {
                 method: "POST",
                 headers: {
                     Authorization: "Bearer " + auth.access_token,
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     acreage: acreage,
@@ -36,56 +37,100 @@ const PricePrediction = (props) => {
             });
             if (!response.ok) throw new Error("Error");
             let result = await response.json();
-            if (!result.status) throw new Error("Error");
+            console.log(result);
+            if (!result.status) throw new Error(result.message);
             set_price(result.data);
         } catch (err) {
-            throw err;
+            console.log(err.toString());
         }
     };
 
     return (
         <div style={{ display: "flex", flexDirection: "row" }}>
-            <div>
+            <div style={{ marginLeft: 50 }}>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Diện tích</div>
-                    <input value={acreage} onChange={(e) => set_acreage(e.target.value)} />
+                    <input
+                        style={{ paddingLeft: 5 }}
+                        value={acreage}
+                        onChange={(e) => set_acreage(parseFloat(e.target.value))}
+                    />
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Loại giường</div>
-                    <input value={bed_type} onChange={(e) => set_bed_type(e.target.value)} />
+                    <select
+                        style={{
+                            width: 158,
+                            height: 21,
+                            paddingLeft: 5,
+                        }}
+                        value={bed_type}
+                        onChange={(event) => set_bed_type(parseInt(event.target.value))}>
+                        <option value={0}>Giường đơn</option>
+                        <option value={1}>Giường đôi</option>
+                    </select>
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Cách trung tâm</div>
-                    <input value={distance_from_center} onChange={(e) => set_distance_from_center(e.target.value)} />
+                    <input
+                        style={{ paddingLeft: 5 }}
+                        value={distance_from_center}
+                        onChange={(e) => set_distance_from_center(parseFloat(e.target.value))}
+                    />
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Giáp biển</div>
-                    <input value={is_near_beach} onChange={(e) => set_is_near_beach(e.target.value)} />
+                    <input
+                        type="checkbox"
+                        checked={is_near_beach}
+                        onChange={(e) => set_is_near_beach(1 - is_near_beach)}
+                    />
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Xếp hạng</div>
-                    <input value={rank} onChange={(e) => set_rank(e.target.value)} />
+                    <input
+                        style={{ paddingLeft: 5 }}
+                        value={rank}
+                        onChange={(e) => set_rank(parseFloat(e.target.value))}
+                    />
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Bữa ăn</div>
-                    <input value={meal} onChange={(e) => set_meal(e.target.value)} />
+                    <select
+                        style={{
+                            width: 158,
+                            height: 21,
+                            paddingLeft: 5,
+                        }}
+                        value={meal}
+                        onChange={(e) => set_meal(parseInt(e.target.value))}>
+                        <option value={0}>Không có</option>
+                        <option value={1}>Bữa sáng</option>
+                        <option value={2}>Bữa sáng và trưa</option>
+                        <option value={3}>Bữa sáng và tối</option>
+                        <option value={4}>Cả ba bữa</option>
+                    </select>
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Thành phố</div>
-                    <input value={city_id} onChange={(e) => set_city_id(e.target.value)} />
+                    <input style={{ paddingLeft: 5 }} value={city_id} onChange={(e) => set_city_id(e.target.value)} />
                 </div>
                 <div style={{ marginBottom: 20 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Loại chỗ nghỉ</div>
-                    <input value={property_type_id} onChange={(e) => set_property_type_id(e.target.value)} />
+                    <input
+                        style={{ paddingLeft: 5 }}
+                        value={property_type_id}
+                        onChange={(e) => set_property_type_id(e.target.value)}
+                    />
                 </div>
             </div>
-            <div>
-                <div style={{ marginBottom: 40 }}>
+            <div style={{ marginLeft: 50 }}>
+                <div style={{ marginBottom: 56 }}>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Sử dụng</div>
                     <select
                         style={{
-                            width: 156,
-                            height: 24,
+                            width: 158,
+                            height: 21,
                             paddingLeft: 10,
                         }}
                         value={type}
@@ -94,10 +139,13 @@ const PricePrediction = (props) => {
                         <option value="neural">Neural Network</option>
                     </select>
                 </div>
-                <div style={{ marginBottom: 40, textAlign: "right" }}>
-                    <button onClick={predict}>Dự đoán</button>
+                <div style={{ marginBottom: 56, textAlign: "center" }}>
+                    <div style={{ width: 140, display: "inline-block" }}></div>
+                    <button style={{ width: 100 }} onClick={predict}>
+                        Dự đoán
+                    </button>
                 </div>
-                <div style={{ marginBottom: 20 }}>
+                <div>
                     <div style={{ width: 140, textAlign: "center", display: "inline-block" }}>Kết quả</div>
                     <input value={price} disabled />
                 </div>
