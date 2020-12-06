@@ -1,7 +1,10 @@
+from io import BytesIO
+import pandas as pd
 from bson import ObjectId
-from flask import Blueprint, request
+from flask import Blueprint, request, send_file
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
+from xlwt import Workbook
 
 from app.decorators import admin_required
 from app.schema.schema_validator import room_validator
@@ -158,7 +161,7 @@ def detail():
         item["distance_from_center"] = _property["distance_from_center"]
         item["city_id"] = _property["city_id"]
         item["property_type_id"] = _property["property_type_id"]
-    return send_result(data=list(results))
+    return send_result(data=results)
 
 
 @api.route('/<room_id>', methods=['GET'])
@@ -198,3 +201,85 @@ def available_rooms_by_date():
     booking_rooms_id = [b["room_id"] for b in bookings]
     available_rooms = [room for room in all_rooms if room["_id"] not in booking_rooms_id]
     return send_result(data=available_rooms)
+
+
+@api.route('/export', methods=['GET'])
+def export():
+    """ This api gets all rooms.
+
+        Returns:
+
+        Examples::
+
+    """
+
+    results = list(client.db.rooms.find({}, {"facility": 0, "description": 0, "name": 0}))
+    wb = Workbook()
+    sheet = wb.add_sheet("sheet1")
+    sheet.write(0, 0, 'acreage')
+    sheet.write(0, 1, 'bed_type')
+    sheet.write(0, 2, 'distance_from_center')
+    sheet.write(0, 3, 'is_near_beach')
+    sheet.write(0, 4, 'rank')
+    sheet.write(0, 5, 'meal')
+    sheet.write(0, 6, 'city_id')
+    sheet.write(0, 7, 'property_type_id')
+    for i, item in enumerate(results):
+        _property = client.db.properties.find_one({"_id": item["property_id"]})
+
+        sheet.write(i + 1, 0, item['acreage'])
+        sheet.write(i + 1, 1, item['bed_type'])
+        sheet.write(i + 1, 2, _property['distance_from_center'])
+        sheet.write(i + 1, 3, _property['is_near_beach'])
+        sheet.write(i + 1, 4, _property['rank'])
+        sheet.write(i + 1, 5, _property['meal'])
+        sheet.write(i + 1, 6, _property['city_id'])
+        sheet.write(i + 1, 7, _property['property_type_id'])
+
+    # Save book as bytes
+    output = BytesIO()
+    wb.save(output)
+    output.seek(0)
+    excel_name = "room_data"
+
+    return send_file(output, attachment_filename='{}.xls'.format(excel_name), as_attachment=True)
+
+
+@api.route('/export2', methods=['GET'])
+def export2():
+    """ This api gets all rooms.
+
+        Returns:
+
+        Examples::
+
+    """
+
+    items = list(client.db.rooms.find({}, {"facility": 0, "description": 0, "name": 0}))
+    for item in items:
+        _property = client.db.properties.find_one({"_id": item["property_id"]})
+        item["is_near_beach"] = _property["is_near_beach"]
+        item["rank"] = _property["rank"]
+        item["meal"] = _property["meal"]
+        item["distance_from_center"] = _property["distance_from_center"]
+        item["city_id"] = _property["city_id"]
+        item["property_type_id"] = _property["property_type_id"]
+
+    data = {
+        "acreage": [i["acreage"] for i in items],
+        "bed_type": [i["bed_type"] for i in items],
+        "distance_from_center": [i["distance_from_center"] for i in items],
+        "is_near_beach": [i["is_near_beach"] for i in items],
+        "rank": [i["rank"] for i in items],
+        "meal": [i["meal"] for i in items],
+        "city_id": [i["city_id"] for i in items],
+        "property_type_id": [i["property_type_id"] for i in items],
+        "price": [i["price"] for i in items]
+    }
+
+    df = pd.DataFrame(data, columns=["acreage", "bed_type", "distance_from_center", "is_near_beach", "rank", "meal",
+                                     "city_id", "property_type_id", "price"])
+
+    df.to_csv('feature.csv', index=False, header=True)
+
+    return send_result(message="Ok")
