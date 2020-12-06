@@ -1,15 +1,17 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { Line, Polar } from "react-chartjs-2";
 
 import HeadText from "./HeadText";
-import { colors } from "../../constants";
 
 import { API_STATISTICS_BOOKINGS_BY_CITY, API_STATISTICS_BOOKINGS_BY_YEAR } from "../../constants";
+
+import BookingsByCity from "./BookingsByCity";
+import BookingsIncome from "./BookingsIncome";
 
 const Statistic = (props) => {
     const auth = useSelector((state) => state.auth);
     const [data, set_data] = useState(null);
+    const [tab, set_tab] = useState("BOOKINGS_BY_CITY");
 
     useEffect(() => {
         const load = async () => {
@@ -48,92 +50,35 @@ const Statistic = (props) => {
         load();
     }, []);
 
-    if (!data) return <div />;
+    let Render = <div />;
+
+    if (data) {
+        switch (tab) {
+            case "BOOKINGS_BY_CITY":
+                Render = <BookingsByCity data={data} />;
+                break;
+            case "BOOKINGS_INCOME":
+                Render = <BookingsIncome data={data} />;
+                break;
+        }
+    }
 
     return (
         <div>
             <HeadText>Danh mục - Thống kê</HeadText>
-            <div style={{ width: "90%", margin: "0 auto" }}>
-                <div style={{ textAlign: "center" }}>
-                    <Polar
-                        height={120}
-                        data={{
-                            labels: Object.keys(data.bookings_by_city),
-                            datasets: [
-                                {
-                                    label: "Số lượt đặt",
-                                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                                    data: Object.values(data.bookings_by_city),
-                                },
-                            ],
-                        }}
-                        options={{
-                            legend: {
-                                display: true,
-                                position: "top",
-                            },
-                            scale: {
-                                ticks: {
-                                    display: false,
-                                },
-                            },
-                        }}
-                    />
-                    <div style={{ margin: "30px 0 50px 0" }}>Thống kê số lượng đặt phòng theo các thành phố</div>
-                </div>
-                <div style={{ textAlign: "center" }}>
-                    <Line
-                        data={{
-                            labels: data.bookings_by_year.map((value) => value.month),
-                            datasets: [
-                                {
-                                    label: "Số lượt đặt",
-                                    yAxisID: "A",
-                                    data: data.bookings_by_year.map((value) => value.number_of_reservations),
-                                    borderColor: "#ee9030",
-                                    backgroundColor: "#ee90303f",
-                                },
-                                {
-                                    label: "Doanh thu",
-                                    yAxisID: "B",
-                                    data: data.bookings_by_year.map((value) => value.total_income),
-                                    borderColor: "#8e5ea2",
-                                    backgroundColor: "#8e5ea23f",
-                                },
-                            ],
-                        }}
-                        options={{
-                            legend: {
-                                display: true,
-                                position: "top",
-                            },
-                            scales: {
-                                yAxes: [
-                                    {
-                                        id: "A",
-                                        type: "linear",
-                                        position: "left",
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
-                                    },
-                                    {
-                                        id: "B",
-                                        type: "linear",
-                                        position: "right",
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
-                                    },
-                                ],
-                            },
-                        }}
-                    />
-                    <div style={{ margin: "10px 0 50px 0" }}>
-                        Thống kê số lượt đặt phòng và doanh thu theo các tháng
-                    </div>
-                </div>
+            <div class="tab">
+                <button
+                    style={tab === "BOOKINGS_BY_CITY" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("BOOKINGS_BY_CITY")}>
+                    Đặt phòng theo thành phố
+                </button>
+                <button
+                    style={tab === "BOOKINGS_INCOME" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("BOOKINGS_INCOME")}>
+                    Doanh thu đặt phòng
+                </button>
             </div>
+            <div style={{ width: "85%", margin: "0 auto" }}>{Render}</div>
         </div>
     );
 };

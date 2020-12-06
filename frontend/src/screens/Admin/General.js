@@ -1,9 +1,7 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { Doughnut, Bar } from "react-chartjs-2";
 
 import HeadText from "./HeadText";
-import { colors } from "../../constants";
 
 import {
     API_STATISTICS_PROPERTIES_BY_CITY,
@@ -11,9 +9,13 @@ import {
     API_STATISTICS_ROOMS_BY_CITY,
 } from "../../constants";
 
+import PropertiesByCity from "./PropertiesByCity";
+import RoomsByProperty from "./RoomsByProperty";
+
 const General = (props) => {
     const auth = useSelector((state) => state.auth);
     const [data, set_data] = useState(null);
+    const [tab, set_tab] = useState("PROPERTIES_BY_CITY");
 
     useEffect(() => {
         const load = async () => {
@@ -64,62 +66,35 @@ const General = (props) => {
         load();
     }, []);
 
-    if (!data) return <div />;
+    let Render = <div />;
 
-    let bar_colors = [];
-    for (let key in data.rooms_by_property) {
-        let rd = Math.floor(Math.random() * colors.length);
-        bar_colors.push(colors[rd]);
+    if (data) {
+        switch (tab) {
+            case "PROPERTIES_BY_CITY":
+                Render = <PropertiesByCity data={data} />;
+                break;
+            case "ROOMS_BY_PROPERTY":
+                Render = <RoomsByProperty data={data} />;
+                break;
+        }
     }
 
     return (
         <div>
             <HeadText>Danh mục - Tổng quan</HeadText>
-            <div style={{ width: "92%", margin: "0 auto" }}>
-                <div style={{ textAlign: "center" }}>
-                    <Doughnut
-                        height={80}
-                        data={{
-                            labels: Object.keys(data.properties_by_city),
-                            datasets: [
-                                {
-                                    label: "Số chỗ nghỉ",
-                                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                                    data: Object.values(data.properties_by_city),
-                                },
-                            ],
-                        }}
-                    />
-                    <div style={{ margin: "30px 0 50px 0" }}>Thống kê số chỗ nghỉ theo các thành phố</div>
-                </div>
-                <div style={{ textAlign: "center" }}>
-                    <Bar
-                        data={{
-                            labels: Object.keys(data.rooms_by_property),
-                            datasets: [
-                                {
-                                    label: "Số phòng",
-                                    backgroundColor: bar_colors,
-                                    data: Object.values(data.rooms_by_property),
-                                },
-                            ],
-                        }}
-                        options={{
-                            legend: { display: false },
-                            scales: {
-                                yAxes: [
-                                    {
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
-                                    },
-                                ],
-                            },
-                        }}
-                    />
-                    <div style={{ margin: "10px 0 50px 0" }}>Thống kê số phòng theo các khách sạn</div>
-                </div>
+            <div class="tab">
+                <button
+                    style={tab === "PROPERTIES_BY_CITY" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("PROPERTIES_BY_CITY")}>
+                    Chỗ nghỉ theo thành phố
+                </button>
+                <button
+                    style={tab === "ROOMS_BY_PROPERTY" ? { backgroundColor: "#ccc" } : {}}
+                    onClick={() => set_tab("ROOMS_BY_PROPERTY")}>
+                    Phòng theo khách sạn
+                </button>
             </div>
+            <div style={{ margin: "0 auto" }}>{Render}</div>
         </div>
     );
 };

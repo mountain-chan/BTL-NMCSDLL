@@ -41,7 +41,7 @@ const Irregular = (props) => {
                 Render = <Comparison data={data} />;
                 break;
             case "IRREGULAR_ROOMS":
-                Render = <IrregularRooms data={data}/>;
+                Render = <IrregularRooms data={data} set_data={set_data} />;
                 break;
         }
     }

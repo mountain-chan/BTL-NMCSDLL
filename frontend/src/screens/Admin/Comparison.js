@@ -21,7 +21,7 @@ const Comparison = (props) => {
         <div style={{ textAlign: "center" }}>
             <div style={{ textAlign: "center", width: 540, margin: "0 auto" }}>
                 <Scatter
-                    height={180}
+                    height={190}
                     data={{
                         labels: "So sánh",
                         datasets: [
@@ -44,7 +44,7 @@ const Comparison = (props) => {
                         },
                     }}
                 />
-                <div style={{ margin: "20px 0 50px 0" }}>So sánh giữa giá phòng dự đoán và thực tế</div>
+                <div style={{ margin: "20px 0 20px 0" }}>So sánh giá phòng giữa dự đoán và thực tế</div>
             </div>
         </div>
     );

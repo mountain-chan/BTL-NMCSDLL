@@ -40,7 +40,7 @@ const Histogram = (props) => {
                     },
                 }}
             />
-            <div style={{ margin: "20px 0 50px 0" }}>Phân bố giá phòng</div>
+            <div style={{ margin: "20px 0 20px 0" }}>Phân bố giá phòng</div>
         </div>
     );
 };

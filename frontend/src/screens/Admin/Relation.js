@@ -64,8 +64,8 @@ const Relation = (props) => {
             </div>
             <div style={{ textAlign: "center", marginLeft: 50 }}>
                 <Scatter
-                    width={600}
-                    height={300}
+                    width={500}
+                    height={340}
                     data={{
                         labels: "d",
                         datasets: [
@@ -83,7 +83,7 @@ const Relation = (props) => {
                         },
                     }}
                 />
-                <div style={{ margin: "20px 0 50px 0" }}>
+                <div style={{ margin: "20px 0 20px 0" }}>
                     Sự phụ thuộc của {label_x} đến {label_y}
                 </div>
             </div>

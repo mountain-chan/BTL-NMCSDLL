@@ -25,7 +25,8 @@ const item_per_page = 6;
 const IrregularRooms = (props) => {
     const auth = useSelector((state) => state.auth);
 
-    const [data, set_data] = useState(props.data.irregular);
+    const data = props.data;
+    const set_data = props.set_data;
 
     const { addToast } = useToasts();
 
@@ -48,7 +49,9 @@ const IrregularRooms = (props) => {
     const [del_data, set_del_data] = useState("");
     const [page_current, set_page_current] = useState(0);
 
-    const page_max = Math.ceil(data.length / item_per_page) - 1;
+    const irregular = data.irregular;
+
+    const page_max = Math.ceil(irregular.length / item_per_page) - 1;
     const pages = [];
     let page_left = page_current - 3,
         page_right = page_current + 3;
@@ -59,7 +62,7 @@ const IrregularRooms = (props) => {
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
     const item_min = page_current * item_per_page;
-    const item_max = page_max === page_current ? data.length : (page_current + 1) * item_per_page;
+    const item_max = page_max === page_current ? irregular.length : (page_current + 1) * item_per_page;
 
     const goto = (page) => {
         if (page < 0) page = 0;
@@ -84,11 +87,11 @@ const IrregularRooms = (props) => {
             }
             const result = await response.json();
             if (!result.status) throw new Error(result.message);
-            set_data((state) => {
-                const idx = state.findIndex((a) => a._id === upd_data._id);
-                let new_state = state;
-                new_state[idx] = upd_data;
-                return new_state;
+            set_data((data) => {
+                let dt = data;
+                let idx = dt.irregular.findIndex((a) => a._id === upd_data._id);
+                dt.irregular[idx] = upd_data;
+                return dt;
             });
         } catch (err) {
             throw err;
@@ -108,7 +111,11 @@ const IrregularRooms = (props) => {
             }
             const result = await response.json();
             if (!result.status) throw new Error(result.message);
-            set_data((state) => state.filter((a) => a._id !== del_data._id));
+            set_data((data) => {
+                let dt = data;
+                dt.irregular = dt.irregular.filter((a) => a._id !== del_data._id);
+                return dt;
+            });
         } catch (err) {
             throw err;
         }
@@ -189,7 +196,7 @@ const IrregularRooms = (props) => {
                                         </div>
                                     </div>
                                     <div style={{ flex: 1, textAlign: "right", marginRight: 10 }}>
-                                        Tổng: {data.length}
+                                        Tổng: {irregular.length}
                                     </div>
                                 </div>
                             </td>
@@ -200,7 +207,7 @@ const IrregularRooms = (props) => {
                             ))}
                             <th>Thao tác</th>
                         </tr>
-                        {data.slice(item_min, item_max).map((item) => (
+                        {irregular.slice(item_min, item_max).map((item) => (
                             <tr>
                                 {columns.map((i) => (
                                     <td>{item[i.name]}</td>
