@@ -39,6 +39,7 @@ const Cities = (props) => {
     });
     const [del_data, set_del_data] = useState("");
     const [page_current, set_page_current] = useState(0);
+    const [search, set_search] = useState("");
 
     useEffect(() => {
         const load = async () => {
@@ -49,7 +50,10 @@ const Cities = (props) => {
         load();
     }, []);
 
-    const page_max = Math.ceil(data.length / item_per_page) - 1;
+    let data2 = data;
+    if (search !== "") data2 = data2.filter((d) => d.name.toLowerCase().includes(search.toLowerCase()));
+
+    const page_max = Math.ceil(data2.length / item_per_page) - 1;
     const pages = [];
     let page_left = page_current - 3,
         page_right = page_current + 3;
@@ -60,7 +64,7 @@ const Cities = (props) => {
     if (page_max >= 0 && page_current > page_max) set_page_current(page_max);
 
     const item_min = page_current * item_per_page;
-    const item_max = page_max === page_current ? data.length : (page_current + 1) * item_per_page;
+    const item_max = page_max === page_current ? data2.length : (page_current + 1) * item_per_page;
 
     const goto = (page) => {
         if (page < 0) page = 0;
@@ -108,7 +112,7 @@ const Cities = (props) => {
                         <tr>
                             <td colSpan={columns.length + 1} style={{ height: 28 }}>
                                 <div style={{ display: "flex", flex: 1, flexDirection: "row" }}>
-                                    <div style={{ textAlign: "center", flex: 4 }}>
+                                    <div style={{ textAlign: "center", flex: 3 }}>
                                         <div
                                             style={{
                                                 display: "inline-block",
@@ -147,8 +151,20 @@ const Cities = (props) => {
                                             &raquo;
                                         </div>
                                     </div>
+                                    <input
+                                        value={search}
+                                        style={{
+                                            marginRight: 10,
+                                            width: 110,
+                                            border: "1px solid #aaa",
+                                            borderRadius: 3,
+                                            paddingLeft: 8,
+                                        }}
+                                        placeholder="Tìm kiếm ..."
+                                        onChange={(e) => set_search(e.target.value)}
+                                    />
                                     <div style={{ flex: 1, textAlign: "right" }}>
-                                        Tổng: {data.length}
+                                        Tổng: {data2.length}
                                         <button style={{ marginLeft: 15 }} onClick={() => set_ins_open(true)}>
                                             <i className="fa fa-plus-circle"></i>
                                             <span
@@ -169,7 +185,7 @@ const Cities = (props) => {
                             ))}
                             <th>Thao tác</th>
                         </tr>
-                        {data.slice(item_min, item_max).map((item) => (
+                        {data2.slice(item_min, item_max).map((item) => (
                             <tr>
                                 {columns.map((i) => (
                                     <td>{item[i.name]}</td>
