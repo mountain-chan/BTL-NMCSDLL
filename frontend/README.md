@@ -1,2 +1,13 @@
-# BTL-NMCSDLL
-Đề tài: Quản lý đặt phòng khách sạn (Booking)
+# Booking frontend
+
+Download Nodejs:
+
+### `https://nodejs.org/en/download/`
+
+Install dependencies:
+
+### `npm install` or `npm i`
+
+Run:
+
+### `npm start`
