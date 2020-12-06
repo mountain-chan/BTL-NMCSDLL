@@ -43,7 +43,7 @@ def predictions():
         price = neural.predict(x)[0][0]
 
     price = scaler_y.revert(price)
-    return send_result(data=price)
+    return send_result(data=round(price, 2))
 
 
 @api.route('/irregular', methods=['GET'])
