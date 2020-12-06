@@ -1,18 +1,26 @@
 import json
-
-from app.app import create_app
-from app.extensions import client
+from flask import Flask
+from flask_pymongo import PyMongo
 from app.settings import DevConfig
+
+client = PyMongo()
 
 
 class Worker:
     def __init__(self):
-        app = create_app(config_object=DevConfig)
+        app = Flask(__name__)
+
+        app.config.from_object(DevConfig)
+        client.app = app
+        client.init_app(app)
         app_context = app.app_context()
         app_context.push()
         client.db.command("dropDatabase")
         with open('default.json', encoding='utf-8') as file:
             self.default_data = json.load(file)
+
+        with open('room_data.json', encoding='utf-8') as file:
+            self.room_data = json.load(file)
 
         with open('booking_data.json', encoding='utf-8') as file:
             self.booking_data = json.load(file)
@@ -30,7 +38,7 @@ class Worker:
         client.db.properties.insert_many(properties)
 
     def insert_default_rooms(self):
-        rooms = self.default_data.get('rooms', {})
+        rooms = self.room_data
         client.db.rooms.insert_many(rooms)
 
     def insert_default_users(self):

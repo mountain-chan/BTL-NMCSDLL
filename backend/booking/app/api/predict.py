@@ -84,13 +84,13 @@ def irregular():
     regular_rooms = []
     irregular_rooms = []
     for i, j, k in zip(items, y_real, y_predict):
-        if abs(j - k) > 100:
-            i["predicted_price"] = float(k)
+        if abs(j - k) > 110:
+            i["predicted_price"] = round(k, 2)
             irregular_rooms.append(i)
         else:
             item = {
                 "price": float(j),
-                "predicted_price": float(k)
+                "predicted_price": round(k, 2)
             }
             regular_rooms.append(item)
 
