@@ -1,17 +1,17 @@
 [
     {
         "_id": "5fcb2af4510a272d9c4baed8",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 14,
         "price": 420,
         "facility": "1 Giường đôi",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 1,
         "property_id": "8"
     },
     {
         "_id": "5fcb2af4510a272d9c4baed9",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 12,
         "price": 330,
         "facility": "1 Giường đơn",
@@ -161,7 +161,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baee8",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 26,
         "price": 350,
         "facility": "1 Giường đơn",
@@ -251,11 +251,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baef1",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 29,
         "price": 620,
         "facility": "1 Giường đôi",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 1,
         "property_id": "20"
     },
@@ -341,7 +341,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baefa",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 26,
         "price": 470,
         "facility": "1 Giường đôi",
@@ -471,7 +471,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf07",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 25,
         "price": 410,
         "facility": "1 Giường đôi",
@@ -501,7 +501,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf0a",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 23,
         "price": 420,
         "facility": "1 Giường đôi",
@@ -701,7 +701,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf1e",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 29,
         "price": 440,
         "facility": "1 Giường đơn",
@@ -831,11 +831,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf2b",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 26,
         "price": 470,
         "facility": "1 Giường đôi",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 1,
         "property_id": "13"
     },
@@ -931,7 +931,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf35",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 21,
         "price": 550,
         "facility": "1 Giường đôi",
@@ -1061,7 +1061,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf42",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 27,
         "price": 350,
         "facility": "1 Giường đôi",
@@ -1141,7 +1141,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf4a",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 30,
         "price": 580,
         "facility": "1 Giường đơn",
@@ -1501,7 +1501,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf6e",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 17,
         "price": 270,
         "facility": "1 Giường đơn",
@@ -1651,7 +1651,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf7d",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 22,
         "price": 440,
         "facility": "1 Giường đơn",
@@ -1671,7 +1671,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf7f",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 18,
         "price": 530,
         "facility": "1 Giường đôi",
@@ -1771,7 +1771,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf89",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 24,
         "price": 410,
         "facility": "1 Giường đôi",
@@ -1901,7 +1901,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf96",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 30,
         "price": 370,
         "facility": "1 Giường đơn",
@@ -1921,7 +1921,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4baf98",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 23,
         "price": 390,
         "facility": "1 Giường đơn",
@@ -2171,7 +2171,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bafb1",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 19,
         "price": 390,
         "facility": "1 Giường đơn",
@@ -2471,7 +2471,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bafcf",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 27,
         "price": 410,
         "facility": "1 Giường đôi",
@@ -2691,11 +2691,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bafe5",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 25,
         "price": 470,
         "facility": "1 Giường đơn",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 0,
         "property_id": "21"
     },
@@ -3091,7 +3091,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb00d",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 14,
         "price": 200,
         "facility": "1 Giường đơn",
@@ -3121,7 +3121,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb010",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 20,
         "price": 300,
         "facility": "1 Giường đơn",
@@ -3181,11 +3181,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb016",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 31,
         "price": 450,
         "facility": "1 Giường đơn",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 0,
         "property_id": "23"
     },
@@ -3221,7 +3221,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb01a",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 12,
         "price": 210,
         "facility": "1 Giường đôi",
@@ -3381,7 +3381,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb02a",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 14,
         "price": 390,
         "facility": "1 Giường đơn",
@@ -3401,7 +3401,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb02c",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 29,
         "price": 480,
         "facility": "1 Giường đôi",
@@ -3621,11 +3621,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb042",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 25,
         "price": 570,
         "facility": "1 Giường đơn",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 0,
         "property_id": "6"
     },
@@ -3871,7 +3871,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb05b",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 28,
         "price": 570,
         "facility": "1 Giường đơn",
@@ -3941,7 +3941,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb062",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 31,
         "price": 680,
         "facility": "1 Giường đơn",
@@ -4031,7 +4031,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb06b",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 26,
         "price": 530,
         "facility": "1 Giường đơn",
@@ -4051,7 +4051,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb06d",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 15,
         "price": 390,
         "facility": "1 Giường đơn",
@@ -4091,7 +4091,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb071",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 17,
         "price": 340,
         "facility": "1 Giường đơn",
@@ -4131,7 +4131,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb075",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 12,
         "price": 300,
         "facility": "1 Giường đôi",
@@ -4531,7 +4531,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb09d",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 24,
         "price": 370,
         "facility": "1 Giường đôi",
@@ -4841,11 +4841,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0bc",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 20,
         "price": 410,
         "facility": "1 Giường đôi",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 1,
         "property_id": "17"
     },
@@ -4901,7 +4901,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0c2",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 22,
         "price": 340,
         "facility": "1 Giường đơn",
@@ -4981,7 +4981,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0ca",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 14,
         "price": 310,
         "facility": "1 Giường đơn",
@@ -5051,7 +5051,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0d1",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 30,
         "price": 400,
         "facility": "1 Giường đơn",
@@ -5201,7 +5201,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0e0",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 17,
         "price": 330,
         "facility": "1 Giường đôi",
@@ -5311,7 +5311,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0eb",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 28,
         "price": 350,
         "facility": "1 Giường đơn",
@@ -5361,11 +5361,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0f0",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 14,
         "price": 370,
         "facility": "1 Giường đơn",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 0,
         "property_id": "25"
     },
@@ -5381,7 +5381,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb0f2",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 22,
         "price": 210,
         "facility": "1 Giường đơn",
@@ -5681,7 +5681,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb110",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 25,
         "price": 380,
         "facility": "1 Giường đơn",
@@ -5801,7 +5801,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb11c",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 13,
         "price": 360,
         "facility": "1 Giường đơn",
@@ -5931,7 +5931,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb129",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 15,
         "price": 410,
         "facility": "1 Giường đơn",
@@ -6101,7 +6101,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb13a",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 20,
         "price": 470,
         "facility": "1 Giường đôi",
@@ -6311,7 +6311,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb14f",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 24,
         "price": 380,
         "facility": "1 Giường đôi",
@@ -6391,11 +6391,11 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb157",
-        "name": "Phòng Trần Dần",
+        "name": "Phòng VIP 102",
         "acreage": 17,
         "price": 270,
         "facility": "1 Giường đơn",
-        "description": "Nhà tiên tri lộn xào vũ trụ Trần Dần và các ba que tụ họp.",
+        "description": "Phòng VIP sang trọng.",
         "bed_type": 0,
         "property_id": "4"
     },
@@ -6711,7 +6711,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c4bb177",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 21,
         "price": 420,
         "facility": "1 Giường đơn",
@@ -6741,7 +6741,7 @@
     },
     {
         "_id": "5fcb2af4510a272d9c422b177",
-        "name": "Phòng Ban",
+        "name": "Phòng Trung cấp",
         "acreage": 21,
         "price": 120,
         "facility": "1 Giường đơn",

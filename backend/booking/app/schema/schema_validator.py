@@ -136,7 +136,7 @@ room_validator = {
             "maxLength": 50
         }
     },
-    "required": ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
+    "required": []
 }
 
 city_validator = {
