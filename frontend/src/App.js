@@ -7,7 +7,7 @@ import { ToastProvider } from "react-toast-notifications";
 import Manager from "./screens/Admin/Manager";
 
 import "font-awesome/css/font-awesome.min.css";
-import "./css/App.css";
+import "./App.css";
 
 import { auth_reducer } from "./store/reducers/Auth";
 

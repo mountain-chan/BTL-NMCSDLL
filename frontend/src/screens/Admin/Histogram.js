@@ -9,11 +9,15 @@ const Histogram = (props) => {
     let interval = (max - min) / point;
     let price_range = [];
     let amount = [];
-    for (let i = 0; i <= point; i++) {
+    for (let i = 0; i < point; i++) {
         price_range.push(Math.floor(min + interval * i));
         amount.push(0);
     }
-    prices.map((value) => (amount[Math.floor((value - min) / interval)] += 1));
+    prices.map((value) => {
+        let idx = Math.floor((value - min) / interval);
+        if (idx === point) idx -= 1;
+        amount[idx] += 1;
+    });
     prices = {
         price_range: price_range,
         amount: amount,

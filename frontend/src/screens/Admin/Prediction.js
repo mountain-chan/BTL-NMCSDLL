@@ -56,7 +56,7 @@ const Prediction = (props) => {
     return (
         <div>
             <HeadText>Danh mục - Dự đoán</HeadText>
-            <div class="tab">
+            <div className="tab">
                 <button
                     style={tab === "ROOMS_DETAIL" ? { backgroundColor: "#ccc" } : {}}
                     onClick={() => set_tab("ROOMS_DETAIL")}>

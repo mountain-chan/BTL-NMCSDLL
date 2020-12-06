@@ -49,7 +49,7 @@ const Irregular = (props) => {
     return (
         <div>
             <HeadText>Danh mục - Bất thường</HeadText>
-            <div class="tab">
+            <div className="tab">
                 <button
                     style={tab === "COMPARISON" ? { backgroundColor: "#ccc" } : {}}
                     onClick={() => set_tab("COMPARISON")}>
