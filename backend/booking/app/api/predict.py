@@ -1,8 +1,10 @@
 from flask import Blueprint, request
+from flask_jwt_extended import jwt_required
 from jsonschema import validate
 import pandas as pd
 import numpy as np
 
+from app.decorators import admin_required
 from app.schema.schema_validator import feature_validator
 from app.utils import send_result, send_error
 from app.extensions import client, scaler_x, scaler_y, linear, neural
@@ -11,6 +13,8 @@ api = Blueprint('predictions', __name__)
 
 
 @api.route('', methods=['POST'])
+@jwt_required
+@admin_required()
 def predictions():
     """ This api predict price of a room.
 
@@ -47,6 +51,8 @@ def predictions():
 
 
 @api.route('/irregular', methods=['GET'])
+@jwt_required
+@admin_required()
 def irregular():
     """ This api predict irregular.
 
