@@ -82,14 +82,14 @@ def update_room(room_id):
     except Exception as ex:
         return send_error(message=str(ex))
 
-    _property = client.db.properties.find_one({"_id": json_data.get("property_id", None)})
-    if not _property:
-        return send_error(message="Not found the property")
-
     keys = ["name", "acreage", "price", "facility", "description", "bed_type", "property_id"]
     data = {}
     for key in keys:
         if key in json_data:
+            if key == "property_id":
+                _property = client.db.properties.find_one({"_id": json_data.get("property_id", None)})
+                if not _property:
+                    return send_error(message="Not found the property")
             data[key] = json_data.get(key)
 
     new_values = {
