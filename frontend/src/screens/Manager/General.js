@@ -82,7 +82,7 @@ const General = (props) => {
     return (
         <div>
             <HeadText>Danh mục - Tổng quan</HeadText>
-            <div class="tab">
+            <div className="tab">
                 <button
                     style={tab === "PROPERTIES_BY_CITY" ? { backgroundColor: "#ccc" } : {}}
                     onClick={() => set_tab("PROPERTIES_BY_CITY")}>

@@ -2,21 +2,21 @@
     font-family: "Maven-Pro";
     font-style: normal;
     font-weight: normal;
-    src: url("../fonts/MavenPro-Medium.ttf") format("truetype");
+    src: url("fonts/MavenPro-Medium.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Maven-Pro";
     font-style: normal;
     font-weight: lighter;
-    src: url("../fonts/MavenPro-Regular.ttf") format("truetype");
+    src: url("fonts/MavenPro-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Maven-Pro";
     font-style: normal;
     font-weight: bold;
-    src: url("../fonts/MavenPro-Bold.ttf") format("truetype");
+    src: url("fonts/MavenPro-Bold.ttf") format("truetype");
 }
 
 body {
@@ -115,4 +115,34 @@ td {
 
 .tab button:hover {
     background-color: #ddd;
+}
+
+.topnav {
+    overflow: hidden;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #ccd6e5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px !important;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 0;
+    margin-right: 40px;
+}
+
+.topnav a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.topnav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
 }

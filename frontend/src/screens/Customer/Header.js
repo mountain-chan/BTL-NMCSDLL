@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-import logo from "../images/logo.png";
-
-import "../css/Header.css";
+import logo from "../../images/logo.png";
 
 const Header = (props) => {
     return (
-        <div style={{ backgroundColor: "#003580", paddingBottom: 3 }}>
+        <div style={{ backgroundColor: "#003580", paddingBottom: 2 }}>
             <a href="/">
                 <img
                     src={logo}

@@ -66,7 +66,7 @@ const Statistic = (props) => {
     return (
         <div>
             <HeadText>Danh mục - Thống kê</HeadText>
-            <div class="tab">
+            <div className="tab">
                 <button
                     style={tab === "BOOKINGS_BY_CITY" ? { backgroundColor: "#ccc" } : {}}
                     onClick={() => set_tab("BOOKINGS_BY_CITY")}>
