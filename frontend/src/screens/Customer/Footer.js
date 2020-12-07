@@ -1,5 +1,5 @@
-import sticker_facebook from "../images/sticker_facebook.png";
-import sticker_youtube from "../images/sticker_youtube.png";
+import sticker_facebook from "../../images/sticker_facebook.png";
+import sticker_youtube from "../../images/sticker_youtube.png";
 
 const Footer = (props) => {
     return (
