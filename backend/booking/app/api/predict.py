@@ -7,7 +7,7 @@ import numpy as np
 from app.decorators import admin_required
 from app.schema.schema_validator import feature_validator
 from app.utils import send_result, send_error
-from app.extensions import client, scaler_x, scaler_y, linear, neural
+from app.extensions import client, scaler_x, scaler_y, linear
 
 api = Blueprint('predictions', __name__)
 
@@ -41,10 +41,7 @@ def predictions():
     # standardized data
     x = scaler_x.transform(x)
 
-    if _type == "linear":
-        price = linear.predict(x)[0]
-    else:
-        price = neural.predict(x)[0][0]
+    price = linear.predict(x)[0]
 
     price = scaler_y.revert(price)
     return send_result(data=round(price, 2))

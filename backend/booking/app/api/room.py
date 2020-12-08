@@ -4,7 +4,6 @@ from bson import ObjectId
 from flask import Blueprint, request, send_file
 from flask_jwt_extended import jwt_required
 from jsonschema import validate
-from xlwt import Workbook
 
 from app.decorators import admin_required
 from app.schema.schema_validator import room_validator
@@ -203,46 +202,46 @@ def available_rooms_by_date():
     return send_result(data=available_rooms)
 
 
-@api.route('/export', methods=['GET'])
-def export():
-    """ This api gets all rooms.
-
-        Returns:
-
-        Examples::
-
-    """
-
-    results = list(client.db.rooms.find({}, {"facility": 0, "description": 0, "name": 0}))
-    wb = Workbook()
-    sheet = wb.add_sheet("sheet1")
-    sheet.write(0, 0, 'acreage')
-    sheet.write(0, 1, 'bed_type')
-    sheet.write(0, 2, 'distance_from_center')
-    sheet.write(0, 3, 'is_near_beach')
-    sheet.write(0, 4, 'rank')
-    sheet.write(0, 5, 'meal')
-    sheet.write(0, 6, 'city_id')
-    sheet.write(0, 7, 'property_type_id')
-    for i, item in enumerate(results):
-        _property = client.db.properties.find_one({"_id": item["property_id"]})
-
-        sheet.write(i + 1, 0, item['acreage'])
-        sheet.write(i + 1, 1, item['bed_type'])
-        sheet.write(i + 1, 2, _property['distance_from_center'])
-        sheet.write(i + 1, 3, _property['is_near_beach'])
-        sheet.write(i + 1, 4, _property['rank'])
-        sheet.write(i + 1, 5, _property['meal'])
-        sheet.write(i + 1, 6, _property['city_id'])
-        sheet.write(i + 1, 7, _property['property_type_id'])
-
-    # Save book as bytes
-    output = BytesIO()
-    wb.save(output)
-    output.seek(0)
-    excel_name = "room_data"
-
-    return send_file(output, attachment_filename='{}.xls'.format(excel_name), as_attachment=True)
+# @api.route('/export', methods=['GET'])
+# def export():
+#     """ This api gets all rooms.
+#
+#         Returns:
+#
+#         Examples::
+#
+#     """
+#
+#     results = list(client.db.rooms.find({}, {"facility": 0, "description": 0, "name": 0}))
+#     wb = Workbook()
+#     sheet = wb.add_sheet("sheet1")
+#     sheet.write(0, 0, 'acreage')
+#     sheet.write(0, 1, 'bed_type')
+#     sheet.write(0, 2, 'distance_from_center')
+#     sheet.write(0, 3, 'is_near_beach')
+#     sheet.write(0, 4, 'rank')
+#     sheet.write(0, 5, 'meal')
+#     sheet.write(0, 6, 'city_id')
+#     sheet.write(0, 7, 'property_type_id')
+#     for i, item in enumerate(results):
+#         _property = client.db.properties.find_one({"_id": item["property_id"]})
+#
+#         sheet.write(i + 1, 0, item['acreage'])
+#         sheet.write(i + 1, 1, item['bed_type'])
+#         sheet.write(i + 1, 2, _property['distance_from_center'])
+#         sheet.write(i + 1, 3, _property['is_near_beach'])
+#         sheet.write(i + 1, 4, _property['rank'])
+#         sheet.write(i + 1, 5, _property['meal'])
+#         sheet.write(i + 1, 6, _property['city_id'])
+#         sheet.write(i + 1, 7, _property['property_type_id'])
+#
+#     # Save book as bytes
+#     output = BytesIO()
+#     wb.save(output)
+#     output.seek(0)
+#     excel_name = "room_data"
+#
+#     return send_file(output, attachment_filename='{}.xls'.format(excel_name), as_attachment=True)
 
 
 @api.route('/export2', methods=['GET'])

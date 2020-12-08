@@ -2,7 +2,6 @@ import logging
 import os
 import numpy as np
 from joblib import load
-from keras.models import load_model
 from webargs.flaskparser import FlaskParser
 from flask_jwt_extended import JWTManager
 from flask_pymongo import PyMongo
@@ -33,7 +32,6 @@ client = PyMongo()
 scaler_x = load('app/models/scaler_x.model')
 scaler_y = PriceScaler(160, 570)
 linear = load('app/models/linear.model')
-neural = load_model('app/models/neural.h5')
 
 os.makedirs("logs", exist_ok=True)
 app_log_handler = RotatingFileHandler('logs/app.log', maxBytes=1000000, backupCount=30)
