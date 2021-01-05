@@ -7,7 +7,9 @@ Environment: python 3.7
 ## Installation
 Download Mongodb 
 
-pip install -r requirement to install all packages for app back end
+### Install all packages for app back end
+
+pip install -r requirements.txt
 
 ## Initial database
 run migrate/init_db.py to insert default values
