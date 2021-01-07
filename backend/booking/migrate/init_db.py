@@ -1,7 +1,8 @@
 import json
 from flask import Flask
 from flask_pymongo import PyMongo
-from app.settings import DevConfig
+
+from settings import DevConfig
 
 client = PyMongo()
 
@@ -16,13 +17,13 @@ class Worker:
         app_context = app.app_context()
         app_context.push()
         client.db.command("dropDatabase")
-        with open('default.json', encoding='utf-8') as file:
+        with open('migrate/default.json', encoding='utf-8') as file:
             self.default_data = json.load(file)
 
-        with open('room_data.json', encoding='utf-8') as file:
+        with open('migrate/room_data.json', encoding='utf-8') as file:
             self.room_data = json.load(file)
 
-        with open('booking_data.json', encoding='utf-8') as file:
+        with open('migrate/booking_data.json', encoding='utf-8') as file:
             self.booking_data = json.load(file)
 
     def insert_default_cities(self):

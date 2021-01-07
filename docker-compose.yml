@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    command: npm start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "db"
+    networks:
+      - booking
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/booking/Dockerfile
+    command: bash -c "python migrate/init_db.py && python main.py"
+    ports:
+      - "5012:5012"
+    depends_on:
+      - "db"
+    networks:
+      - booking
+
+  db:
+    image: mongo:latest
+    container_name: mongoCon
+    ports:
+      - "27017:27017"
+    volumes:
+      - "db_data:/etc/mongo/data"
+    networks:
+      - booking
+
+volumes:
+  db_data:
+
+networks:
+  booking:

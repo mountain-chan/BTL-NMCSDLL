@@ -39,9 +39,13 @@ def login():
         password = json_data.get('password')
     except Exception as ex:
         logger.error('{} Parameters error: '.format(get_datetime_now().strftime('%Y-%b-%d %H:%M:%S')) + str(ex))
+        print(str(ex))
         return send_error(message='Invalid username or password.\nPlease try again')
-
-    user = client.db.users.find_one({'username': username})
+    try:
+        user = client.db.users.find_one({'username': username})
+    except Exception as ex:
+        print(str(ex))
+        return send_error(message='Can not connect to db')
     if user is None:
         return send_error(message='Invalid username or password.\nPlease try again')
 

@@ -25,8 +25,6 @@ class ProdConfig(Config):
 
     # MongoDB config
     MONGO_URI = "mongodb://localhost:27017/booking"
-    MONGO_DBNAME = 'booking'
-    MONGO_HOST = 'localhost'
     MONGO_AUTH_SOURCE = 'admin'
     MONGO_USERNAME = 'admin'
     MONGO_PASSWORD = '1234567aA@'

@@ -1,5 +1,4 @@
 attrs==20.3.0
-bson==0.5.10
 certifi==2020.11.8
 click==7.1.2
 Flask==1.1.2
@@ -16,7 +15,7 @@ marshmallow==3.9.1
 numpy==1.19.3
 pandas==1.1.5
 PyJWT==1.7.1
-pymongo==3.11.1
+pymongo==3.11.2
 pyrsistent==0.17.3
 python-dateutil==2.8.1
 pytz==2020.4
