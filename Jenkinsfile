@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Deploy') {
             steps {
-                sh 'python --version'
+                sh 'sudo docker-compose build'
+                sh 'sudo docker-compose up -d'
             }
         }
     }
