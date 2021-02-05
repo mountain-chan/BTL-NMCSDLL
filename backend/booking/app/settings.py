@@ -49,7 +49,7 @@ class DevConfig(Config):
     JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
 
     # MongoDB config
-    MONGO_URI = "mongodb://172.20.0.2:27017/booking"
+    MONGO_URI = "mongodb://db:27017/booking"
     # MONGO_AUTH_SOURCE = 'admin'
     # MONGO_USERNAME = 'admin'
     # MONGO_PASSWORD = '1234567aA@'
